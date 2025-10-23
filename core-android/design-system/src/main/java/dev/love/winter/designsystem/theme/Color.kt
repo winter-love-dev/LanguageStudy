@@ -2,6 +2,10 @@ package dev.love.winter.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 
+/**
+ * Color token
+ */
+
 // Brand - Primary
 val Primary50 = Color(0xFFF1F1FF)
 val Primary100 = Color(0xFFDBDFFF)
@@ -61,3 +65,36 @@ val Red600 = Color(0xFFCE2E2E)
 val Red700 = Color(0xFFA02424)
 val Red800 = Color(0xFF6C1A1A)
 val Red900 = Color(0xFF401111)
+
+/**
+ * Component Token - Background (Light Theme)
+ */
+val ColorBackgroundLight = Grey50
+val ColorBackgroundContainerLight = Grey100
+val ColorBackgroundObjectLight = Grey200
+val ColorBackgroundModalLight = Grey50
+val ColorBackgroundBrandLight = Primary500
+val ColorBackgroundBrandSubtleLight = Primary50
+val ColorBackgroundPositiveLight = Green50
+val ColorBackgroundWarningLight = Yellow50
+val ColorBackgroundNegativeLight = Red50
+val ColorBackgroundContrastLight = Grey900
+val ColorBackgroundDisabledLight = Grey100
+val ColorBackgroundOverlayLight = Grey900.copy(alpha = 0.5f)
+
+/**
+ * Component Token - Background (Dark Theme)
+ */
+val ColorBackgroundDark = Grey900
+val ColorBackgroundContainerDark = Grey800
+val ColorBackgroundObjectDark = Grey700
+val ColorBackgroundModalDark = Grey800
+val ColorBackgroundBrandDark = Primary500
+val ColorBackgroundBrandSubtleDark = Primary900
+val ColorBackgroundPositiveDark = Green900
+val ColorBackgroundWarningDark = Yellow900
+val ColorBackgroundNegativeDark = Red900
+val ColorBackgroundContrastDark = Grey50
+val ColorBackgroundDisabledDark = Grey800
+val ColorBackgroundOverlayDark = Grey900.copy(alpha = 0.7f)
+
