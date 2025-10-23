@@ -2,25 +2,24 @@ package dev.love.winter.convention
 
 // reference : https://github.com/android/nowinandroid/blob/main/build-logic/convention/src/main/kotlin/com/google/samples/apps/nowinandroid/AndroidCompose.kt
 
-import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
+import dev.love.winter.convention.extension.AndroidExtension
 import dev.love.winter.convention.extension.api
 import dev.love.winter.convention.extension.debugImplementation
 import dev.love.winter.convention.extension.implementation
 import dev.love.winter.convention.extension.libs
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
-import org.gradle.kotlin.dsl.getByType
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-internal fun Project.configureComposeAndroid() {
+internal fun Project.configureComposeAndroid(
+    commonExtension: AndroidExtension,
+) {
     with(pluginManager) {
         apply("org.jetbrains.kotlin.plugin.compose")
     }
 
-    val extension = extensions.getByType<BaseAppModuleExtension>()
-
-    extension.apply {
+    commonExtension.apply {
         buildFeatures.compose = true
     }
 
