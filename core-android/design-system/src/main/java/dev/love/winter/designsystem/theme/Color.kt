@@ -18,6 +18,18 @@ val Primary700 = Color(0xFF3B39AF)
 val Primary800 = Color(0xFF2B2A85)
 val Primary900 = Color(0xFF131243)
 
+// Blue (Use when brand color is no longer blue)
+val Blue50 = Color(0xFFF1F1FF)
+val Blue100 = Color(0xFFDBDFFF)
+val Blue200 = Color(0xFFC1C8FF)
+val Blue300 = Color(0xFF9397FF)
+val Blue400 = Color(0xFF7278FF)
+val Blue500 = Color(0xFF5653FF)
+val Blue600 = Color(0xFF4745E4)
+val Blue700 = Color(0xFF3B39AF)
+val Blue800 = Color(0xFF2B2A85)
+val Blue900 = Color(0xFF131243)
+
 // Neutral - Grey
 val Grey50 = Color(0xFFFDFDFD)
 val Grey100 = Color(0xFFF4F4F5)
