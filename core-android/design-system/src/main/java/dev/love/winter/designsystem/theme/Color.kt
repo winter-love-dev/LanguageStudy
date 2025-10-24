@@ -98,3 +98,24 @@ val ColorBackgroundContrastDark = Grey50
 val ColorBackgroundDisabledDark = Grey800
 val ColorBackgroundOverlayDark = Grey900.copy(alpha = 0.7f)
 
+/**
+ * Component Token - Stroke (Light Theme)
+ */
+val ColorStrokeNeutralSubtleLight = Grey100
+val ColorStrokeNeutralLight = Grey200
+val ColorStrokeNeutralStrongLight = Grey300
+val ColorStrokeBrandLight = Primary500
+val ColorStrokePositiveLight = Green500
+val ColorStrokeWarningLight = Yellow500
+val ColorStrokeNegativeLight = Red500
+
+/**
+ * Component Token - Stroke (Dark Theme)
+ */
+val ColorStrokeNeutralSubtleDark = Grey800
+val ColorStrokeNeutralDark = Grey700
+val ColorStrokeNeutralStrongDark = Grey600
+val ColorStrokeBrandDark = Primary600
+val ColorStrokePositiveDark = Green600
+val ColorStrokeWarningDark = Yellow600
+val ColorStrokeNegativeDark = Red600

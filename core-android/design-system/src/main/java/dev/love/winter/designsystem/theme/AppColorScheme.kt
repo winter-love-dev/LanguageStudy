@@ -22,6 +22,13 @@ data class AppColorScheme(
     val colorBackgroundContrast: Color,
     val colorBackgroundDisabled: Color,
     val colorBackgroundOverlay: Color,
+    val colorStrokeNeutralSubtle: Color,
+    val colorStrokeNeutral: Color,
+    val colorStrokeNeutralStrong: Color,
+    val colorStrokeBrand: Color,
+    val colorStrokePositive: Color,
+    val colorStrokeWarning: Color,
+    val colorStrokeNegative: Color,
 )
 
 val LightAppColorScheme = AppColorScheme(
@@ -37,6 +44,13 @@ val LightAppColorScheme = AppColorScheme(
     colorBackgroundContrast = ColorBackgroundContrastLight,
     colorBackgroundDisabled = ColorBackgroundDisabledLight,
     colorBackgroundOverlay = ColorBackgroundOverlayLight,
+    colorStrokeNeutralSubtle = ColorStrokeNeutralSubtleLight,
+    colorStrokeNeutral = ColorStrokeNeutralLight,
+    colorStrokeNeutralStrong = ColorStrokeNeutralStrongLight,
+    colorStrokeBrand = ColorStrokeBrandLight,
+    colorStrokePositive = ColorStrokePositiveLight,
+    colorStrokeWarning = ColorStrokeWarningLight,
+    colorStrokeNegative = ColorStrokeNegativeLight,
 )
 
 val DarkAppColorScheme = AppColorScheme(
@@ -52,6 +66,13 @@ val DarkAppColorScheme = AppColorScheme(
     colorBackgroundContrast = ColorBackgroundContrastDark,
     colorBackgroundDisabled = ColorBackgroundDisabledDark,
     colorBackgroundOverlay = ColorBackgroundOverlayDark,
+    colorStrokeNeutralSubtle = ColorStrokeNeutralSubtleDark,
+    colorStrokeNeutral = ColorStrokeNeutralDark,
+    colorStrokeNeutralStrong = ColorStrokeNeutralStrongDark,
+    colorStrokeBrand = ColorStrokeBrandDark,
+    colorStrokePositive = ColorStrokePositiveDark,
+    colorStrokeWarning = ColorStrokeWarningDark,
+    colorStrokeNegative = ColorStrokeNegativeDark,
 )
 
 val LocalAppColorScheme = staticCompositionLocalOf {
