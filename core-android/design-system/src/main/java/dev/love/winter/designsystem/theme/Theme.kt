@@ -100,6 +100,7 @@ fun WinterTheme(
     CompositionLocalProvider(
         LocalDarkTheme provides darkTheme,
         LocalAppColorScheme provides appColorScheme,
+        LocalTypography provides Typography,
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
@@ -112,4 +113,8 @@ object AppTheme {
     val colors: ColorScheme
         @Composable
         get() = LocalAppColorScheme.current
+
+    val typography: TypographyScheme
+        @Composable
+        get() = LocalTypography.current
 }
