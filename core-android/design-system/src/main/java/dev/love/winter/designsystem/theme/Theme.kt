@@ -103,6 +103,7 @@ fun WinterTheme(
         LocalTypography provides Typography,
         LocalSpacing provides Spacing,
         LocalBorderRadius provides BorderRadius,
+        LocalIcons provides Icon,
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
