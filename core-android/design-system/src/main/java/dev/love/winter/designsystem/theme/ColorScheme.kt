@@ -76,6 +76,12 @@ data class ColorScheme(
     val inputPositive: Color,
     val inputNegative: Color,
     val inputDisabled: Color,
+    val tagNeutral: Color,
+    val tagBrandStrong: Color,
+    val tagBrandSubtle: Color,
+    val tagPositive: Color,
+    val tagWarning: Color,
+    val tagNegative: Color,
 )
 
 val LightAppColorScheme = ColorScheme(
@@ -145,6 +151,12 @@ val LightAppColorScheme = ColorScheme(
     inputPositive = InputPositiveLight,
     inputNegative = InputNegativeLight,
     inputDisabled = InputDisabledLight,
+    tagNeutral = TagNeutralLight,
+    tagBrandStrong = TagBrandStrongLight,
+    tagBrandSubtle = TagBrandSubtleLight,
+    tagPositive = TagPositiveLight,
+    tagWarning = TagWarningLight,
+    tagNegative = TagNegativeLight,
 )
 
 val DarkAppColorScheme = ColorScheme(
@@ -214,6 +226,12 @@ val DarkAppColorScheme = ColorScheme(
     inputPositive = InputPositiveDark,
     inputNegative = InputNegativeDark,
     inputDisabled = InputDisabledDark,
+    tagNeutral = TagNeutralDark,
+    tagBrandStrong = TagBrandStrongDark,
+    tagBrandSubtle = TagBrandSubtleDark,
+    tagPositive = TagPositiveDark,
+    tagWarning = TagWarningDark,
+    tagNegative = TagNegativeDark,
 )
 
 val LocalAppColorScheme = staticCompositionLocalOf {

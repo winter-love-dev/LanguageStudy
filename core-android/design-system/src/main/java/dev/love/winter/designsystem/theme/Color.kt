@@ -245,3 +245,23 @@ val InputSelectedDark = Grey50
 val InputPositiveDark = Green300
 val InputNegativeDark = Red300
 val InputDisabledDark = Grey700
+
+/**
+ * Component Token - Tag (Light Theme)
+ */
+val TagNeutralLight = Grey200
+val TagBrandStrongLight = Primary500
+val TagBrandSubtleLight = Primary100
+val TagPositiveLight = Green100
+val TagWarningLight = Yellow100
+val TagNegativeLight = Red100
+
+/**
+ * Component Token - Tag (Dark Theme)
+ */
+val TagNeutralDark = Grey700
+val TagBrandStrongDark = Primary600
+val TagBrandSubtleDark = Primary100
+val TagPositiveDark = Green100
+val TagWarningDark = Yellow100
+val TagNegativeDark = Red100
