@@ -185,3 +185,41 @@ val IconOnColorDarkDark = Grey50
 val IconOnColorLightDark = Grey900
 val IconOnContrastDark = Grey900
 val IconDisabledDark = Grey600
+
+/**
+ * Component Token - Button (Light Theme)
+ */
+val ButtonPrimaryDefaultLight = Grey900
+val ButtonPrimaryActiveLight = Grey800
+val ButtonPrimaryDisabledLight = Grey100
+val ButtonSecondaryDefaultLight = Grey600
+val ButtonSecondaryActiveLight = Grey700
+val ButtonSecondaryDisabledLight = Grey800
+val ButtonTertiaryDefaultLight = Grey900
+val ButtonTertiaryActiveLight = Grey700
+val ButtonTertiaryDisabledLight = Grey400
+val ButtonBrandDefaultLight = Primary500
+val ButtonBrandActiveLight = Primary600
+val ButtonBrandDisabledLight = Grey100
+val ButtonCriticalDefaultLight = Red600
+val ButtonCriticalActiveLight = Red700
+val ButtonCriticalDisabledLight = Grey100
+
+/**
+ * Component Token - Button (Dark Theme)
+ */
+val ButtonPrimaryDefaultDark = Grey50
+val ButtonPrimaryActiveDark = Grey200
+val ButtonPrimaryDisabledDark = Grey800
+val ButtonSecondaryDefaultDark = Grey300
+val ButtonSecondaryActiveDark = Grey400
+val ButtonSecondaryDisabledDark = Grey100
+val ButtonTertiaryDefaultDark = Grey50
+val ButtonTertiaryActiveDark = Grey300
+val ButtonTertiaryDisabledDark = Grey600
+val ButtonBrandDefaultDark = Primary500
+val ButtonBrandActiveDark = Primary600
+val ButtonBrandDisabledDark = Grey800
+val ButtonCriticalDefaultDark = Red600
+val ButtonCriticalActiveDark = Red700
+val ButtonCriticalDisabledDark = Grey800
