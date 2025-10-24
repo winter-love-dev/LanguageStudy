@@ -102,6 +102,7 @@ fun WinterTheme(
         LocalAppColorScheme provides appColorScheme,
         LocalTypography provides Typography,
         LocalSpacing provides Spacing,
+        LocalBorderRadius provides BorderRadius,
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
@@ -122,4 +123,8 @@ object AppTheme {
     val spacing: SpacingScheme
         @Composable
         get() = LocalSpacing.current
+
+    val borderRadius: BorderRadiusScheme
+        @Composable
+        get() = LocalBorderRadius.current
 }
