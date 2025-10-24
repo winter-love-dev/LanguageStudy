@@ -69,119 +69,119 @@ val Red900 = Color(0xFF401111)
 /**
  * Component Token - Background (Light Theme)
  */
-val ColorBackgroundLight = Grey50
-val ColorBackgroundContainerLight = Grey100
-val ColorBackgroundObjectLight = Grey200
-val ColorBackgroundModalLight = Grey50
-val ColorBackgroundBrandLight = Primary500
-val ColorBackgroundBrandSubtleLight = Primary50
-val ColorBackgroundPositiveLight = Green50
-val ColorBackgroundWarningLight = Yellow50
-val ColorBackgroundNegativeLight = Red50
-val ColorBackgroundContrastLight = Grey900
-val ColorBackgroundDisabledLight = Grey100
-val ColorBackgroundOverlayLight = Grey900.copy(alpha = 0.5f)
+val BackgroundLight = Grey50
+val BackgroundContainerLight = Grey100
+val BackgroundObjectLight = Grey200
+val BackgroundModalLight = Grey50
+val BackgroundBrandLight = Primary500
+val BackgroundBrandSubtleLight = Primary50
+val BackgroundPositiveLight = Green50
+val BackgroundWarningLight = Yellow50
+val BackgroundNegativeLight = Red50
+val BackgroundContrastLight = Grey900
+val BackgroundDisabledLight = Grey100
+val BackgroundOverlayLight = Grey900.copy(alpha = 0.5f)
 
 /**
  * Component Token - Background (Dark Theme)
  */
-val ColorBackgroundDark = Grey900
-val ColorBackgroundContainerDark = Grey800
-val ColorBackgroundObjectDark = Grey700
-val ColorBackgroundModalDark = Grey800
-val ColorBackgroundBrandDark = Primary500
-val ColorBackgroundBrandSubtleDark = Primary900
-val ColorBackgroundPositiveDark = Green900
-val ColorBackgroundWarningDark = Yellow900
-val ColorBackgroundNegativeDark = Red900
-val ColorBackgroundContrastDark = Grey50
-val ColorBackgroundDisabledDark = Grey800
-val ColorBackgroundOverlayDark = Grey900.copy(alpha = 0.7f)
+val BackgroundDark = Grey900
+val BackgroundContainerDark = Grey800
+val BackgroundObjectDark = Grey700
+val BackgroundModalDark = Grey800
+val BackgroundBrandDark = Primary500
+val BackgroundBrandSubtleDark = Primary900
+val BackgroundPositiveDark = Green900
+val BackgroundWarningDark = Yellow900
+val BackgroundNegativeDark = Red900
+val BackgroundContrastDark = Grey50
+val BackgroundDisabledDark = Grey800
+val BackgroundOverlayDark = Grey900.copy(alpha = 0.7f)
 
 /**
  * Component Token - Stroke (Light Theme)
  */
-val ColorStrokeNeutralSubtleLight = Grey100
-val ColorStrokeNeutralLight = Grey200
-val ColorStrokeNeutralStrongLight = Grey300
-val ColorStrokeBrandLight = Primary500
-val ColorStrokePositiveLight = Green500
-val ColorStrokeWarningLight = Yellow500
-val ColorStrokeNegativeLight = Red500
+val StrokeNeutralSubtleLight = Grey100
+val StrokeNeutralLight = Grey200
+val StrokeNeutralStrongLight = Grey300
+val StrokeBrandLight = Primary500
+val StrokePositiveLight = Green500
+val StrokeWarningLight = Yellow500
+val StrokeNegativeLight = Red500
 
 /**
  * Component Token - Stroke (Dark Theme)
  */
-val ColorStrokeNeutralSubtleDark = Grey800
-val ColorStrokeNeutralDark = Grey700
-val ColorStrokeNeutralStrongDark = Grey600
-val ColorStrokeBrandDark = Primary600
-val ColorStrokePositiveDark = Green600
-val ColorStrokeWarningDark = Yellow600
-val ColorStrokeNegativeDark = Red600
+val StrokeNeutralSubtleDark = Grey800
+val StrokeNeutralDark = Grey700
+val StrokeNeutralStrongDark = Grey600
+val StrokeBrandDark = Primary600
+val StrokePositiveDark = Green600
+val StrokeWarningDark = Yellow600
+val StrokeNegativeDark = Red600
 
 /**
  * Component Token - Text (Light Theme)
  */
-val ColorTextTitleLight = Grey900
-val ColorTextSubtitleLight = Grey700
-val ColorTextBodyLight = Grey800
-val ColorTextCaptionLight = Grey600
-val ColorTextPlaceholderLight = Grey500
-val ColorTextDisabledLight = Grey400
-val ColorTextOnColorDarkLight = Grey50
-val ColorTextOnColorLightLight = Grey900
-val ColorTextOnContrastLight = Grey50
-val ColorTextLinkLight = Primary600
-val ColorTextBrandLight = Primary500
-val ColorTextPositiveLight = Green200
-val ColorTextWarningLight = Yellow700
-val ColorTextNegativeLight = Red600
+val TextTitleLight = Grey900
+val TextSubtitleLight = Grey700
+val TextBodyLight = Grey800
+val TextCaptionLight = Grey600
+val TextPlaceholderLight = Grey500
+val TextDisabledLight = Grey400
+val TextOnColorDarkLight = Grey50
+val TextOnColorLightLight = Grey900
+val TextOnContrastLight = Grey50
+val TextLinkLight = Primary600
+val TextBrandLight = Primary500
+val TextPositiveLight = Green200
+val TextWarningLight = Yellow700
+val TextNegativeLight = Red600
 
 /**
  * Component Token - Text (Dark Theme)
  */
-val ColorTextTitleDark = Grey50
-val ColorTextSubtitleDark = Grey200
-val ColorTextBodyDark = Grey100
-val ColorTextCaptionDark = Grey300
-val ColorTextPlaceholderDark = Grey500
-val ColorTextDisabledDark = Grey600
-val ColorTextOnColorDarkDark = Grey50
-val ColorTextOnColorLightDark = Grey900
-val ColorTextOnContrastDark = Grey900
-val ColorTextLinkDark = Primary300
-val ColorTextBrandDark = Primary500
-val ColorTextPositiveDark = Green700
-val ColorTextWarningDark = Yellow200
-val ColorTextNegativeDark = Red200
+val TextTitleDark = Grey50
+val TextSubtitleDark = Grey200
+val TextBodyDark = Grey100
+val TextCaptionDark = Grey300
+val TextPlaceholderDark = Grey500
+val TextDisabledDark = Grey600
+val TextOnColorDarkDark = Grey50
+val TextOnColorLightDark = Grey900
+val TextOnContrastDark = Grey900
+val TextLinkDark = Primary300
+val TextBrandDark = Primary500
+val TextPositiveDark = Green700
+val TextWarningDark = Yellow200
+val TextNegativeDark = Red200
 
 /**
  * Component Token - Icon (Light Theme)
  */
-val ColorIconNeutralSubtleLight = Grey500
-val ColorIconNeutralLight = Grey600
-val ColorIconNeutralStrongLight = Grey900
-val ColorIconBrandLight = Primary500
-val ColorIconPositiveLight = Green600
-val ColorIconWarningLight = Yellow600
-val ColorIconNegativeLight = Red600
-val ColorIconOnColorDarkLight = Grey50
-val ColorIconOnColorLightLight = Grey900
-val ColorIconOnContrastLight = Grey50
-val ColorIconDisabledLight = Grey400
+val IconNeutralSubtleLight = Grey500
+val IconNeutralLight = Grey600
+val IconNeutralStrongLight = Grey900
+val IconBrandLight = Primary500
+val IconPositiveLight = Green600
+val IconWarningLight = Yellow600
+val IconNegativeLight = Red600
+val IconOnColorDarkLight = Grey50
+val IconOnColorLightLight = Grey900
+val IconOnContrastLight = Grey50
+val IconDisabledLight = Grey400
 
 /**
  * Component Token - Icon (Dark Theme)
  */
-val ColorIconNeutralSubtleDark = Grey500
-val ColorIconNeutralDark = Grey300
-val ColorIconNeutralStrongDark = Grey300
-val ColorIconBrandDark = Primary500
-val ColorIconPositiveDark = Green600
-val ColorIconWarningDark = Yellow500
-val ColorIconNegativeDark = Red500
-val ColorIconOnColorDarkDark = Grey50
-val ColorIconOnColorLightDark = Grey900
-val ColorIconOnContrastDark = Grey900
-val ColorIconDisabledDark = Grey600
+val IconNeutralSubtleDark = Grey500
+val IconNeutralDark = Grey300
+val IconNeutralStrongDark = Grey300
+val IconBrandDark = Primary500
+val IconPositiveDark = Green600
+val IconWarningDark = Yellow500
+val IconNegativeDark = Red500
+val IconOnColorDarkDark = Grey50
+val IconOnColorLightDark = Grey900
+val IconOnContrastDark = Grey900
+val IconDisabledDark = Grey600

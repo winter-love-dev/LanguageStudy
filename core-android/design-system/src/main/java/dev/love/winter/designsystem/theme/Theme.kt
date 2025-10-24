@@ -109,7 +109,7 @@ fun WinterTheme(
 }
 
 object AppTheme {
-    val colors: AppColorScheme
+    val colors: ColorScheme
         @Composable
         get() = LocalAppColorScheme.current
 }
