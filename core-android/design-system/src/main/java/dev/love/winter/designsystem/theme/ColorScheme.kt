@@ -43,6 +43,17 @@ data class AppColorScheme(
     val colorTextPositive: Color,
     val colorTextWarning: Color,
     val colorTextNegative: Color,
+    val colorIconNeutralSubtle: Color,
+    val colorIconNeutral: Color,
+    val colorIconNeutralStrong: Color,
+    val colorIconBrand: Color,
+    val colorIconPositive: Color,
+    val colorIconWarning: Color,
+    val colorIconNegative: Color,
+    val colorIconOnColorDark: Color,
+    val colorIconOnColorLight: Color,
+    val colorIconOnContrast: Color,
+    val colorIconDisabled: Color,
 )
 
 val LightAppColorScheme = AppColorScheme(
@@ -79,6 +90,17 @@ val LightAppColorScheme = AppColorScheme(
     colorTextPositive = ColorTextPositiveLight,
     colorTextWarning = ColorTextWarningLight,
     colorTextNegative = ColorTextNegativeLight,
+    colorIconNeutralSubtle = ColorIconNeutralSubtleLight,
+    colorIconNeutral = ColorIconNeutralLight,
+    colorIconNeutralStrong = ColorIconNeutralStrongLight,
+    colorIconBrand = ColorIconBrandLight,
+    colorIconPositive = ColorIconPositiveLight,
+    colorIconWarning = ColorIconWarningLight,
+    colorIconNegative = ColorIconNegativeLight,
+    colorIconOnColorDark = ColorIconOnColorDarkLight,
+    colorIconOnColorLight = ColorIconOnColorLightLight,
+    colorIconOnContrast = ColorIconOnContrastLight,
+    colorIconDisabled = ColorIconDisabledLight,
 )
 
 val DarkAppColorScheme = AppColorScheme(
@@ -115,6 +137,17 @@ val DarkAppColorScheme = AppColorScheme(
     colorTextPositive = ColorTextPositiveDark,
     colorTextWarning = ColorTextWarningDark,
     colorTextNegative = ColorTextNegativeDark,
+    colorIconNeutralSubtle = ColorIconNeutralSubtleDark,
+    colorIconNeutral = ColorIconNeutralDark,
+    colorIconNeutralStrong = ColorIconNeutralStrongDark,
+    colorIconBrand = ColorIconBrandDark,
+    colorIconPositive = ColorIconPositiveDark,
+    colorIconWarning = ColorIconWarningDark,
+    colorIconNegative = ColorIconNegativeDark,
+    colorIconOnColorDark = ColorIconOnColorDarkDark,
+    colorIconOnColorLight = ColorIconOnColorLightDark,
+    colorIconOnContrast = ColorIconOnContrastDark,
+    colorIconDisabled = ColorIconDisabledDark,
 )
 
 val LocalAppColorScheme = staticCompositionLocalOf {

@@ -155,3 +155,33 @@ val ColorTextBrandDark = Primary500
 val ColorTextPositiveDark = Green700
 val ColorTextWarningDark = Yellow200
 val ColorTextNegativeDark = Red200
+
+/**
+ * Component Token - Icon (Light Theme)
+ */
+val ColorIconNeutralSubtleLight = Grey500
+val ColorIconNeutralLight = Grey600
+val ColorIconNeutralStrongLight = Grey900
+val ColorIconBrandLight = Primary500
+val ColorIconPositiveLight = Green600
+val ColorIconWarningLight = Yellow600
+val ColorIconNegativeLight = Red600
+val ColorIconOnColorDarkLight = Grey50
+val ColorIconOnColorLightLight = Grey900
+val ColorIconOnContrastLight = Grey50
+val ColorIconDisabledLight = Grey400
+
+/**
+ * Component Token - Icon (Dark Theme)
+ */
+val ColorIconNeutralSubtleDark = Grey500
+val ColorIconNeutralDark = Grey300
+val ColorIconNeutralStrongDark = Grey300
+val ColorIconBrandDark = Primary500
+val ColorIconPositiveDark = Green600
+val ColorIconWarningDark = Yellow500
+val ColorIconNegativeDark = Red500
+val ColorIconOnColorDarkDark = Grey50
+val ColorIconOnColorLightDark = Grey900
+val ColorIconOnContrastDark = Grey900
+val ColorIconDisabledDark = Grey600
