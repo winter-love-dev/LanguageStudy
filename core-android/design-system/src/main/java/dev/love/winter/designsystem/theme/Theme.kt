@@ -101,6 +101,7 @@ fun WinterTheme(
         LocalDarkTheme provides darkTheme,
         LocalAppColorScheme provides appColorScheme,
         LocalTypography provides Typography,
+        LocalSpacing provides Spacing,
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
@@ -117,4 +118,8 @@ object AppTheme {
     val typography: TypographyScheme
         @Composable
         get() = LocalTypography.current
+
+    val spacing: SpacingScheme
+        @Composable
+        get() = LocalSpacing.current
 }
