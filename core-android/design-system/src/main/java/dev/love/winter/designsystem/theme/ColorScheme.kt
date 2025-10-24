@@ -69,6 +69,13 @@ data class ColorScheme(
     val buttonCriticalDefault: Color,
     val buttonCriticalActive: Color,
     val buttonCriticalDisabled: Color,
+    val inputDefault: Color,
+    val inputActive: Color,
+    val inputActiveCursor: Color,
+    val inputSelected: Color,
+    val inputPositive: Color,
+    val inputNegative: Color,
+    val inputDisabled: Color,
 )
 
 val LightAppColorScheme = ColorScheme(
@@ -131,6 +138,13 @@ val LightAppColorScheme = ColorScheme(
     buttonCriticalDefault = ButtonCriticalDefaultLight,
     buttonCriticalActive = ButtonCriticalActiveLight,
     buttonCriticalDisabled = ButtonCriticalDisabledLight,
+    inputDefault = InputDefaultLight,
+    inputActive = InputActiveLight,
+    inputActiveCursor = InputActiveCursorLight,
+    inputSelected = InputSelectedLight,
+    inputPositive = InputPositiveLight,
+    inputNegative = InputNegativeLight,
+    inputDisabled = InputDisabledLight,
 )
 
 val DarkAppColorScheme = ColorScheme(
@@ -193,6 +207,13 @@ val DarkAppColorScheme = ColorScheme(
     buttonCriticalDefault = ButtonCriticalDefaultDark,
     buttonCriticalActive = ButtonCriticalActiveDark,
     buttonCriticalDisabled = ButtonCriticalDisabledDark,
+    inputDefault = InputDefaultDark,
+    inputActive = InputActiveDark,
+    inputActiveCursor = InputActiveCursorDark,
+    inputSelected = InputSelectedDark,
+    inputPositive = InputPositiveDark,
+    inputNegative = InputNegativeDark,
+    inputDisabled = InputDisabledDark,
 )
 
 val LocalAppColorScheme = staticCompositionLocalOf {

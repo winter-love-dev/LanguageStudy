@@ -223,3 +223,25 @@ val ButtonBrandDisabledDark = Grey800
 val ButtonCriticalDefaultDark = Red600
 val ButtonCriticalActiveDark = Red700
 val ButtonCriticalDisabledDark = Grey800
+
+/**
+ * Component Token - Input (Light Theme)
+ */
+val InputDefaultLight = Grey300
+val InputActiveLight = Grey300
+val InputActiveCursorLight = Primary500
+val InputSelectedLight = Grey900
+val InputPositiveLight = Green500
+val InputNegativeLight = Red500
+val InputDisabledLight = Grey300
+
+/**
+ * Component Token - Input (Dark Theme)
+ */
+val InputDefaultDark = Grey700
+val InputActiveDark = Primary500
+val InputActiveCursorDark = Primary200
+val InputSelectedDark = Grey50
+val InputPositiveDark = Green300
+val InputNegativeDark = Red300
+val InputDisabledDark = Grey700
