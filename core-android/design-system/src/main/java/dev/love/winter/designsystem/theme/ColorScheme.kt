@@ -29,6 +29,20 @@ data class AppColorScheme(
     val colorStrokePositive: Color,
     val colorStrokeWarning: Color,
     val colorStrokeNegative: Color,
+    val colorTextTitle: Color,
+    val colorTextSubtitle: Color,
+    val colorTextBody: Color,
+    val colorTextCaption: Color,
+    val colorTextPlaceholder: Color,
+    val colorTextDisabled: Color,
+    val colorTextOnColorDark: Color,
+    val colorTextOnColorLight: Color,
+    val colorTextOnContrast: Color,
+    val colorTextLink: Color,
+    val colorTextBrand: Color,
+    val colorTextPositive: Color,
+    val colorTextWarning: Color,
+    val colorTextNegative: Color,
 )
 
 val LightAppColorScheme = AppColorScheme(
@@ -51,6 +65,20 @@ val LightAppColorScheme = AppColorScheme(
     colorStrokePositive = ColorStrokePositiveLight,
     colorStrokeWarning = ColorStrokeWarningLight,
     colorStrokeNegative = ColorStrokeNegativeLight,
+    colorTextTitle = ColorTextTitleLight,
+    colorTextSubtitle = ColorTextSubtitleLight,
+    colorTextBody = ColorTextBodyLight,
+    colorTextCaption = ColorTextCaptionLight,
+    colorTextPlaceholder = ColorTextPlaceholderLight,
+    colorTextDisabled = ColorTextDisabledLight,
+    colorTextOnColorDark = ColorTextOnColorDarkLight,
+    colorTextOnColorLight = ColorTextOnColorLightLight,
+    colorTextOnContrast = ColorTextOnContrastLight,
+    colorTextLink = ColorTextLinkLight,
+    colorTextBrand = ColorTextBrandLight,
+    colorTextPositive = ColorTextPositiveLight,
+    colorTextWarning = ColorTextWarningLight,
+    colorTextNegative = ColorTextNegativeLight,
 )
 
 val DarkAppColorScheme = AppColorScheme(
@@ -73,6 +101,20 @@ val DarkAppColorScheme = AppColorScheme(
     colorStrokePositive = ColorStrokePositiveDark,
     colorStrokeWarning = ColorStrokeWarningDark,
     colorStrokeNegative = ColorStrokeNegativeDark,
+    colorTextTitle = ColorTextTitleDark,
+    colorTextSubtitle = ColorTextSubtitleDark,
+    colorTextBody = ColorTextBodyDark,
+    colorTextCaption = ColorTextCaptionDark,
+    colorTextPlaceholder = ColorTextPlaceholderDark,
+    colorTextDisabled = ColorTextDisabledDark,
+    colorTextOnColorDark = ColorTextOnColorDarkDark,
+    colorTextOnColorLight = ColorTextOnColorLightDark,
+    colorTextOnContrast = ColorTextOnContrastDark,
+    colorTextLink = ColorTextLinkDark,
+    colorTextBrand = ColorTextBrandDark,
+    colorTextPositive = ColorTextPositiveDark,
+    colorTextWarning = ColorTextWarningDark,
+    colorTextNegative = ColorTextNegativeDark,
 )
 
 val LocalAppColorScheme = staticCompositionLocalOf {
