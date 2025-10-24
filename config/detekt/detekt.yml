@@ -304,6 +304,8 @@ style:
     active: false
   BracesOnIfStatements:
     active: true
+  BracesOnWhenStatements:
+    active: true
   MandatoryBracesLoops:
     active: true
   MaxLineLength:
