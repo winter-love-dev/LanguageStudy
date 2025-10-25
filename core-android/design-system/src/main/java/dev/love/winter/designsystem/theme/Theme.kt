@@ -14,6 +14,8 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
+internal val LocalDarkTheme = compositionLocalOf { false }
+
 private val LightColorScheme = lightColorScheme(
     primary = Primary500,
     onPrimary = Color.White,
@@ -70,8 +72,6 @@ private val DarkColorScheme = darkColorScheme(
     scrim = Grey900,
 )
 
-val LocalDarkTheme = compositionLocalOf { false }
-
 @Composable
 fun WinterTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
@@ -112,7 +112,7 @@ fun WinterTheme(
     }
 }
 
-object AppTheme {
+object WinterTheme {
     val colors: ColorScheme
         @Composable
         get() = LocalAppColorScheme.current
