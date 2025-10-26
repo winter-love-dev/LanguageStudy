@@ -1,17 +1,11 @@
 package dev.love.winter.designsystem.theme
 
-import android.app.Activity
-import android.view.Window
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.compositionLocalOf
-import androidx.compose.ui.platform.LocalInspectionMode
-import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
 
 internal val LocalDarkTheme = compositionLocalOf { false }
 
@@ -20,14 +14,6 @@ fun WinterTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
-    if (!LocalInspectionMode.current) {
-        val view = LocalView.current
-        SideEffect {
-            val window: Window = (view.context as Activity).window
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
-            WindowCompat.getInsetsController(window, view).isAppearanceLightNavigationBars = !darkTheme
-        }
-    }
     val designSystemColorTheme: Colors = if (darkTheme) {
         DarkColorTheme
     } else {
