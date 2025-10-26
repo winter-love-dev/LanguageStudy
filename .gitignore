@@ -77,6 +77,9 @@ proguard/
 *~
 *.swp
 
+# macOS
+.DS_Store
+
 ### AndroidStudio Patch ###
 !/gradle/wrapper/gradle-wrapper.jar
 
