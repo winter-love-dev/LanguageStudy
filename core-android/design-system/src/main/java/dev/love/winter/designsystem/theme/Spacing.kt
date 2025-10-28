@@ -13,13 +13,13 @@ import dev.love.winter.designsystem.tokens.SpacingSmall
 
 @Immutable
 data class Spacing(
-    val extraExtraSmall: Dp,
-    val extraSmall: Dp,
-    val small: Dp,
-    val medium: Dp,
-    val large: Dp,
-    val extraLarge: Dp,
-    val extraExtraLarge: Dp,
+    val extraExtraSmall: Dp, // 4
+    val extraSmall: Dp, // 8
+    val small: Dp, // 16
+    val medium: Dp, // 24
+    val large: Dp, // 32
+    val extraLarge: Dp, // 40
+    val extraExtraLarge: Dp, // 48
 )
 
 internal val SpacingTheme = Spacing(

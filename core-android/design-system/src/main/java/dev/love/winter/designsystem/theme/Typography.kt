@@ -23,23 +23,23 @@ import dev.love.winter.designsystem.tokens.TitleSmall
 
 @Immutable
 data class Typography(
-    val displayLarge: TextStyle,
-    val displayMedium: TextStyle,
-    val displaySmall: TextStyle,
-    val titleLarge: TextStyle,
-    val titleMedium: TextStyle,
-    val titleSmall: TextStyle,
-    val bodyExtraLarge: TextStyle,
-    val bodyLarge: TextStyle,
-    val bodyMedium: TextStyle,
-    val bodySmall: TextStyle,
-    val bodyExtraSmall: TextStyle,
-    val actionLarge: TextStyle,
-    val actionMedium: TextStyle,
-    val actionSmall: TextStyle,
-    val captionLarge: TextStyle,
-    val captionMedium: TextStyle,
-    val captionSmall: TextStyle,
+    val displayLarge: TextStyle, // 28
+    val displayMedium: TextStyle, // 24
+    val displaySmall: TextStyle, // 18
+    val titleLarge: TextStyle, // 16
+    val titleMedium: TextStyle, // 14
+    val titleSmall: TextStyle, // 12
+    val bodyExtraLarge: TextStyle, // 18
+    val bodyLarge: TextStyle, // 16
+    val bodyMedium: TextStyle, // 14
+    val bodySmall: TextStyle, // 12
+    val bodyExtraSmall: TextStyle, // 10
+    val actionLarge: TextStyle, // 16
+    val actionMedium: TextStyle, // 14
+    val actionSmall: TextStyle, // 12
+    val captionLarge: TextStyle, // 14
+    val captionMedium: TextStyle, // 12
+    val captionSmall: TextStyle, // 10
 )
 
 internal val TypographyTheme = Typography(
