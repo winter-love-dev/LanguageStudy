@@ -7,9 +7,9 @@ plugins {
 }
 
 android {
-    setNamespace("sample.dscatalog")
+    setNamespace("dscatalog")
     defaultConfig {
-        applicationId = "dev.love.winter.sample.dscatalog"
+        applicationId = "dev.love.winter.dscatalog"
         versionCode = 1
         versionName = "1.0.0"
     }
