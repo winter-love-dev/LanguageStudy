@@ -22,4 +22,5 @@ sealed interface ButtonState {
 data class ButtonColors(
     val container: Color,
     val content: Color,
+    val icon: Color,
 )

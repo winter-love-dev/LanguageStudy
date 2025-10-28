@@ -122,7 +122,7 @@ fun Button(
                 painter = painterResource(icon.resource),
                 contentDescription = icon.contentDescription,
                 modifier = Modifier.size(shape.iconSize),
-                tint = currentColors.content,
+                tint = currentColors.icon,
             )
             Spacer(Modifier.width(WinterTheme.spacing.extraSmall))
         }
@@ -137,7 +137,7 @@ fun Button(
                 painter = painterResource(icon.resource),
                 contentDescription = icon.contentDescription,
                 modifier = Modifier.size(shape.iconSize),
-                tint = currentColors.content,
+                tint = currentColors.icon,
             )
         }
     }

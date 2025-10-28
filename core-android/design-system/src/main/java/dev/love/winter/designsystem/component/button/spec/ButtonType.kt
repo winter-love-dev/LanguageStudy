@@ -35,14 +35,17 @@ sealed interface ButtonType {
             ButtonState.Default -> ButtonColors(
                 container = WinterTheme.color.buttonPrimaryDefault,
                 content = WinterTheme.color.textOnContrast,
+                icon = WinterTheme.color.iconOnContrast,
             )
             ButtonState.Active -> ButtonColors(
                 container = WinterTheme.color.buttonPrimaryActive,
                 content = WinterTheme.color.textOnContrast,
+                icon = WinterTheme.color.iconOnContrast,
             )
             ButtonState.Disabled -> ButtonColors(
                 container = WinterTheme.color.buttonPrimaryDisabled,
                 content = WinterTheme.color.textDisabled,
+                icon = WinterTheme.color.iconDisabled,
             )
         }
     }
@@ -53,14 +56,17 @@ sealed interface ButtonType {
             ButtonState.Default -> ButtonColors(
                 container = WinterTheme.color.buttonSecondaryDefault,
                 content = WinterTheme.color.textTitle,
+                icon = WinterTheme.color.iconNeutralStrong,
             )
             ButtonState.Active -> ButtonColors(
                 container = WinterTheme.color.buttonSecondaryActive,
                 content = WinterTheme.color.textTitle,
+                icon = WinterTheme.color.iconNeutralStrong,
             )
             ButtonState.Disabled -> ButtonColors(
                 container = WinterTheme.color.buttonSecondaryDisabled,
                 content = WinterTheme.color.textDisabled,
+                icon = WinterTheme.color.iconDisabled,
             )
         }
     }
@@ -71,14 +77,17 @@ sealed interface ButtonType {
             ButtonState.Default -> ButtonColors(
                 container = Color.Transparent,
                 content = WinterTheme.color.buttonTertiaryDefault,
+                icon = WinterTheme.color.buttonTertiaryDefault,
             )
             ButtonState.Active -> ButtonColors(
                 container = Color.Transparent,
                 content = WinterTheme.color.buttonTertiaryActive,
+                icon = WinterTheme.color.buttonTertiaryActive,
             )
             ButtonState.Disabled -> ButtonColors(
                 container = Color.Transparent,
                 content = WinterTheme.color.buttonTertiaryDisabled,
+                icon = WinterTheme.color.buttonTertiaryDisabled,
             )
         }
     }
@@ -89,14 +98,17 @@ sealed interface ButtonType {
             ButtonState.Default -> ButtonColors(
                 container = WinterTheme.color.buttonBrandDefault,
                 content = WinterTheme.color.textOnColorDark,
+                icon = WinterTheme.color.iconOnColorDark,
             )
             ButtonState.Active -> ButtonColors(
                 container = WinterTheme.color.buttonBrandActive,
                 content = WinterTheme.color.textOnColorDark,
+                icon = WinterTheme.color.iconOnColorDark,
             )
             ButtonState.Disabled -> ButtonColors(
                 container = WinterTheme.color.buttonBrandDisabled,
                 content = WinterTheme.color.textDisabled,
+                icon = WinterTheme.color.iconDisabled,
             )
         }
     }
@@ -107,14 +119,17 @@ sealed interface ButtonType {
             ButtonState.Default -> ButtonColors(
                 container = WinterTheme.color.buttonCriticalDefault,
                 content = WinterTheme.color.textOnColorDark,
+                icon = WinterTheme.color.iconOnColorDark,
             )
             ButtonState.Active -> ButtonColors(
                 container = WinterTheme.color.buttonCriticalActive,
                 content = WinterTheme.color.textOnColorDark,
+                icon = WinterTheme.color.iconOnColorDark,
             )
             ButtonState.Disabled -> ButtonColors(
                 container = WinterTheme.color.buttonCriticalDisabled,
                 content = WinterTheme.color.textDisabled,
+                icon = WinterTheme.color.iconDisabled,
             )
         }
     }
