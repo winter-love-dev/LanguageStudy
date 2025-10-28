@@ -2,8 +2,10 @@ package dev.love.winter.designsystem.component.button
 
 import android.content.res.Configuration
 import androidx.compose.foundation.background
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -14,14 +16,17 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
-import androidx.compose.material3.ripple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.love.winter.designsystem.component.button.spec.ButtonColors
@@ -39,6 +44,9 @@ import dev.love.winter.designsystem.theme.WinterTheme
  * Use different types of buttons to reflect the hierarchy of actions.
  */
 
+private const val SCALE_DEFAULT = 1.0f
+private const val SCALE_PRESSED = 0.98f
+
 @Composable
 fun Button(
     label: String,
@@ -50,27 +58,57 @@ fun Button(
     shape: ButtonShape = ButtonShape.Medium,
     enabled: Boolean = true,
 ) {
-    val currentState: ButtonState = if (enabled) {
-        state
-    } else {
-        ButtonState.Disabled
-    }
-    val currentColors: ButtonColors = type.colors(currentState)
     val interactionSource = remember {
         MutableInteractionSource()
     }
+    val pressed: State<Boolean> = interactionSource.collectIsPressedAsState()
+    val effectiveEnabled: Boolean = enabled && state != ButtonState.Disabled
+    val pressEffect: Boolean =
+        (effectiveEnabled && pressed.value && state == ButtonState.Default) ||
+        state == ButtonState.Active
+    val scale: State<Float> = animateFloatAsState(
+        targetValue = if (pressEffect) {
+            SCALE_PRESSED
+        } else {
+            SCALE_DEFAULT
+        },
+    )
+
+    val currentState: ButtonState = if (effectiveEnabled && pressed.value) {
+        ButtonState.Active
+    } else {
+        state
+    }
+    val currentColors: ButtonColors = type.colors(currentState)
 
     Row(
-        modifier = modifier
+        modifier = (if (effectiveEnabled) {
+                modifier.scale(scale.value)
+            } else {
+                modifier
+            })
             .clip(shape.shape())
             .defaultMinSize(minHeight = shape.height)
             .background(currentColors.container)
+            .semantics {
+                stateDescription = when (state) {
+                    ButtonState.Default -> {
+                        state.toString()
+                    }
+                    ButtonState.Active -> {
+                        state.toString()
+                    }
+                    ButtonState.Disabled -> {
+                        state.toString()
+                    }
+                }
+            }
             .clickable(
-                enabled = enabled,
-                onClick = onClick,
                 role = Role.Button,
+                enabled = effectiveEnabled,
+                onClick = onClick,
                 interactionSource = interactionSource,
-                indication = ripple(),
+                indication = null,
             )
             .padding(
                 vertical = shape.paddingVertical(),
@@ -104,7 +142,6 @@ fun Button(
         }
     }
 }
-
 
 @Preview(
     name = "Light",
