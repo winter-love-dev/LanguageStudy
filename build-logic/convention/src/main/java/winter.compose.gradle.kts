@@ -9,5 +9,11 @@ configureComposeAndroid(
 )
 
 dependencies {
+    implementation(libs.findLibrary("androidX-hiltNavigationCompose"))
     implementation(libs.findLibrary("androidX-activityCompose"))
+
+    implementation(libs.findLibrary("androidx-navigation3Runtime"))
+    implementation(libs.findLibrary("androidx-navigation3Ui"))
+    implementation(libs.findLibrary("androidx-lifecycleViewmodelNavigation3"))
+    implementation(libs.findLibrary("androidx-material3AdaptiveNavigation3"))
 }

@@ -4,6 +4,8 @@ plugins {
     id("winter.android.application")
     id("winter.compose")
     id("winter.detekt")
+    id("winter.hilt")
+    alias(libs.plugins.kotlinSerialization)
 }
 
 android {
