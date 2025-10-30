@@ -1,5 +1,6 @@
 package dev.love.winter.dscatalog
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -9,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
+import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.catalog.button.ButtonRoute
 import dev.love.winter.dscatalog.home.HomeRoute
 
@@ -19,7 +21,9 @@ fun Navigation(
     val backStack = rememberNavBackStack(Catalog.Home.destination!!)
 
     Scaffold(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier
+            .background(color = WinterTheme.color.buttonCriticalActive)
+            .fillMaxSize(),
     ) { paddingValues ->
         NavDisplay(
             backStack = backStack,
@@ -28,6 +32,21 @@ fun Navigation(
                 backStack.removeLastOrNull()
             },
             entryProvider = entryProvider {
+                entry<ActionSheetScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<BorderRadiusScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<ButtonScreen> {
+                    ButtonRoute()
+                }
+                entry<ColorsScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<DividerScreen> {
+                    Text(text = "Unknown screen")
+                }
                 entry<HomeScreen> {
                     HomeRoute(
                         onNavigate = {
@@ -35,7 +54,7 @@ fun Navigation(
                         }
                     )
                 }
-                entry<ColorsScreen> {
+                entry<IconsScreen> {
                     Text(text = "Unknown screen")
                 }
                 entry<TypographyScreen> {
@@ -44,17 +63,8 @@ fun Navigation(
                 entry<SpacingScreen> {
                     Text(text = "Unknown screen")
                 }
-                entry<BorderRadiusScreen> {
+                entry<SliderScreen> {
                     Text(text = "Unknown screen")
-                }
-                entry<IconsScreen> {
-                    Text(text = "Unknown screen")
-                }
-                entry<ActionSheetScreen> {
-                    Text(text = "Unknown screen")
-                }
-                entry<ButtonScreen> {
-                    ButtonRoute()
                 }
             },
         )

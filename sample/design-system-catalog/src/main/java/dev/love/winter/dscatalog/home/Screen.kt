@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -73,8 +72,7 @@ private fun HomeScreen(
         Content(
             state = state,
             modifier = Modifier
-                .fillMaxSize()
-                .background(color = WinterTheme.color.background),
+                .fillMaxSize(),
             onClick = onClick,
         )
         BottomBar(
@@ -196,16 +194,14 @@ private fun Content(
 
 @Composable
 private fun SectionTitle(text: String) {
-    Surface(
-        modifier = Modifier.fillMaxWidth(),
-        color = WinterTheme.color.background,
-    ) {
-        Text(
-            text = text,
-            style = WinterTheme.typography.titleLarge,
-            color = WinterTheme.color.textTitle,
-        )
-    }
+    Text(
+        text = text,
+        style = WinterTheme.typography.titleLarge,
+        color = WinterTheme.color.textTitle,
+        modifier = Modifier
+            .background(color = WinterTheme.color.background)
+            .fillMaxWidth(),
+    )
 }
 
 @Composable

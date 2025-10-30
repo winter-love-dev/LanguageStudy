@@ -1,12 +1,14 @@
 package dev.love.winter.dscatalog.catalog.button
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -30,8 +32,13 @@ fun ButtonScreen(
     modifier: Modifier = Modifier,
 ) {
     Column(
-        modifier = modifier.verticalScroll(rememberScrollState()),
+        modifier = modifier
+            .padding(horizontal = WinterTheme.spacing.small)
+            .verticalScroll(rememberScrollState()),
     ) {
+        Spacer(
+            Modifier.height(WinterTheme.spacing.extraExtraLarge)
+        )
         listOf(
             ButtonType.Primary,
             ButtonType.Secondary,
@@ -53,10 +60,12 @@ fun ButtonScreen(
                     text = buttonShape.toString(),
                     style = WinterTheme.typography.titleSmall,
                     color = WinterTheme.color.textOnColorDark,
+                    modifier = Modifier.padding(
+                        top = WinterTheme.spacing.small,
+                    )
                 )
                 Row(
                     modifier = Modifier
-                        .background(color = WinterTheme.color.background)
                         .padding(
                             vertical = WinterTheme.spacing.extraSmall,
                             horizontal = WinterTheme.spacing.small,
@@ -86,6 +95,21 @@ fun ButtonScreen(
                     )
                 }
             }
+            Divider()
         }
+        Spacer(
+            Modifier.height(WinterTheme.spacing.extraExtraLarge)
+        )
     }
+}
+
+@Composable
+private fun Divider() {
+    HorizontalDivider(
+        color = WinterTheme.color.strokeNeutral,
+        modifier = Modifier.padding(
+            top = WinterTheme.spacing.large,
+            bottom = WinterTheme.spacing.medium,
+        )
+    )
 }
