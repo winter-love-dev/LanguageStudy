@@ -17,14 +17,14 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ViewModel @Inject constructor() : ViewModel() {
+    private val _uiState = MutableStateFlow(State.Default)
     val uiState: StateFlow<State> = _uiState.asStateFlow()
-    val sideEffect: SharedFlow<SideEffect> = _sideEffect.asSharedFlow()
 
-    private val _uiState get() = MutableStateFlow(State.Default)
-    private val _sideEffect get() = MutableSharedFlow<SideEffect>(
+    private val _sideEffect = MutableSharedFlow<SideEffect>(
         extraBufferCapacity = 1,
         onBufferOverflow = BufferOverflow.DROP_OLDEST,
     )
+    val sideEffect: SharedFlow<SideEffect> = _sideEffect.asSharedFlow()
 
     init {
         _uiState.update {

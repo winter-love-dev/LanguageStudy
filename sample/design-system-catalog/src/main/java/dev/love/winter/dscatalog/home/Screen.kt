@@ -17,6 +17,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation3.runtime.NavKey
 import dev.love.winter.designsystem.component.button.Button
 import dev.love.winter.designsystem.component.button.spec.ButtonIcon
@@ -41,6 +43,8 @@ fun HomeRoute(
     modifier: Modifier = Modifier,
     viewModel: ViewModel = hiltViewModel(),
 ) {
+    val state: State by viewModel.uiState.collectAsStateWithLifecycle()
+
     LaunchedEffect(viewModel.sideEffect) {
         viewModel.sideEffect.collectLatest { sideEffect ->
             when (sideEffect) {
@@ -51,6 +55,7 @@ fun HomeRoute(
         }
     }
     HomeScreen(
+        state = state,
         modifier = modifier,
         onClick = {
             viewModel.onEvent(Event.OnCatalogItemClick(it))
@@ -60,11 +65,13 @@ fun HomeRoute(
 
 @Composable
 private fun HomeScreen(
+    state: State,
     modifier: Modifier = Modifier,
     onClick: (item: Catalog) -> Unit = { },
 ) {
     Box(modifier) {
         Content(
+            state = state,
             modifier = Modifier
                 .fillMaxSize()
                 .background(color = WinterTheme.color.background),
@@ -80,6 +87,7 @@ private fun HomeScreen(
 
 @Composable
 private fun Content(
+    state: State,
     modifier: Modifier = Modifier,
     onClick: (item: Catalog) -> Unit,
 ) {
@@ -134,7 +142,7 @@ private fun Content(
             SectionTitle(text = "🎨  DESIGN TOKENS")
         }
         items(
-            items = Catalog.designTokenEntries,
+            items = state.designTokenEntries,
             key = { it.toString() },
         ) { item ->
             Button(
@@ -154,7 +162,7 @@ private fun Content(
             SectionTitle(text = "🧩  COMPONENTS")
         }
         items(
-            items = Catalog.componentEntries.chunked(2),
+            items = state.componentEntries.chunked(2),
             key = { it.first().toString() },
         ) { itemPair ->
             Row(
@@ -279,7 +287,9 @@ private fun createHighlightedText(
 @Composable
 private fun Preview() {
     WinterTheme {
-        HomeScreen()
+        HomeScreen(
+            state = State.Default,
+        )
     }
 }
 
@@ -287,6 +297,8 @@ private fun Preview() {
 @Composable
 private fun PreviewDark() {
     WinterTheme(darkTheme = true) {
-        HomeScreen()
+        HomeScreen(
+            state = State.Default,
+        )
     }
 }

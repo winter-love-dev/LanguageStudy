@@ -23,7 +23,9 @@ fun Navigation(
         NavDisplay(
             backStack = backStack,
             modifier = Modifier.padding(paddingValues),
-            onBack = { backStack.removeLastOrNull() },
+            onBack = {
+                backStack.removeLastOrNull()
+            },
             entryProvider = entryProvider {
                 entry<HomeScreen> {
                     HomeRoute(
@@ -45,6 +47,9 @@ fun Navigation(
                     Text(text = "Unknown screen")
                 }
                 entry<IconsScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<ActionSheetScreen> {
                     Text(text = "Unknown screen")
                 }
                 entry<ButtonScreen> {
