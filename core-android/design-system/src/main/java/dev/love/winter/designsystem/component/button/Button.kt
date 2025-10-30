@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
@@ -126,6 +127,8 @@ fun Button(
             text = label,
             style = shape.textStyle(),
             color = textColor,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
         )
         if (icon is ButtonIcon.Trailing) {
             Spacer(Modifier.width(WinterTheme.spacing.extraSmall))
