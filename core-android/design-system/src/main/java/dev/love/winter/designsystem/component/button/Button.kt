@@ -1,11 +1,9 @@
 package dev.love.winter.designsystem.component.button
 
 import android.content.res.Configuration
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
-import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,14 +15,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.tooling.preview.Preview
@@ -34,23 +31,19 @@ import dev.love.winter.designsystem.component.button.spec.ButtonIcon
 import dev.love.winter.designsystem.component.button.spec.ButtonShape
 import dev.love.winter.designsystem.component.button.spec.ButtonState
 import dev.love.winter.designsystem.component.button.spec.ButtonType
+import dev.love.winter.designsystem.interaction.PressableState
+import dev.love.winter.designsystem.interaction.pressable
+import dev.love.winter.designsystem.interaction.rememberPressedState
+import dev.love.winter.designsystem.interaction.updateScale
 import dev.love.winter.designsystem.theme.WinterTheme
 
-/**
- * Buttons communicate actions users can perform by tapping it.
- * They are typically placed where the user can take
- * any action throughout your UI – such as in Dialogs, Forms, Banners, Cards, etc.
- *
- * Use different types of buttons to reflect the hierarchy of actions.
- */
-
-private const val SCALE_DEFAULT = 1.0f
-private const val SCALE_PRESSED = 0.98f
+private const val PRESSED_SCALE = 0.95f
+private const val DURATION_ANIMATION = 100
 
 @Composable
 fun Button(
     label: String,
-    onClick: () -> Unit,
+    onPress: () -> Unit,
     modifier: Modifier = Modifier,
     icon: ButtonIcon? = null,
     type: ButtonType = ButtonType.Primary,
@@ -58,62 +51,65 @@ fun Button(
     shape: ButtonShape = ButtonShape.Medium,
     enabled: Boolean = true,
 ) {
-    val interactionSource = remember {
-        MutableInteractionSource()
+    val pressState: PressableState = rememberPressedState()
+
+    val currentState: ButtonState = if (enabled) {
+        state
+    } else {
+        ButtonState.Disabled
     }
-    val pressed: State<Boolean> = interactionSource.collectIsPressedAsState()
-    val effectiveEnabled: Boolean = enabled && state != ButtonState.Disabled
-    val pressEffect: Boolean =
-        (effectiveEnabled && pressed.value && state == ButtonState.Default) ||
-        state == ButtonState.Active
-    val scale: State<Float> = animateFloatAsState(
-        targetValue = if (pressEffect) {
-            SCALE_PRESSED
-        } else {
-            SCALE_DEFAULT
-        },
+
+    val buttonEnabled: Boolean =
+        enabled && currentState != ButtonState.Disabled
+
+    val pressedWhenDefaultState: Boolean =
+        (buttonEnabled && pressState.pressed && currentState == ButtonState.Default) ||
+        currentState == ButtonState.Active
+
+    val buttonColors: ButtonColors = if (pressedWhenDefaultState) {
+        type.colors(ButtonState.Active)
+    } else {
+        type.colors(currentState)
+    }
+
+    val containerColor by animateColorAsState(
+        targetValue = buttonColors.container,
+        animationSpec = tween(durationMillis = DURATION_ANIMATION),
+        label = "containerColor",
+    )
+    val textColor by animateColorAsState(
+        targetValue = buttonColors.content,
+        animationSpec = tween(durationMillis = DURATION_ANIMATION),
+        label = "textColor",
+    )
+    val iconColor by animateColorAsState(
+        targetValue = buttonColors.icon,
+        animationSpec = tween(durationMillis = DURATION_ANIMATION),
+        label = "iconColor",
     )
 
-    val currentState: ButtonState = if (effectiveEnabled && pressed.value) {
-        ButtonState.Active
-    } else {
-        state
-    }
-    val currentColors: ButtonColors = type.colors(currentState)
-
     Row(
-        modifier = (if (effectiveEnabled) {
-                modifier.scale(scale.value)
-            } else {
-                modifier
-            })
+        modifier = modifier
+            .updateScale(
+                pressed = pressedWhenDefaultState,
+                pressedScale = PRESSED_SCALE,
+            )
             .clip(shape.shape())
             .defaultMinSize(minHeight = shape.height)
-            .background(currentColors.container)
-            .semantics {
-                stateDescription = when (state) {
-                    ButtonState.Default -> {
-                        state.toString()
-                    }
-                    ButtonState.Active -> {
-                        state.toString()
-                    }
-                    ButtonState.Disabled -> {
-                        state.toString()
-                    }
-                }
-            }
-            .clickable(
-                role = Role.Button,
-                enabled = effectiveEnabled,
-                onClick = onClick,
-                interactionSource = interactionSource,
-                indication = null,
-            )
+            .background(containerColor)
             .padding(
                 vertical = shape.paddingVertical(),
                 horizontal = shape.paddingHorizontal(),
-            ),
+            )
+            .pressable(
+                enabled = buttonEnabled,
+                pressState = pressState,
+                onPress = onPress,
+            )
+            .semantics {
+                role = Role.Button
+                stateDescription = "$label button is $currentState"
+            },
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -122,14 +118,14 @@ fun Button(
                 painter = painterResource(icon.resource),
                 contentDescription = icon.contentDescription,
                 modifier = Modifier.size(shape.iconSize),
-                tint = currentColors.icon,
+                tint = iconColor,
             )
             Spacer(Modifier.width(WinterTheme.spacing.extraSmall))
         }
         Text(
             text = label,
             style = shape.textStyle(),
-            color = currentColors.content,
+            color = textColor,
         )
         if (icon is ButtonIcon.Trailing) {
             Spacer(Modifier.width(WinterTheme.spacing.extraSmall))
@@ -137,7 +133,7 @@ fun Button(
                 painter = painterResource(icon.resource),
                 contentDescription = icon.contentDescription,
                 modifier = Modifier.size(shape.iconSize),
-                tint = currentColors.icon,
+                tint = iconColor,
             )
         }
     }
@@ -163,12 +159,12 @@ private fun Preview() {
         ) {
             Button(
                 label = "Button",
-                onClick = {},
+                onPress = {},
                 shape = ButtonShape.Small,
             )
             Button(
                 label = "Button",
-                onClick = {},
+                onPress = {},
                 icon = ButtonIcon.Leading(
                     resource = WinterTheme.icon.input.plus.outlined,
                     contentDescription = "Settings",
@@ -176,7 +172,7 @@ private fun Preview() {
             )
             Button(
                 label = "Button",
-                onClick = {},
+                onPress = {},
                 shape = ButtonShape.Large,
                 icon = ButtonIcon.Trailing(
                     resource = WinterTheme.icon.input.plus.outlined,
@@ -237,21 +233,21 @@ private fun Catalog() {
                             type = buttonType,
                             state = ButtonState.Default,
                             shape = buttonShape,
-                            onClick = {},
+                            onPress = {},
                         )
                         Button(
                             label = "Active",
                             type = buttonType,
                             state = ButtonState.Active,
                             shape = buttonShape,
-                            onClick = {},
+                            onPress = {},
                         )
                         Button(
                             label = "Disabled",
                             type = buttonType,
                             state = ButtonState.Disabled,
                             shape = buttonShape,
-                            onClick = {},
+                            onPress = {},
                         )
                     }
                 }
