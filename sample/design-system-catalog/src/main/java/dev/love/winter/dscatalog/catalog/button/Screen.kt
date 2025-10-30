@@ -1,10 +1,11 @@
 package dev.love.winter.dscatalog.catalog.button
 
+import android.content.res.Configuration
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -12,6 +13,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import dev.love.winter.designsystem.component.button.Button
 import dev.love.winter.designsystem.component.button.spec.ButtonShape
 import dev.love.winter.designsystem.component.button.spec.ButtonState
@@ -33,12 +35,12 @@ fun ButtonScreen(
 ) {
     Column(
         modifier = modifier
-            .padding(horizontal = WinterTheme.spacing.small)
-            .verticalScroll(rememberScrollState()),
+            .verticalScroll(rememberScrollState())
+            .padding(
+                horizontal = WinterTheme.spacing.small,
+                vertical = WinterTheme.spacing.extraExtraLarge,
+            ),
     ) {
-        Spacer(
-            Modifier.height(WinterTheme.spacing.extraExtraLarge)
-        )
         listOf(
             ButtonType.Primary,
             ButtonType.Secondary,
@@ -49,7 +51,7 @@ fun ButtonScreen(
             Text(
                 text = buttonType.toString(),
                 style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textOnColorDark,
+                color = WinterTheme.color.textBody,
             )
             listOf(
                 ButtonShape.Small,
@@ -59,7 +61,7 @@ fun ButtonScreen(
                 Text(
                     text = buttonShape.toString(),
                     style = WinterTheme.typography.titleSmall,
-                    color = WinterTheme.color.textOnColorDark,
+                    color = WinterTheme.color.textBody,
                     modifier = Modifier.padding(
                         top = WinterTheme.spacing.small,
                     )
@@ -97,9 +99,6 @@ fun ButtonScreen(
             }
             Divider()
         }
-        Spacer(
-            Modifier.height(WinterTheme.spacing.extraExtraLarge)
-        )
     }
 }
 
@@ -112,4 +111,25 @@ private fun Divider() {
             bottom = WinterTheme.spacing.medium,
         )
     )
+}
+
+@Preview(
+    name = "Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    heightDp = 1800,
+)
+@Preview(
+    name = "Dark",
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    heightDp = 1800,
+)
+@Composable
+private fun Preview() {
+    WinterTheme {
+        Box(
+            Modifier.background(WinterTheme.color.background)
+        ) {
+            ButtonScreen()
+        }
+    }
 }
