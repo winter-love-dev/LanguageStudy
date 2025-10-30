@@ -81,7 +81,7 @@ private fun HomeScreen(
 @Composable
 private fun Content(
     modifier: Modifier = Modifier,
-    onClick: (item: Catalog) -> Unit = { },
+    onClick: (item: Catalog) -> Unit,
 ) {
     LazyColumn(
         modifier = modifier,
