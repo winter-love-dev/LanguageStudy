@@ -1,7 +1,7 @@
-package dev.love.winter.ls
+package dev.love.winter.dscatalog
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class Application : Application()
+class CatalogApplication : Application()
