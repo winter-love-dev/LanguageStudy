@@ -96,15 +96,15 @@ fun Button(
             )
             .clip(shape.shape())
             .defaultMinSize(minHeight = shape.height)
-            .background(containerColor)
-            .padding(
-                vertical = shape.paddingVertical(),
-                horizontal = shape.paddingHorizontal(),
-            )
             .pressable(
                 enabled = buttonEnabled,
                 pressState = pressState,
                 onPress = onPress,
+            )
+            .background(containerColor)
+            .padding(
+                vertical = shape.paddingVertical(),
+                horizontal = shape.paddingHorizontal(),
             )
             .semantics {
                 role = Role.Button

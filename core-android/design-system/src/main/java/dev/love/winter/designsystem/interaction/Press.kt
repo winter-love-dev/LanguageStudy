@@ -30,7 +30,7 @@ internal fun Modifier.pressable(
     pressState: PressableState,
     onPress: () -> Unit,
 ): Modifier {
-    return pointerInput(enabled) {
+    return pointerInput(enabled, onPress) {
         detectTapGestures(
             onPress = {
                 if (enabled) {
