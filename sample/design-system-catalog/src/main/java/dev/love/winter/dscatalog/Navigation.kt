@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
+import dev.love.winter.dscatalog.home.HomeRoute
 
 @Composable
 fun Navigation(
@@ -25,7 +26,11 @@ fun Navigation(
             onBack = { backStack.removeLastOrNull() },
             entryProvider = entryProvider {
                 entry<HomeScreen> {
-
+                    HomeRoute(
+                        onNavigate = {
+                            backStack.add(it)
+                        }
+                    )
                 }
                 entry<ColorsScreen> {
                     Text(text = "Unknown screen")
