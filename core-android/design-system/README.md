@@ -9,8 +9,8 @@ It establishes a consistent visual language across the app through systematicall
 
 - Define design tokens (colors, typography, spacing, etc.) as code following industry best practices
 - Compose and maintain app themes with support for light and dark modes
+- Provide interaction modifiers for consistent user feedback across components
 - Implement and maintain UI components built on top of design tokens
-- Provide foundation utilities for common design system needs
 
 # Design Tokens
 
@@ -57,20 +57,36 @@ design-system/
 │   ├── Typography.kt
 │   └── Icon.kt ...
 │
-├── foundation/           # Foundation utilities
-│   └── ModifierExtensions, Ripple 
+├── interaction/         # Interaction layer with components
+│   ├── Press.kt
+│   ├── Scale.kt
+│   └── Ripple.kt
 │
 └── component/           # UI components
     ├── Button.kt
     └── TextField.kt
 ```
 
-## Package Descriptions
+## Component Manufacturing Process
 
-- **tokens**: Raw design token values (colors, typography scales, spacing units)
-- **theme**: Aggregated theme objects accessible via `WinterTheme`
-- **foundation**: Core utilities and helpers for the design system
-- **component**: Reusable UI components built with design tokens
+### 1. tokens
+ - Define primitive values (colors, spacing, etc.)
 
-# Usage
+### 2. theme
+ - Compose tokens into semantic groups
+ - Provide unified access via WinterTheme
+
+### 3. interaction
+ - Interaction modifiers and utilities (press, scale, ripple effects)
+ - Depends on: Jetpack compose API
+
+### 4. component
+ - Reusable UI components built with tokens + theme + interaction
+
+## Key Principles
+
+1. **Unidirectional Dependency Flow**: Lower layers never depend on upper layers
+2. **Token-First Design**: All visual values originate from tokens
+3. **Composable Interactions**: Interaction behaviors are reusable across components
+4. **Theme Consistency**: All components consume theme, ensuring visual coherence
 
