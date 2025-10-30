@@ -1,0 +1,51 @@
+package dev.love.winter.dscatalog
+
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.navigation3.runtime.entryProvider
+import androidx.navigation3.runtime.rememberNavBackStack
+import androidx.navigation3.ui.NavDisplay
+
+@Composable
+fun Navigation(
+    modifier: Modifier = Modifier,
+) {
+    val backStack = rememberNavBackStack(Catalog.Home.destination!!)
+
+    Scaffold(
+        modifier = modifier.fillMaxSize(),
+    ) { paddingValues ->
+        NavDisplay(
+            backStack = backStack,
+            modifier = Modifier.padding(paddingValues),
+            onBack = { backStack.removeLastOrNull() },
+            entryProvider = entryProvider {
+                entry<HomeScreen> {
+
+                }
+                entry<ColorsScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<TypographyScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<SpacingScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<BorderRadiusScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<IconsScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<ButtonScreen> {
+                    Text(text = "Unknown screen")
+                }
+            },
+        )
+    }
+}
