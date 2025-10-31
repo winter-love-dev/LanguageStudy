@@ -12,6 +12,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 internal const val COMPILE_SDK = 36
 internal const val MIN_SDK = 23
 internal const val TARGET_SDK = 36
+internal const val JAVA_LANGUAGE_VERSION = 21
 internal val JAVA_VERSION = JavaVersion.VERSION_21
 internal val JVM_TARGET = JvmTarget.JVM_21
 
