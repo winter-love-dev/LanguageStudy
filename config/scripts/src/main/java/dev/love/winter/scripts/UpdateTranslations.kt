@@ -204,12 +204,26 @@ fun parseTranslationData(data: List<List<Any>>): TranslationData {
     )
 }
 
+fun convertToAndroidResourceQualifier(languageCode: String): String {
+    val parts = languageCode.split("-")
+    return when (parts.size) {
+        1 -> parts[0].lowercase()
+        2 -> {
+            val language = parts[0].lowercase()
+            val region = parts[1].uppercase()
+            "$language-r$region"
+        }
+        else -> languageCode.lowercase()
+    }
+}
+
 fun saveTranslationsAsXml(data: TranslationData, appModulePath: String) {
     data.languages.forEach { language ->
+        val androidLanguageCode = convertToAndroidResourceQualifier(language)
         val valuesDir = if (language == "en") {
             File(appModulePath, "src/main/res/values")
         } else {
-            File(appModulePath, "src/main/res/values-$language")
+            File(appModulePath, "src/main/res/values-$androidLanguageCode")
         }
 
         valuesDir.mkdirs()
