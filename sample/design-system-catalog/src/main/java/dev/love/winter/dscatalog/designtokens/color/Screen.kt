@@ -46,7 +46,7 @@ fun ColorRoute(
 }
 
 @Composable
-fun ColorScreen(
+private fun ColorScreen(
     modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
@@ -162,7 +162,7 @@ fun ColorScreen(
 }
 
 @Composable
-fun SectionHeader(
+private fun SectionHeader(
     subTitle: String,
     title: String = "",
     modifier: Modifier = Modifier,
@@ -201,7 +201,7 @@ private fun Divider(
 }
 
 @Composable
-fun ColorList(
+private fun ColorList(
     subTitle: String,
     title: String = "",
     colorTokens: List<ColorToken>,
@@ -250,7 +250,7 @@ fun ColorList(
 }
 
 @Composable
-fun Item(
+private fun Item(
     colorToken: ColorToken,
     modifier: Modifier = Modifier,
 ) {
