@@ -58,11 +58,11 @@ private fun Screen(
             bottom = WinterTheme.spacing.extraExtraLarge,
         ),
     ) {
-        stickyHeader(key = "display-header") {
+        item(key = "display-header") {
             SectionHeader(
                 title = "Display",
                 description = DESC_HEADER_DISPLAY,
-                modifier = Modifier.background(color = WinterTheme.color.background),
+                modifier = Modifier.padding(top = WinterTheme.spacing.extraExtraLarge),
             )
         }
         items(
@@ -72,11 +72,10 @@ private fun Screen(
             TypographyItem(data = item)
         }
 
-        stickyHeader(key = "title-header") {
+        item(key = "title-header") {
             SectionHeader(
                 title = "Title",
                 description = DESC_HEADER_TITLE,
-                modifier = Modifier.background(color = WinterTheme.color.background),
             )
         }
         items(
@@ -86,11 +85,10 @@ private fun Screen(
             TypographyItem(data = item)
         }
 
-        stickyHeader(key = "body-header") {
+        item(key = "body-header") {
             SectionHeader(
                 title = "Body",
                 description = DESC_HEADER_BODY,
-                modifier = Modifier.background(color = WinterTheme.color.background),
             )
         }
         items(
@@ -100,11 +98,10 @@ private fun Screen(
             TypographyItem(data = item)
         }
 
-        stickyHeader(key = "action-header") {
+        item(key = "action-header") {
             SectionHeader(
                 title = "Action",
                 description = DESC_HEADER_ACTION,
-                modifier = Modifier.background(color = WinterTheme.color.background),
             )
         }
         items(
@@ -114,11 +111,10 @@ private fun Screen(
             TypographyItem(data = item)
         }
 
-        stickyHeader(key = "caption-header") {
+        item(key = "caption-header") {
             SectionHeader(
                 title = "Caption",
                 description = DESC_HEADER_CAPTION,
-                modifier = Modifier.background(color = WinterTheme.color.background),
             )
         }
         items(
