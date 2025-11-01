@@ -222,7 +222,10 @@ private fun BottomBar(
     ) {
         Text(
             text = createHighlightedText(
-                text = "Designed & Developed by Winter© 2025 All rights reserved.",
+                text = """
+                    Designed & Developed by Winter
+                    © 2025 All rights reserved.
+                """.trimIndent(),
                 highlightWord = "Winter",
                 highlightColor = WinterTheme.color.textBrand,
                 baseStyle = WinterTheme.typography.bodySmall,
