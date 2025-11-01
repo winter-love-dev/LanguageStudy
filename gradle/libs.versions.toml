@@ -24,6 +24,8 @@ kotlin = "2.2.20"
 ksp = "2.2.20-2.0.4"
 # https://github.com/Kotlin/kotlinx.coroutines
 kotlin-coroutine = "1.10.2"
+# https://github.com/Kotlin/kotlinx.collections.immutable
+kotlin-immutable = "0.4.0"
 # https://github.com/google/dagger/releases
 dagger = "2.57.2"
 # https://github.com/junit-team/junit-framework/
@@ -85,6 +87,8 @@ kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", versio
 kotlin-coroutineCore = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutine" }
 kotlin-coroutineAndroid = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlin-coroutine" }
 kotlin-coroutineTest = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlin-coroutine" }
+kotlin-immutable = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version.ref = "kotlin-immutable" }
+
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 detekt-formatting = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }

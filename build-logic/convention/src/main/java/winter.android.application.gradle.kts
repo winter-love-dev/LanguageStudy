@@ -19,6 +19,7 @@ configureKotlin()
 dependencies {
     implementation(libs.findLibrary("androidX-coreKtx"))
     implementation(libs.findLibrary("androidX-activityKtx"))
+    implementation(libs.findLibrary("kotlin-immutable"))
 //    "testImplementation"(libs.findLibrary("androidX-testJunit").get())
 //    "androidTestImplementation"(libs.findLibrary("androidX-testEspresso").get())
 }
