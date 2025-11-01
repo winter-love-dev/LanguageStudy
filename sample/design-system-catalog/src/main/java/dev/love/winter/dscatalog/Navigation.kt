@@ -12,6 +12,7 @@ import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.ui.NavDisplay
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.catalog.button.ButtonRoute
+import dev.love.winter.dscatalog.designtokens.color.ColorRoute
 import dev.love.winter.dscatalog.home.HomeRoute
 
 @Composable
@@ -42,7 +43,7 @@ fun Navigation(
                     ButtonRoute()
                 }
                 entry<ColorsScreen> {
-                    Text(text = "Unknown screen")
+                    ColorRoute()
                 }
                 entry<DividerScreen> {
                     Text(text = "Unknown screen")
