@@ -250,7 +250,6 @@ data class Colors(
     val tagNegative: Color,
 )
 
-
 internal val MaterialLightColorTheme = lightColorScheme(
     primary = Primary500,
     onPrimary = Color.White,

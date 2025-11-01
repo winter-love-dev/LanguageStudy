@@ -12,12 +12,12 @@ import dev.love.winter.designsystem.tokens.BorderRadiusSmall
 
 @Immutable
 data class BorderRadius(
-    val extraSmall: Shape,
-    val small: Shape,
-    val medium: Shape,
-    val large: Shape,
-    val extraLarge: Shape,
-    val pill: Shape,
+    val extraSmall: Shape, // 2
+    val small: Shape, // 4
+    val medium: Shape, // 8
+    val large: Shape, // 16
+    val extraLarge: Shape, // 24
+    val pill: Shape, // CircleShape
 )
 
 internal val BorderRadiusTheme = BorderRadius(

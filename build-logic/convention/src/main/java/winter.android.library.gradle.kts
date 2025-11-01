@@ -1,5 +1,7 @@
 import dev.love.winter.convention.configureAndroid
 import dev.love.winter.convention.configureKotlin
+import dev.love.winter.convention.extension.implementation
+import dev.love.winter.convention.extension.libs
 
 plugins {
     id("com.android.library")
@@ -10,3 +12,7 @@ plugins {
 
 configureAndroid()
 configureKotlin()
+
+dependencies {
+    implementation(libs.findLibrary("kotlin-immutable"))
+}
