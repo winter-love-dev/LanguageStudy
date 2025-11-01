@@ -69,9 +69,7 @@ fun Navigation(
                 ) {
                     BorderRadiusRoute()
                 }
-                entry<ColorsScreen>(
-
-                ) {
+                entry<ColorsScreen> {
                     ColorRoute()
                 }
                 entry<IconsScreen> {
