@@ -40,13 +40,13 @@ import dev.love.winter.designsystem.theme.WinterTheme
 fun ColorRoute(
     modifier: Modifier = Modifier,
 ) {
-    ColorScreen(
+    Screen(
         modifier = modifier,
     )
 }
 
 @Composable
-private fun ColorScreen(
+private fun Screen(
     modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
@@ -363,7 +363,7 @@ fun ItemPreview() {
 @Composable
 fun ScreenPreview() {
     WinterTheme {
-        ColorScreen()
+        Screen()
     }
 }
 
