@@ -16,3 +16,21 @@ dependencies {
     implementation("com.google.http-client:google-http-client-jackson2:2.0.2")
 }
 
+/**
+ * ./gradlew :config:scripts:updateTranslations -Pargs="example"
+ * ./gradlew :config:scripts:updateTranslations -Pargs="sample-app"
+ * ./gradlew :config:scripts:updateTranslations -Pargs="app"
+ */
+tasks.register<JavaExec>("updateTranslations") {
+    group = "translation"
+    description = "Update translations from Google Sheets to Android strings.xml"
+    mainClass.set("dev.love.winter.scripts.UpdateTranslationsKt")
+    classpath = sourceSets["main"].runtimeClasspath
+    workingDir = rootProject.projectDir
+
+    // Pass command line arguments to the script
+    val argsProperty = providers.gradleProperty("args")
+    if (argsProperty.isPresent) {
+        args(argsProperty.get().split(" "))
+    }
+}
