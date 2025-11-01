@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application name -->
+    <string name="app_name">LanguageStudy</string>
+    <!-- Design System text -->
+    <string name="design_system">Design System</string>
+    <!-- Welcome message -->
+    <string name="welcome_message">A comprehensive catalog of components and styles</string>
+    <!-- Design tokens -->
+    <string name="design_tokens">Design tokens</string>
+    <!-- Design token -->
+    <string name="design_token">Design token</string>
+    <!-- Component -->
+    <string name="component">Component</string>
+    <!-- Components -->
+    <string name="components">Components</string>
+    <string name="winter">Winter</string>
+    <string name="made_by">Designed &amp; Development by Winter</string>
+    <string name="copyright">\@ 2025 All rights reserved.</string>
+    <string name="option">Option</string>
+    <string name="color_system">Color System</string>
+    <string name="display">Display</string>
+    <string name="display_description">Use the display font style for large headings or prominent text that requires emphasis. Display is ideal for grabbing the user\'s attention and making a bold statement. Avoid using this style for long texts.</string>
+    <string name="title">Title</string>
+    <string name="title_description">Use the title font style when you need a clear visual hierarchy without overwhelming the layout. You can apply this style in short texts that need to stand out when compared to body text, like section titles, card titles, page titles, etc.</string>
+    <string name="body">Body</string>
+    <string name="body_description">The body font style is ideal for regular text content, such as paragraphs, or descriptions. The body styles are suitable both for long and short text, where readability and legibility are essential.</string>
+    <string name="action">Action</string>
+    <string name="action_description">The action font style is suitable for text elements that represent interactive or actionable items, such as buttons, input, and links. Use it to distinguish interactive elements from regular text.</string>
+    <string name="caption">Caption</string>
+    <string name="caption_description">The caption font style is used for supporting text that provides context and complements visual elements, like icons, images, tags, etc. Avoid using this style in long texts.</string>
+    <string name="spacing">Spacing</string>
+    <string name="spacing_description">Spacing tokens guarantee consistent spacing and alignment between elements while providing better readability, clarity, and balance.</string>
+    <string name="usage">Usage</string>
+    <string name="usage_description_1">Use the spacing tokens to organize the content under the correct hierarchy.\n\nIt\'s important to group related elements to increase readability.\n\nFor related items, use smaller spacing values. While between unrelated items, it\'s better to increase the spacing.</string>
+    <string name="usage_description_2">When stacking components</string>
+    <string name="border_radius">Border radius</string>
+    <string name="border_radius_description">Border radius tokens are applied to elements with rounded corners, such as buttons, cards, input fields, and containers, to soften their edges and create a more pleasing appearance.</string>
+    <string name="tokens">Tokens</string>
+    <string name="extra_small">Extra Small</string>
+    <string name="extra_small_description">Use Extra small for very subtle rounded corners.</string>
+    <string name="small">Small</string>
+    <string name="small_description">Use Small for the smallest elements or nested components.</string>
+    <string name="medium">Medium</string>
+    <string name="medium_description">The Medium variation is used in most components. Use it in small-to-medium components and containers.</string>
+    <string name="large">Large</string>
+    <string name="large_description">Use Large for medium-to-large components and containers.</string>
+    <string name="extra_large">Extra Large</string>
+    <string name="extra_large_description">Use Extra Large for the biggest elements, especially on tablet screens.</string>
+    <string name="pill">Pill</string>
+    <string name="pill_description">Use Pill for the components that are completely rounded on their sides.</string>
+    <string name="icons">Icons</string>
+    <string name="icons_description">Icons are graphic assets that improve usability by providing extra meaning to actions and components, making them more visually appealing and easier to understand.</string>
+    <string name="creating_an_icon">Creating an icon</string>
+    <string name="creating_an_icon_description">When creating new icons, start with a base of 24px and draw the icon using a 1.5px stroke. Use the Icon grid (represented below) to help you design consistent icons.</string>
+</resources>
