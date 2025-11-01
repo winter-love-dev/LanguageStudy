@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -33,6 +32,7 @@ import androidx.navigation3.runtime.NavKey
 import dev.love.winter.designsystem.component.button.Button
 import dev.love.winter.designsystem.component.button.spec.ButtonIcon
 import dev.love.winter.designsystem.component.button.spec.ButtonShape
+import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.Catalog
 import kotlinx.coroutines.flow.collectLatest
@@ -222,7 +222,7 @@ private fun BottomBar(
     ) {
         Text(
             text = createHighlightedText(
-                text = "Designed & Developed by Winter\n© 2025 All rights reserved.",
+                text = "Designed & Developed by Winter© 2025 All rights reserved.",
                 highlightWord = "Winter",
                 highlightColor = WinterTheme.color.textBrand,
                 baseStyle = WinterTheme.typography.bodySmall,

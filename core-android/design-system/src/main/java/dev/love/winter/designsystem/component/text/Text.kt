@@ -1,6 +1,5 @@
 package dev.love.winter.designsystem.component.text
 
-import androidx.compose.material3.Text as MaterialText
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -16,6 +15,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import dev.love.winter.designsystem.theme.WinterTheme
 import java.util.Locale
+import androidx.compose.material3.Text as MaterialText
 
 @Composable
 fun Text(

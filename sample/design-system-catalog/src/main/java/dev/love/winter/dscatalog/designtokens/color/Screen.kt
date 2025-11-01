@@ -19,7 +19,6 @@ import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -34,6 +33,7 @@ import dev.love.winter.designsystem.api.greenColorTokens
 import dev.love.winter.designsystem.api.neutralColorTokens
 import dev.love.winter.designsystem.api.redColorTokens
 import dev.love.winter.designsystem.api.yellowColorTokens
+import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import kotlinx.collections.immutable.ImmutableList
 
@@ -65,7 +65,6 @@ private fun Screen(
             Text(
                 text = "Color System",
                 style = WinterTheme.typography.displayMedium,
-                color = WinterTheme.color.textBody,
             )
         }
 
@@ -165,21 +164,19 @@ private fun Screen(
 @Composable
 private fun SectionHeader(
     subTitle: String,
-    title: String = "",
     modifier: Modifier = Modifier,
+    title: String = "",
 ) {
     Column(modifier) {
         if (title.isNotBlank()) {
             Text(
                 text = title,
                 style = WinterTheme.typography.displaySmall,
-                color = WinterTheme.color.textBody,
             )
         }
         Text(
             text = subTitle,
             style = WinterTheme.typography.titleMedium,
-            color = WinterTheme.color.textBody,
             modifier = Modifier.padding(
                 top = if (title.isNotBlank()) WinterTheme.spacing.small else 0.dp,
             ),
@@ -207,21 +204,17 @@ private fun ColorList(
     colorTokens: ImmutableList<ColorToken>,
     modifier: Modifier = Modifier,
     title: String = "",
-    colorTokens: List<ColorToken>,
-    modifier: Modifier = Modifier,
 ) {
     Column(modifier) {
         if (title.isNotBlank()) {
             Text(
                 text = title,
                 style = WinterTheme.typography.displaySmall,
-                color = WinterTheme.color.textBody,
             )
         }
         Text(
             text = subTitle,
             style = WinterTheme.typography.titleMedium,
-            color = WinterTheme.color.textBody,
             modifier = Modifier.padding(
                 top = WinterTheme.spacing.small,
             )
@@ -263,7 +256,7 @@ private fun Item(
     val rgbString = remember(colorToken.color) {
         colorToken.color.toRgbString()
     }
-    Column (
+    Column(
         modifier = modifier
             .border(
                 border = BorderStroke(
@@ -288,8 +281,6 @@ private fun Item(
         ) {
             Text(
                 text = colorToken.name,
-                style = WinterTheme.typography.bodyMedium,
-                color = WinterTheme.color.textBody,
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(WinterTheme.color.tagNeutral)

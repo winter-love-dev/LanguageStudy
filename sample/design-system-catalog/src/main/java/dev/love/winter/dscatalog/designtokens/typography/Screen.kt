@@ -11,14 +11,33 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
-import dev.love.winter.designsystem.component.text.CaptionText
+import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
+
+private const val DESC_HEADER_DISPLAY =
+    "Use the display font style for large headings or prominent text that requires emphasis. " +
+            "Display is ideal for grabbing the user's attention and making a bold statement. Avoid using this style for long texts."
+
+private const val DESC_HEADER_TITLE =
+    "Use the title font style when you need a clear visual hierarchy without overwhelming the layout. " +
+            "You can apply this style in short texts that need to stand out when compared to body text, like section titles, card titles, page titles, etc."
+
+private const val DESC_HEADER_BODY =
+    "The body font style is ideal for regular text content, such as paragraphs, or descriptions. " +
+            "The body styles are suitable both for long and short text, where readability and legibility are essential."
+
+private const val DESC_HEADER_ACTION =
+    "The action font style is suitable for text elements that represent interactive or actionable items, such as buttons, input, and links. " +
+            "Use it to distinguish interactive elements from regular text."
+
+private const val DESC_HEADER_CAPTION =
+    "The caption font style is used for supporting text that provides context and complements visual elements, " +
+            "like icons, images, tags, etc. Avoid using this style in long texts."
 
 @Composable
 fun TypographyRoute(
@@ -38,7 +57,7 @@ private fun Screen(
             add(
                 TypographyListItem.Header(
                     title = "Display",
-                    description = "Use the display font style for large headings or prominent text that requires emphasis. Display is ideal for grabbing the user's attention and making a bold statement. Avoid using this style for long texts.",
+                    description = DESC_HEADER_DISPLAY,
                 )
             )
             typographyItems.forEach {
@@ -47,7 +66,7 @@ private fun Screen(
             add(
                 TypographyListItem.Header(
                     title = "Title",
-                    description = "Use the title font style when you need a clear visual hierarchy without overwhelming the layout. You can apply this style in short texts that need to stand out when compared to body text, like section titles, card titles, page titles, etc.",
+                    description = DESC_HEADER_TITLE,
                 )
             )
             typographyTitleItems.forEach {
@@ -56,7 +75,7 @@ private fun Screen(
             add(
                 TypographyListItem.Header(
                     title = "Body",
-                    description = "The body font style is ideal for regular text content, such as paragraphs, or descriptions. The body styles are suitable both for long and short text, where readability and legibility are essential.",
+                    description = DESC_HEADER_BODY,
                 )
             )
             typographyBodyItems.forEach {
@@ -65,7 +84,7 @@ private fun Screen(
             add(
                 TypographyListItem.Header(
                     title = "Action",
-                    description = "The action font style is suitable for text elements that represent interactive or actionable items, such as buttons, input, and links. Use it to distinguish interactive elements from regular text.",
+                    description = DESC_HEADER_ACTION,
                 )
             )
             typographyActionItems.forEach {
@@ -74,7 +93,7 @@ private fun Screen(
             add(
                 TypographyListItem.Header(
                     title = "Caption",
-                    description = "The caption font style is used for supporting text that provides context and complements visual elements, like icons, images, tags, etc. Avoid using this style in long texts.",
+                    description = DESC_HEADER_CAPTION,
                 )
             )
             typographyCaptionItems.forEach {
@@ -135,7 +154,6 @@ private fun TypographyItem(
         Text(
             text = "Tokens",
             style = WinterTheme.typography.displaySmall,
-            color = WinterTheme.color.textBody,
             modifier = Modifier
                 .padding(top = WinterTheme.spacing.extraLarge)
                 .fillMaxWidth()
@@ -147,8 +165,6 @@ private fun TypographyItem(
         )
         Text(
             text = data.tokenName,
-            style = WinterTheme.typography.bodyMedium,
-            color = WinterTheme.color.textBody,
             modifier = Modifier
                 .padding(all = WinterTheme.spacing.medium)
                 .clip(CircleShape)
@@ -161,7 +177,6 @@ private fun TypographyItem(
         Text(
             text = "Specs",
             style = WinterTheme.typography.displaySmall,
-            color = WinterTheme.color.textBody,
             modifier = Modifier
                 .fillMaxWidth()
                 .background(color = WinterTheme.color.backgroundContainer)
@@ -200,7 +215,6 @@ private fun TypographyItem(
         Text(
             text = "Example",
             style = WinterTheme.typography.displaySmall,
-            color = WinterTheme.color.textBody,
             modifier = Modifier
                 .fillMaxWidth()
                 .background(color = WinterTheme.color.backgroundContainer)
@@ -209,29 +223,19 @@ private fun TypographyItem(
                     horizontal = WinterTheme.spacing.medium,
                 ),
         )
-        if (isCaption) {
-            CaptionText(
-                text = "Lorem ipsum dolor sit amet",
-                style = textStyle,
-                color = WinterTheme.color.textBody,
-                modifier = Modifier
-                    .padding(
-                        vertical = WinterTheme.spacing.small,
-                        horizontal = WinterTheme.spacing.extraExtraLarge,
-                    ),
-            )
-        } else {
-            Text(
-                text = "Lorem ipsum dolor sit amet",
-                style = textStyle,
-                color = WinterTheme.color.textBody,
-                modifier = Modifier
-                    .padding(
-                        vertical = WinterTheme.spacing.small,
-                        horizontal = WinterTheme.spacing.extraLarge,
-                    ),
-            )
-        }
+        Text(
+            text = "Lorem ipsum dolor sit amet",
+            style = textStyle,
+            modifier = Modifier
+                .padding(
+                    vertical = WinterTheme.spacing.small,
+                    horizontal = if (isCaption) {
+                        WinterTheme.spacing.extraExtraLarge
+                    } else {
+                        WinterTheme.spacing.extraLarge
+                    },
+                ),
+        )
     }
 }
 
@@ -242,7 +246,7 @@ private fun SectionHeader(
     modifier: Modifier = Modifier,
 ) {
     Column(modifier) {
-        CaptionText(
+        Text(
             text = "Typography",
             style = WinterTheme.typography.captionMedium,
             color = WinterTheme.color.textCaption,
@@ -252,7 +256,6 @@ private fun SectionHeader(
                     top = WinterTheme.spacing.extraExtraLarge,
                     bottom = WinterTheme.spacing.small,
                 )
-                .padding(top = WinterTheme.spacing.extraExtraLarge)
         )
         Text(
             text = title,
@@ -263,7 +266,6 @@ private fun SectionHeader(
         )
         Text(
             text = description,
-            style = WinterTheme.typography.bodyMedium,
             color = WinterTheme.color.textCaption,
             modifier = Modifier.padding(
                 vertical = WinterTheme.spacing.small,
@@ -285,8 +287,6 @@ private fun SpecItem(
     ) {
         Text(
             text = leadingLabel,
-            style = WinterTheme.typography.bodyMedium,
-            color = WinterTheme.color.textBody,
             modifier = Modifier
                 .weight(1f)
                 .padding(
@@ -296,8 +296,6 @@ private fun SpecItem(
         )
         Text(
             text = trailingLabel,
-            style = WinterTheme.typography.bodyMedium,
-            color = WinterTheme.color.textBody,
             modifier = Modifier
                 .padding(
                     vertical = WinterTheme.spacing.small,

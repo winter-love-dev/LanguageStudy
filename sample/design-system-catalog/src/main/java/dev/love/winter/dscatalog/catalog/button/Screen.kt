@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -21,6 +20,7 @@ import dev.love.winter.designsystem.component.button.spec.ButtonIcon
 import dev.love.winter.designsystem.component.button.spec.ButtonShape
 import dev.love.winter.designsystem.component.button.spec.ButtonState
 import dev.love.winter.designsystem.component.button.spec.ButtonType
+import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
@@ -65,7 +65,6 @@ fun TopSection(
         Text(
             text = "Summary",
             style = WinterTheme.typography.titleLarge,
-            color = WinterTheme.color.textBody,
         )
         Row(
             Modifier
@@ -129,14 +128,12 @@ private fun BottomSection(
 private fun ButtonTypeSection(
     buttonTypes: ImmutableList<ButtonType>,
     modifier: Modifier = Modifier,
-    buttonTypes: List<ButtonType>,
 ) {
     Column(modifier = modifier) {
         buttonTypes.forEach { buttonType ->
             Text(
                 text = buttonType.toString(),
                 style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textBody,
             )
             listOf(
                 ButtonShape.Small,
@@ -146,7 +143,6 @@ private fun ButtonTypeSection(
                 Text(
                     text = buttonShape.toString(),
                     style = WinterTheme.typography.titleSmall,
-                    color = WinterTheme.color.textBody,
                     modifier = Modifier.padding(
                         top = WinterTheme.spacing.small,
                     )
@@ -182,7 +178,6 @@ private fun ButtonTypeSection(
                 Text(
                     text = "$buttonShape - with image",
                     style = WinterTheme.typography.titleSmall,
-                    color = WinterTheme.color.textBody,
                     modifier = Modifier.padding(
                         top = WinterTheme.spacing.small,
                     )
@@ -284,4 +279,3 @@ private fun Preview2() {
         }
     }
 }
-
