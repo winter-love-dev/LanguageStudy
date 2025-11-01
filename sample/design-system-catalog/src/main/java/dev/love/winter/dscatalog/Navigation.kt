@@ -13,6 +13,7 @@ import androidx.navigation3.ui.NavDisplay
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.catalog.button.ButtonRoute
 import dev.love.winter.dscatalog.designtokens.color.ColorRoute
+import dev.love.winter.dscatalog.designtokens.typography.TypographyRoute
 import dev.love.winter.dscatalog.home.HomeRoute
 
 @Composable
@@ -33,17 +34,32 @@ fun Navigation(
                 backStack.removeLastOrNull()
             },
             entryProvider = entryProvider {
-                entry<ActionSheetScreen> {
+                /**
+                 * Design Tokens
+                 */
+                entry<BorderRadiusScreen> {
                     Text(text = "Unknown screen")
                 }
-                entry<BorderRadiusScreen> {
+                entry<ColorsScreen> {
+                    ColorRoute()
+                }
+                entry<IconsScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<SpacingScreen> {
+                    Text(text = "Unknown screen")
+                }
+                entry<TypographyScreen> {
+                    TypographyRoute()
+                }
+                /**
+                 * Components
+                 */
+                entry<ActionSheetScreen> {
                     Text(text = "Unknown screen")
                 }
                 entry<ButtonScreen> {
                     ButtonRoute()
-                }
-                entry<ColorsScreen> {
-                    ColorRoute()
                 }
                 entry<DividerScreen> {
                     Text(text = "Unknown screen")
@@ -54,15 +70,6 @@ fun Navigation(
                             backStack.add(it)
                         }
                     )
-                }
-                entry<IconsScreen> {
-                    Text(text = "Unknown screen")
-                }
-                entry<TypographyScreen> {
-                    Text(text = "Unknown screen")
-                }
-                entry<SpacingScreen> {
-                    Text(text = "Unknown screen")
                 }
                 entry<SliderScreen> {
                     Text(text = "Unknown screen")
