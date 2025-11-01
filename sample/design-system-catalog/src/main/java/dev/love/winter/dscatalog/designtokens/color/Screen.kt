@@ -344,10 +344,12 @@ private fun Color.toRgbString(): String {
 )
 @Composable
 fun ItemPreview() {
-    Item(
-        colorToken = brandColorTokens.first(),
-        modifier = Modifier.width(168.dp),
-    )
+    WinterTheme {
+        Item(
+            colorToken = brandColorTokens.first(),
+            modifier = Modifier.width(168.dp),
+        )
+    }
 }
 
 @Preview(
