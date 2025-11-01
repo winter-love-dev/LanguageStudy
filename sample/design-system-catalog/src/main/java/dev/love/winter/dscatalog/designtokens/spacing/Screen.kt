@@ -41,7 +41,7 @@ fun SpacingRoute(
 }
 
 @Composable
-fun Screen(
+private fun Screen(
     modifier: Modifier = Modifier,
 ) {
     LazyColumn(
@@ -254,7 +254,7 @@ fun Screen(
 }
 
 @Composable
-fun SpecItem(
+private fun SpecItem(
     token: String,
     px: String,
     exampleSize: Dp,
@@ -307,7 +307,7 @@ fun SpecItem(
 }
 
 @Composable
-fun SpacingExample(
+private fun SpacingExample(
     spacing: Dp,
     modifier: Modifier = Modifier,
 ) {
