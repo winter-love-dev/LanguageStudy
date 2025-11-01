@@ -65,6 +65,7 @@ private fun Screen(
             Text(
                 text = "Color System",
                 style = WinterTheme.typography.displayMedium,
+                modifier = Modifier.padding(top = WinterTheme.spacing.extraExtraLarge),
             )
         }
 
