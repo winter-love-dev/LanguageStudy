@@ -174,8 +174,7 @@ private fun Screen(
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.extraExtraLarge)
-                ,
+                    .padding(top = WinterTheme.spacing.extraExtraLarge),
             )
         }
 

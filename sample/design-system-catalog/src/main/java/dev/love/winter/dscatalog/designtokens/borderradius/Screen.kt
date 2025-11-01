@@ -1,18 +1,19 @@
 package dev.love.winter.dscatalog.designtokens.borderradius
 
 import android.content.res.Configuration
+import androidx.annotation.DrawableRes
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
@@ -44,6 +45,7 @@ fun BorderRadiusRoute(
 fun Screen(
     modifier: Modifier = Modifier,
 ) {
+    val specInfoItems = rememberSpecInfoItems()
     LazyColumn(
         modifier = modifier
             .background(color = WinterTheme.color.background),
@@ -100,68 +102,47 @@ fun Screen(
             )
         }
 
-        item(key = "Specs") {
-            Column {
-                Row(
-                    modifier = Modifier
-                        .padding(
-                            top = WinterTheme.spacing.small,
-                        )
-                        .fillMaxWidth()
-                        .background(color = WinterTheme.color.backgroundContainer)
-                        .padding(
-                            vertical = WinterTheme.spacing.small,
-                            horizontal = WinterTheme.spacing.medium,
-                        )
-                ) {
-                    Text(
-                        text = "Token",
-                        style = WinterTheme.typography.displaySmall,
-                        modifier = Modifier.weight(ASPECT_COLUMN_RATIO_TOKEN),
+        item(key = "Specs header") {
+            Row(
+                modifier = Modifier
+                    .padding(
+                        top = WinterTheme.spacing.small,
                     )
-                    Text(
-                        text = "px",
-                        style = WinterTheme.typography.displaySmall,
-                        modifier = Modifier.weight(ASPECT_COLUMN_RATIO_PX),
+                    .fillMaxWidth()
+                    .background(color = WinterTheme.color.backgroundContainer)
+                    .padding(
+                        vertical = WinterTheme.spacing.small,
+                        horizontal = WinterTheme.spacing.medium,
                     )
-                    Text(
-                        text = "Example",
-                        style = WinterTheme.typography.displaySmall,
-                        modifier = Modifier.weight(ASPECT_COLUMN_RATIO_EXAMPLE),
-                    )
-                }
-                SpecItem(
-                    token = "border-radius-XS",
-                    px = "2",
-                    exampleRadius = WinterTheme.borderRadius.extraSmall,
+            ) {
+                Text(
+                    text = "Token",
+                    style = WinterTheme.typography.displaySmall,
+                    modifier = Modifier.weight(ASPECT_COLUMN_RATIO_TOKEN),
                 )
-                SpecItem(
-                    token = "border-radius-SM",
-                    px = "4",
-                    exampleRadius = WinterTheme.borderRadius.small,
+                Text(
+                    text = "px",
+                    style = WinterTheme.typography.displaySmall,
+                    modifier = Modifier.weight(ASPECT_COLUMN_RATIO_PX),
                 )
-                SpecItem(
-                    token = "border-radius-MD",
-                    px = "8",
-                    exampleRadius = WinterTheme.borderRadius.medium,
-                )
-                SpecItem(
-                    token = "border-radius-LG",
-                    px = "16",
-                    exampleRadius = WinterTheme.borderRadius.large,
-                )
-                SpecItem(
-                    token = "border-radius-XL",
-                    px = "24",
-                    exampleRadius = WinterTheme.borderRadius.extraLarge,
-                )
-                SpecItem(
-                    token = "border-radius-pill",
-                    px = "height/2",
-                    exampleRadius = WinterTheme.borderRadius.pill,
-                    showDivider = false,
+                Text(
+                    text = "Example",
+                    style = WinterTheme.typography.displaySmall,
+                    modifier = Modifier.weight(ASPECT_COLUMN_RATIO_EXAMPLE),
                 )
             }
+        }
+
+        items(
+            items = specInfoItems,
+            key = { it.token },
+        ) { specInfo ->
+            SpecItem(
+                token = specInfo.token,
+                px = specInfo.px,
+                exampleRadius = specInfo.exampleRadius!!,
+                showDivider = specInfo != specInfoItems.last(),
+            )
         }
 
         item(key = "Usage title") {
@@ -174,71 +155,46 @@ fun Screen(
             )
         }
 
-        ///////////////
+        usageInfoItems.forEach { usageInfo ->
+            item(key = "Usage title - ${usageInfo.title}") {
+                Text(
+                    text = usageInfo.title,
+                    style = WinterTheme.typography.titleLarge,
+                    color = WinterTheme.color.textSubtitle,
+                    modifier = Modifier
+                        .padding(horizontal = WinterTheme.spacing.small)
+                        .padding(top = WinterTheme.spacing.small),
+                )
+            }
 
-        item(key = "Usage title - extra small") {
-            Text(
-                text = "Extra small",
-                style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textSubtitle,
-                modifier = Modifier
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.small),
-            )
-        }
+            item(key = "Usage sample - ${usageInfo.title}") {
+                UsageSampleImage(
+                    imageRes = usageInfo.imageRes,
+                )
+            }
 
-        item(key = "Usage sample - extra small") {
-            Box(
-                modifier =
-                    Modifier
-                        .padding(
-                            top = WinterTheme.spacing.small,
-                        )
-                        .fillMaxWidth()
-                        .background(color = WinterTheme.color.backgroundContainer)
-                        .padding(
-                            vertical = WinterTheme.spacing.extraLarge,
-                            horizontal = WinterTheme.spacing.small,
-                        ),
-            ) {
-                Image(
-                    painter = painterResource(R.drawable.image_border_radius_usage),
-                    contentDescription = "sample image",
-                    modifier = Modifier.align(Alignment.Center)
+            item(key = "Usage desc - ${usageInfo.title}") {
+                Text(
+                    text = usageInfo.description,
+                    color = WinterTheme.color.textCaption,
+                    modifier = Modifier
+                        .padding(top = WinterTheme.spacing.small)
+                        .padding(horizontal = WinterTheme.spacing.small)
+                        .padding(bottom = WinterTheme.spacing.extraExtraLarge),
                 )
             }
         }
+    }
+}
 
-        item(key = "Usage desc - extra small") {
-            Text(
-                text = "Use Extra small for very subtle rounded corners.",
-                color = WinterTheme.color.textCaption,
-                modifier = Modifier
-                    .padding(top = WinterTheme.spacing.small)
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                ,
-            )
-        }
-
-        ///////////////
-
-        item(key = "Usage title - small") {
-            Text(
-                text = "Small",
-                style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textSubtitle,
-                modifier = Modifier
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.small),
-            )
-        }
-
-        item(key = "Usage sample - small") {
-            Image(
-                painter = painterResource(R.drawable.image_border_radius_usage_small),
-                contentDescription = "sample image",
-                modifier = Modifier
+@Composable
+private fun UsageSampleImage(
+    @DrawableRes imageRes: Int,
+) {
+    if (imageRes == R.drawable.image_border_radius_usage) {
+        Box(
+            modifier =
+                Modifier
                     .padding(
                         top = WinterTheme.spacing.small,
                     )
@@ -248,189 +204,28 @@ fun Screen(
                         vertical = WinterTheme.spacing.extraLarge,
                         horizontal = WinterTheme.spacing.small,
                     ),
-            )
-        }
-
-        item(key = "Usage desc - small") {
-            Text(
-                text = "Use Small for the smallest elements or nested components.",
-                color = WinterTheme.color.textCaption,
-                modifier = Modifier
-                    .padding(top = WinterTheme.spacing.small)
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                ,
-            )
-        }
-
-        ///////////////
-
-        item(key = "Usage title - medium") {
-            Text(
-                text = "Small",
-                style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textSubtitle,
-                modifier = Modifier
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.small),
-            )
-        }
-
-        item(key = "Usage sample - medium") {
+        ) {
             Image(
-                painter = painterResource(R.drawable.image_border_radius_usage_medium),
+                painter = painterResource(imageRes),
                 contentDescription = "sample image",
-                modifier = Modifier
-                    .padding(
-                        top = WinterTheme.spacing.small,
-                    )
-                    .fillMaxWidth()
-                    .background(color = WinterTheme.color.backgroundContainer)
-                    .padding(
-                        vertical = WinterTheme.spacing.extraLarge,
-                        horizontal = WinterTheme.spacing.small,
-                    ),
+                modifier = Modifier.align(Alignment.Center)
             )
         }
-
-        item(key = "Usage desc - medium") {
-            Text(
-                text = "The Medium variation is used in most components. Use it in small-to-medium components and containers.",
-                color = WinterTheme.color.textCaption,
-                modifier = Modifier
-                    .padding(top = WinterTheme.spacing.small)
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                ,
-            )
-        }
-
-        ///////////////
-
-        item(key = "Usage title - large") {
-            Text(
-                text = "large",
-                style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textSubtitle,
-                modifier = Modifier
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.small),
-            )
-        }
-
-        item(key = "Usage sample - large") {
-            Image(
-                painter = painterResource(R.drawable.image_border_radius_usage_large),
-                contentDescription = "sample image",
-                modifier = Modifier
-                    .padding(
-                        top = WinterTheme.spacing.small,
-                    )
-                    .fillMaxWidth()
-                    .background(color = WinterTheme.color.backgroundContainer)
-                    .padding(
-                        vertical = WinterTheme.spacing.extraLarge,
-                        horizontal = WinterTheme.spacing.small,
-                    ),
-            )
-        }
-
-        item(key = "Usage desc - large") {
-            Text(
-                text = "Use Large for medium-to-large components and containers.",
-                color = WinterTheme.color.textCaption,
-                modifier = Modifier
-                    .padding(top = WinterTheme.spacing.small)
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                ,
-            )
-        }
-
-        ///////////////
-
-        item(key = "Usage title - Extra Large") {
-            Text(
-                text = "Extra Large",
-                style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textSubtitle,
-                modifier = Modifier
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.small),
-            )
-        }
-
-        item(key = "Usage sample - Extra Large") {
-            Image(
-                painter = painterResource(R.drawable.image_border_radius_usage_extra_large),
-                contentDescription = "sample image",
-                modifier = Modifier
-                    .padding(
-                        top = WinterTheme.spacing.small,
-                    )
-                    .fillMaxWidth()
-                    .background(color = WinterTheme.color.backgroundContainer)
-                    .padding(
-                        vertical = WinterTheme.spacing.extraLarge,
-                        horizontal = WinterTheme.spacing.small,
-                    ),
-            )
-        }
-
-        item(key = "Usage desc - Extra Large") {
-            Text(
-                text = "Use Extra Large for the biggest elements, especially on tablet screens.",
-                color = WinterTheme.color.textCaption,
-                modifier = Modifier
-                    .padding(top = WinterTheme.spacing.small)
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                ,
-            )
-        }
-
-        ///////////////
-
-        item(key = "Usage title - Pill") {
-            Text(
-                text = "Pill",
-                style = WinterTheme.typography.titleLarge,
-                color = WinterTheme.color.textSubtitle,
-                modifier = Modifier
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(top = WinterTheme.spacing.small),
-            )
-        }
-
-        item(key = "Usage sample - Pill") {
-            Image(
-                painter = painterResource(R.drawable.image_border_radius_usage_pill),
-                contentDescription = "sample image",
-                modifier = Modifier
-                    .padding(
-                        top = WinterTheme.spacing.small,
-                    )
-                    .fillMaxWidth()
-                    .background(color = WinterTheme.color.backgroundContainer)
-                    .padding(
-                        vertical = WinterTheme.spacing.extraLarge,
-                        horizontal = WinterTheme.spacing.small,
-                    ),
-            )
-        }
-
-        item(key = "Usage desc - Pill") {
-            Text(
-                text = "Use Pill for the components that are completely rounded on their sides.",
-                color = WinterTheme.color.textCaption,
-                modifier = Modifier
-                    .padding(top = WinterTheme.spacing.small)
-                    .padding(horizontal = WinterTheme.spacing.small)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                    .padding(bottom = WinterTheme.spacing.extraExtraLarge)
-                ,
-            )
-        }
+    } else {
+        Image(
+            painter = painterResource(imageRes),
+            contentDescription = "sample image",
+            modifier = Modifier
+                .padding(
+                    top = WinterTheme.spacing.small,
+                )
+                .fillMaxWidth()
+                .background(color = WinterTheme.color.backgroundContainer)
+                .padding(
+                    vertical = WinterTheme.spacing.extraLarge,
+                    horizontal = WinterTheme.spacing.small,
+                ),
+        )
     }
 }
 
@@ -473,7 +268,7 @@ private fun SpecItem(
             modifier = Modifier.weight(ASPECT_COLUMN_RATIO_PX),
         )
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .height(48.dp)
                 .clip(shape = exampleRadius)
                 .background(color = WinterTheme.color.backgroundBrandSubtle)
