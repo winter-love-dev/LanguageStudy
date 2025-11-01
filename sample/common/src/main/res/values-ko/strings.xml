@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application name -->
+    <string name="app_name">LanguageStudy</string>
+    <!-- Design System text -->
+    <string name="design_system">디자인 시스템</string>
+    <!-- Welcome message -->
+    <string name="welcome_message">컴포넌트와 스타일의 종합 카탈로그</string>
+    <!-- Design tokens -->
+    <string name="design_tokens">디자인 토큰</string>
+    <!-- Design token -->
+    <string name="design_token">디자인 토큰</string>
+    <!-- Component -->
+    <string name="component">컴포넌트</string>
+    <!-- Components -->
+    <string name="components">컴포넌트</string>
+    <string name="winter">Winter</string>
+    <string name="made_by">Designed &amp; Development by Winter</string>
+    <string name="copyright">\@ 2025 All rights reserved.</string>
+    <string name="option">옵션</string>
+    <string name="color_system">컬러 시스템</string>
+    <string name="display">디스플레이</string>
+    <string name="display_description">디스플레이 폰트 스타일은 큰 제목이나 강조가 필요한 주요 텍스트에 사용하세요. 사용자의 시선을 끌고 강렬한 인상을 주기에 이상적입니다. 긴 텍스트에는 사용하지 마세요.</string>
+    <string name="title">타이틀</string>
+    <string name="title_description">타이틀 폰트 스타일은 레이아웃을 압도하지 않으면서 명확한 시각적 계층이 필요할 때 사용하세요. 섹션 제목</string>
+    <string name="body">본문</string>
+    <string name="body_description">본문 폰트 스타일은 문단이나 설명과 같은 일반 텍스트 콘텐츠에 이상적입니다. 가독성과 판독성이 중요한 긴 텍스트와 짧은 텍스트 모두에 적합합니다.</string>
+    <string name="action">액션</string>
+    <string name="action_description">액션 폰트 스타일은 버튼, 입력 필드, 링크와 같이 상호작용하거나 실행 가능한 항목을 나타내는 텍스트 요소에 적합합니다. 일반 텍스트와 상호작용 요소를 구분하는 데 사용하세요.</string>
+    <string name="caption">캡션</string>
+    <string name="caption_description">캡션 폰트 스타일은 아이콘, 이미지, 태그 등 시각적 요소를 보완하고 맥락을 제공하는 보조 텍스트에 사용됩니다. 긴 텍스트에는 사용하지 마세요.</string>
+    <string name="spacing">간격</string>
+    <string name="spacing_description">간격 토큰은 요소 간 일관된 간격과 정렬을 보장하며, 더 나은 가독성, 명확성, 균형을 제공합니다.</string>
+    <string name="usage">사용법</string>
+    <string name="usage_description_1">간격 토큰을 사용하여 올바른 계층 구조로 콘텐츠를 구성하세요. 가독성을 높이려면 관련 요소를 그룹화하는 것이 중요합니다. 관련된 항목은 작은 간격 값을 사용하고, 관련 없는 항목 사이에는 간격을 늘리는 것이 좋습니다.</string>
+    <string name="usage_description_2">use the same spacing between all elements in the group.</string>
+    <string name="border_radius">모서리 반경</string>
+    <string name="border_radius_description">모서리 반경 토큰은 버튼, 카드, 입력 필드, 컨테이너 등 둥근 모서리를 가진 요소에 적용되어 가장자리를 부드럽게 하고 더 보기 좋은 외관을 만듭니다.</string>
+    <string name="tokens">토큰</string>
+    <string name="extra_small">엑스트라 스몰</string>
+    <string name="extra_small_description">엑스트라 스몰은 매우 미묘한 둥근 모서리에 사용하세요.</string>
+    <string name="small">스몰</string>
+    <string name="small_description">스몰은 가장 작은 요소나 중첩된 컴포넌트에 사용하세요.</string>
+    <string name="medium">미디엄</string>
+    <string name="medium_description">미디엄은 대부분의 컴포넌트에 사용됩니다. 소형에서 중형 컴포넌트 및 컨테이너에 사용하세요.</string>
+    <string name="large">라지</string>
+    <string name="large_description">라지는 중형에서 대형 컴포넌트 및 컨테이너에 사용하세요.</string>
+    <string name="extra_large">엑스트라 라지</string>
+    <string name="extra_large_description">엑스트라 라지는 가장 큰 요소, 특히 태블릿 화면에서 사용하세요.</string>
+    <string name="pill">필</string>
+    <string name="pill_description">필은 양쪽이 완전히 둥근 컴포넌트에 사용하세요.</string>
+    <string name="icons">아이콘</string>
+    <string name="icons_description">아이콘은 액션과 컴포넌트에 추가적인 의미를 제공하여 사용성을 향상시키고, 시각적으로 더 매력적이며 이해하기 쉽게 만드는 그래픽 자산입니다.</string>
+    <string name="creating_an_icon">아이콘 만들기</string>
+    <string name="creating_an_icon_description">새 아이콘을 만들 때는 24px 베이스로 시작하고 1.5px 스트로크를 사용하여 아이콘을 그리세요. 일관된 아이콘을 디자인하는 데 도움이 되도록 아이콘 그리드(아래 표시)를 사용하세요.</string>
+</resources>
