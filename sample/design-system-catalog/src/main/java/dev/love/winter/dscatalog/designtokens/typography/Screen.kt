@@ -12,7 +12,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
@@ -52,56 +51,6 @@ fun TypographyRoute(
 private fun Screen(
     modifier: Modifier = Modifier,
 ) {
-    val items = remember {
-        buildList {
-            add(
-                TypographyListItem.Header(
-                    title = "Display",
-                    description = DESC_HEADER_DISPLAY,
-                )
-            )
-            typographyItems.forEach {
-                add(TypographyListItem.Item(it))
-            }
-            add(
-                TypographyListItem.Header(
-                    title = "Title",
-                    description = DESC_HEADER_TITLE,
-                )
-            )
-            typographyTitleItems.forEach {
-                add(TypographyListItem.Item(it))
-            }
-            add(
-                TypographyListItem.Header(
-                    title = "Body",
-                    description = DESC_HEADER_BODY,
-                )
-            )
-            typographyBodyItems.forEach {
-                add(TypographyListItem.Item(it))
-            }
-            add(
-                TypographyListItem.Header(
-                    title = "Action",
-                    description = DESC_HEADER_ACTION,
-                )
-            )
-            typographyActionItems.forEach {
-                add(TypographyListItem.Item(it))
-            }
-            add(
-                TypographyListItem.Header(
-                    title = "Caption",
-                    description = DESC_HEADER_CAPTION,
-                )
-            )
-            typographyCaptionItems.forEach {
-                add(TypographyListItem.Item(it))
-            }
-        }
-    }
-
     LazyColumn(
         modifier = modifier
             .background(color = WinterTheme.color.background),
@@ -109,35 +58,74 @@ private fun Screen(
             bottom = WinterTheme.spacing.extraExtraLarge,
         ),
     ) {
+        stickyHeader(key = "display-header") {
+            SectionHeader(
+                title = "Display",
+                description = DESC_HEADER_DISPLAY,
+                modifier = Modifier.background(color = WinterTheme.color.background),
+            )
+        }
         items(
-            items = items,
-            key = { item ->
-                when (item) {
-                    is TypographyListItem.Header -> item.title
-                    is TypographyListItem.Item -> item.data.tokenName
-                }
-            },
-            contentType = { item ->
-                when (item) {
-                    is TypographyListItem.Header -> "Header"
-                    is TypographyListItem.Item -> "Item"
-                }
-            },
+            items = typographyItems,
+            key = { it.tokenName },
         ) { item ->
-            when (item) {
-                is TypographyListItem.Header -> {
-                    SectionHeader(
-                        title = item.title,
-                        description = item.description,
-                    )
-                }
+            TypographyItem(data = item)
+        }
 
-                is TypographyListItem.Item -> {
-                    TypographyItem(
-                        data = item.data,
-                    )
-                }
-            }
+        stickyHeader(key = "title-header") {
+            SectionHeader(
+                title = "Title",
+                description = DESC_HEADER_TITLE,
+                modifier = Modifier.background(color = WinterTheme.color.background),
+            )
+        }
+        items(
+            items = typographyTitleItems,
+            key = { it.tokenName },
+        ) { item ->
+            TypographyItem(data = item)
+        }
+
+        stickyHeader(key = "body-header") {
+            SectionHeader(
+                title = "Body",
+                description = DESC_HEADER_BODY,
+                modifier = Modifier.background(color = WinterTheme.color.background),
+            )
+        }
+        items(
+            items = typographyBodyItems,
+            key = { it.tokenName },
+        ) { item ->
+            TypographyItem(data = item)
+        }
+
+        stickyHeader(key = "action-header") {
+            SectionHeader(
+                title = "Action",
+                description = DESC_HEADER_ACTION,
+                modifier = Modifier.background(color = WinterTheme.color.background),
+            )
+        }
+        items(
+            items = typographyActionItems,
+            key = { it.tokenName },
+        ) { item ->
+            TypographyItem(data = item)
+        }
+
+        stickyHeader(key = "caption-header") {
+            SectionHeader(
+                title = "Caption",
+                description = DESC_HEADER_CAPTION,
+                modifier = Modifier.background(color = WinterTheme.color.background),
+            )
+        }
+        items(
+            items = typographyCaptionItems,
+            key = { it.tokenName },
+        ) { item ->
+            TypographyItem(data = item)
         }
     }
 }
