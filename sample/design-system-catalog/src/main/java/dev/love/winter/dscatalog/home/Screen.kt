@@ -1,5 +1,6 @@
 package dev.love.winter.dscatalog.home
 
+import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -55,7 +56,8 @@ fun HomeRoute(
     }
     HomeScreen(
         state = state,
-        modifier = modifier,
+        modifier = modifier
+            .background(color = WinterTheme.color.background),
         onClick = {
             viewModel.onEvent(Event.OnCatalogItemClick(it))
         },
@@ -279,22 +281,26 @@ private fun createHighlightedText(
     }
 }
 
-@Preview
+@Preview(
+    name = "Light",
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    heightDp = 1700,
+)
+@Preview(
+    name = "Dark",
+    uiMode = Configuration.UI_MODE_NIGHT_YES,
+    heightDp = 1700,
+)
 @Composable
 private fun Preview() {
     WinterTheme {
         HomeScreen(
-            state = State.Default,
-        )
-    }
-}
-
-@Preview
-@Composable
-private fun PreviewDark() {
-    WinterTheme(darkTheme = true) {
-        HomeScreen(
-            state = State.Default,
+            state = State.Default.copy(
+                designTokenEntries = Catalog.designTokenEntries,
+                componentEntries = Catalog.componentEntries,
+            ),
+            modifier = Modifier
+                .background(color = WinterTheme.color.background),
         )
     }
 }
