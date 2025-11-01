@@ -22,6 +22,8 @@ import dev.love.winter.designsystem.component.button.spec.ButtonShape
 import dev.love.winter.designsystem.component.button.spec.ButtonState
 import dev.love.winter.designsystem.component.button.spec.ButtonType
 import dev.love.winter.designsystem.theme.WinterTheme
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 
 @Composable
 fun ButtonRoute(
@@ -97,7 +99,7 @@ fun TopSection(
         }
         Divider()
         ButtonTypeSection(
-            buttonTypes = listOf(
+            buttonTypes = persistentListOf(
                 ButtonType.Primary,
                 ButtonType.Secondary,
             ),
@@ -115,7 +117,7 @@ private fun BottomSection(
 ) {
     ButtonTypeSection(
         modifier = modifier,
-        buttonTypes = listOf(
+        buttonTypes = persistentListOf(
             ButtonType.Tertiary,
             ButtonType.Brand,
             ButtonType.Critical,
@@ -125,6 +127,7 @@ private fun BottomSection(
 
 @Composable
 private fun ButtonTypeSection(
+    buttonTypes: ImmutableList<ButtonType>,
     modifier: Modifier = Modifier,
     buttonTypes: List<ButtonType>,
 ) {

@@ -35,6 +35,7 @@ import dev.love.winter.designsystem.api.neutralColorTokens
 import dev.love.winter.designsystem.api.redColorTokens
 import dev.love.winter.designsystem.api.yellowColorTokens
 import dev.love.winter.designsystem.theme.WinterTheme
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun ColorRoute(
@@ -203,6 +204,8 @@ private fun Divider(
 @Composable
 private fun ColorList(
     subTitle: String,
+    colorTokens: ImmutableList<ColorToken>,
+    modifier: Modifier = Modifier,
     title: String = "",
     colorTokens: List<ColorToken>,
     modifier: Modifier = Modifier,

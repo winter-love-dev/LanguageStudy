@@ -63,6 +63,8 @@ import dev.love.winter.designsystem.tokens.Yellow600
 import dev.love.winter.designsystem.tokens.Yellow700
 import dev.love.winter.designsystem.tokens.Yellow800
 import dev.love.winter.designsystem.tokens.Yellow900
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 
 class ColorCatalogApi
 
@@ -72,7 +74,7 @@ data class ColorToken(
     val color: Color,
 )
 
-val brandColorTokens: List<ColorToken> = listOf(
+val brandColorTokens: ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "primary-50", color = Primary50),
     ColorToken(name = "primary-100", color = Primary100),
     ColorToken(name = "primary-200", color = Primary200),
@@ -85,7 +87,7 @@ val brandColorTokens: List<ColorToken> = listOf(
     ColorToken(name = "primary-900", color = Primary900),
 )
 
-val blueColorTokens: List<ColorToken> = listOf(
+val blueColorTokens: ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "blue-50", color = Blue50),
     ColorToken(name = "blue-100", color = Blue100),
     ColorToken(name = "blue-200", color = Blue200),
@@ -98,7 +100,7 @@ val blueColorTokens: List<ColorToken> = listOf(
     ColorToken(name = "blue-900", color = Blue900),
 )
 
-val neutralColorTokens: List<ColorToken> = listOf(
+val neutralColorTokens: ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "grey-50", color = Grey50),
     ColorToken(name = "grey-100", color = Grey100),
     ColorToken(name = "grey-200", color = Grey200),
@@ -111,7 +113,7 @@ val neutralColorTokens: List<ColorToken> = listOf(
     ColorToken(name = "grey-900", color = Grey900),
 )
 
-val greenColorTokens: List<ColorToken> = listOf(
+val greenColorTokens: ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "green-50", color = Green50),
     ColorToken(name = "green-100", color = Green100),
     ColorToken(name = "green-200", color = Green200),
@@ -124,7 +126,7 @@ val greenColorTokens: List<ColorToken> = listOf(
     ColorToken(name = "green-900", color = Green900),
 )
 
-val yellowColorTokens: List<ColorToken> = listOf(
+val yellowColorTokens: ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "yellow-50", color = Yellow50),
     ColorToken(name = "yellow-100", color = Yellow100),
     ColorToken(name = "yellow-200", color = Yellow200),
@@ -137,7 +139,7 @@ val yellowColorTokens: List<ColorToken> = listOf(
     ColorToken(name = "yellow-900", color = Yellow900),
 )
 
-val redColorTokens: List<ColorToken> = listOf(
+val redColorTokens: ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "red-50", color = Red50),
     ColorToken(name = "red-100", color = Red100),
     ColorToken(name = "red-200", color = Red200),
@@ -150,7 +152,7 @@ val redColorTokens: List<ColorToken> = listOf(
     ColorToken(name = "red-900", color = Red900),
 )
 
-fun Colors.iconColorTokens(): List<ColorToken> = listOf(
+fun Colors.iconColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "icon-neutral-subtle", color = iconNeutralSubtle),
     ColorToken(name = "icon-neutral", color = iconNeutral),
     ColorToken(name = "icon-neutral-strong", color = iconNeutralStrong),
@@ -164,7 +166,7 @@ fun Colors.iconColorTokens(): List<ColorToken> = listOf(
     ColorToken(name = "icon-disabled", color = iconDisabled),
 )
 
-fun Colors.textColorTokens(): List<ColorToken> = listOf(
+fun Colors.textColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "text-title", color = textTitle),
     ColorToken(name = "text-subtitle", color = textSubtitle),
     ColorToken(name = "text-body", color = textBody),
@@ -181,7 +183,7 @@ fun Colors.textColorTokens(): List<ColorToken> = listOf(
     ColorToken(name = "text-negative", color = textNegative),
 )
 
-fun Colors.strokeColorTokens(): List<ColorToken> = listOf(
+fun Colors.strokeColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "stroke-neutral-subtle", color = strokeNeutralSubtle),
     ColorToken(name = "stroke-neutral", color = strokeNeutral),
     ColorToken(name = "stroke-neutral-strong", color = strokeNeutralStrong),
@@ -191,7 +193,7 @@ fun Colors.strokeColorTokens(): List<ColorToken> = listOf(
     ColorToken(name = "stroke-negative", color = strokeNegative),
 )
 
-fun Colors.buttonColorTokens(): List<ColorToken> = listOf(
+fun Colors.buttonColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "button-primary-default", color = buttonPrimaryDefault),
     ColorToken(name = "button-primary-active", color = buttonPrimaryActive),
     ColorToken(name = "button-primary-disabled", color = buttonPrimaryDisabled),
@@ -209,7 +211,7 @@ fun Colors.buttonColorTokens(): List<ColorToken> = listOf(
     ColorToken(name = "button-critical-disabled", color = buttonCriticalDisabled),
 )
 
-fun Colors.inputColorTokens(): List<ColorToken> = listOf(
+fun Colors.inputColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "input-default", color = inputDefault),
     ColorToken(name = "input-active", color = inputActive),
     ColorToken(name = "input-active-cursor", color = inputActiveCursor),
@@ -219,7 +221,7 @@ fun Colors.inputColorTokens(): List<ColorToken> = listOf(
     ColorToken(name = "input-disabled", color = inputDisabled),
 )
 
-fun Colors.tagColorTokens(): List<ColorToken> = listOf(
+fun Colors.tagColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "tag-neutral", color = tagNeutral),
     ColorToken(name = "tag-brand-strong", color = tagBrandStrong),
     ColorToken(name = "tag-brand-subtle", color = tagBrandSubtle),
@@ -228,7 +230,7 @@ fun Colors.tagColorTokens(): List<ColorToken> = listOf(
     ColorToken(name = "tag-negative", color = tagNegative),
 )
 
-fun Colors.backgroundColorTokens(): List<ColorToken> = listOf(
+fun Colors.backgroundColorTokens(): ImmutableList<ColorToken> = persistentListOf(
     ColorToken(name = "background", color = background),
     ColorToken(name = "background-container", color = backgroundContainer),
     ColorToken(name = "background-object", color = backgroundObject),
