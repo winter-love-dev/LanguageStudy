@@ -54,33 +54,6 @@ val usageInfoItems = listOf(
     ),
 )
 
-val specInfoItems = listOf(
-    SpecInfo(
-        token = "border-radius-XS",
-        px = "2",
-    ),
-    SpecInfo(
-        token = "border-radius-SM",
-        px = "4",
-    ),
-    SpecInfo(
-        token = "border-radius-MD",
-        px = "8",
-    ),
-    SpecInfo(
-        token = "border-radius-LG",
-        px = "16",
-    ),
-    SpecInfo(
-        token = "border-radius-XL",
-        px = "24",
-    ),
-    SpecInfo(
-        token = "border-radius-pill",
-        px = "height/2",
-    ),
-)
-
 @Composable
 fun rememberSpecInfoItems(): List<SpecInfo> {
     val extraSmall = WinterTheme.borderRadius.extraSmall
