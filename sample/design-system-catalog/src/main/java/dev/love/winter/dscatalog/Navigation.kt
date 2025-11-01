@@ -13,6 +13,7 @@ import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.catalog.button.ButtonRoute
 import dev.love.winter.dscatalog.designtokens.color.ColorRoute
+import dev.love.winter.dscatalog.designtokens.spacing.SpacingRoute
 import dev.love.winter.dscatalog.designtokens.typography.TypographyRoute
 import dev.love.winter.dscatalog.home.HomeRoute
 
@@ -47,7 +48,7 @@ fun Navigation(
                     Text(text = "Unknown screen")
                 }
                 entry<SpacingScreen> {
-                    Text(text = "Unknown screen")
+                    SpacingRoute()
                 }
                 entry<TypographyScreen> {
                     TypographyRoute()
