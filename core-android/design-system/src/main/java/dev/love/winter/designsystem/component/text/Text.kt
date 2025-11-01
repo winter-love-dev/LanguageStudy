@@ -1,6 +1,5 @@
 package dev.love.winter.designsystem.component.text
 
-import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.Text as MaterialText
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -38,11 +37,15 @@ fun Text(
     onTextLayout: (TextLayoutResult) -> Unit = {},
     style: TextStyle = WinterTheme.typography.bodyMedium,
 ) {
-    val newText = when (style) {
+    val newText: String = when (style) {
         WinterTheme.typography.captionLarge,
         WinterTheme.typography.captionMedium,
-        WinterTheme.typography.captionSmall -> text.uppercase(Locale.getDefault())
-        else -> text
+        WinterTheme.typography.captionSmall -> {
+            text.uppercase(Locale.getDefault())
+        }
+        else -> {
+            text
+        }
     }
     MaterialText(
         text = newText,
@@ -83,17 +86,21 @@ fun Text(
     maxLines: Int = Int.MAX_VALUE,
     minLines: Int = 1,
     onTextLayout: (TextLayoutResult) -> Unit = {},
-    style: TextStyle = LocalTextStyle.current,
+    style: TextStyle = WinterTheme.typography.bodyMedium,
 ) {
-    val newText = when (style) {
+    val newText: AnnotatedString = when (style) {
         WinterTheme.typography.captionLarge,
         WinterTheme.typography.captionMedium,
-        WinterTheme.typography.captionSmall -> AnnotatedString(
-            text = text.text.uppercase(Locale.getDefault()),
-            spanStyles = text.spanStyles,
-            paragraphStyles = text.paragraphStyles,
-        )
-        else -> text
+        WinterTheme.typography.captionSmall -> {
+            AnnotatedString(
+                text = text.text.uppercase(Locale.getDefault()),
+                spanStyles = text.spanStyles,
+                paragraphStyles = text.paragraphStyles,
+            )
+        }
+        else -> {
+            text
+        }
     }
     MaterialText(
         text = newText,
