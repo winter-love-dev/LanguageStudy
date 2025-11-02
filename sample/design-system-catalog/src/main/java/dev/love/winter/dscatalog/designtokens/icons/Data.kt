@@ -2,8 +2,8 @@ package dev.love.winter.dscatalog.designtokens.icons
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import dev.love.winter.designsystem.theme.WinterTheme
-import dev.love.winter.designsystem.tokens.IconResource
+import dev.love.winter.uicomponent.theme.IconResource
+import dev.love.winter.uicomponent.theme.WinterTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 

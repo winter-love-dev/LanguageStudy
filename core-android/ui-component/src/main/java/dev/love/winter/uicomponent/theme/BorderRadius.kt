@@ -1,14 +1,14 @@
-package dev.love.winter.designsystem.theme
+package dev.love.winter.uicomponent.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Shape
-import dev.love.winter.designsystem.tokens.BorderRadiusExtraLarge
-import dev.love.winter.designsystem.tokens.BorderRadiusExtraSmall
-import dev.love.winter.designsystem.tokens.BorderRadiusLarge
-import dev.love.winter.designsystem.tokens.BorderRadiusMedium
-import dev.love.winter.designsystem.tokens.BorderRadiusPill
-import dev.love.winter.designsystem.tokens.BorderRadiusSmall
+import dev.love.winter.designsystem.BorderRadiusExtraLarge
+import dev.love.winter.designsystem.BorderRadiusExtraSmall
+import dev.love.winter.designsystem.BorderRadiusLarge
+import dev.love.winter.designsystem.BorderRadiusMedium
+import dev.love.winter.designsystem.BorderRadiusPill
+import dev.love.winter.designsystem.BorderRadiusSmall
 
 @Immutable
 data class BorderRadius(

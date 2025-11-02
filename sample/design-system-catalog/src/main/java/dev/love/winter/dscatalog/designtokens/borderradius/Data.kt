@@ -4,8 +4,8 @@ import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Shape
-import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.R
+import dev.love.winter.uicomponent.theme.WinterTheme
 import dev.love.winter.sample.common.R as CommonR
 
 class Data

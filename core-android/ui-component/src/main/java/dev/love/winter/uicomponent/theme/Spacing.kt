@@ -1,15 +1,15 @@
-package dev.love.winter.designsystem.theme
+package dev.love.winter.uicomponent.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.unit.Dp
-import dev.love.winter.designsystem.tokens.SpacingExtraExtraLarge
-import dev.love.winter.designsystem.tokens.SpacingExtraExtraSmall
-import dev.love.winter.designsystem.tokens.SpacingExtraLarge
-import dev.love.winter.designsystem.tokens.SpacingExtraSmall
-import dev.love.winter.designsystem.tokens.SpacingLarge
-import dev.love.winter.designsystem.tokens.SpacingMedium
-import dev.love.winter.designsystem.tokens.SpacingSmall
+import dev.love.winter.designsystem.SpacingExtraExtraLarge
+import dev.love.winter.designsystem.SpacingExtraExtraSmall
+import dev.love.winter.designsystem.SpacingExtraLarge
+import dev.love.winter.designsystem.SpacingExtraSmall
+import dev.love.winter.designsystem.SpacingLarge
+import dev.love.winter.designsystem.SpacingMedium
+import dev.love.winter.designsystem.SpacingSmall
 
 @Immutable
 data class Spacing(

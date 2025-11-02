@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.interaction
+package dev.love.winter.uicomponent.interaction
 
 import androidx.compose.animation.core.AnimationSpec
 import androidx.compose.animation.core.Spring

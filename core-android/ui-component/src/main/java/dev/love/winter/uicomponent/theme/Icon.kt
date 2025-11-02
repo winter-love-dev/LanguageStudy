@@ -1,18 +1,8 @@
-package dev.love.winter.designsystem.theme
+package dev.love.winter.uicomponent.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import dev.love.winter.designsystem.R
-import dev.love.winter.designsystem.tokens.DateTimeIcon
-import dev.love.winter.designsystem.tokens.GlobalIcon
-import dev.love.winter.designsystem.tokens.IconResource
-import dev.love.winter.designsystem.tokens.InputIcon
-import dev.love.winter.designsystem.tokens.LocationIcon
-import dev.love.winter.designsystem.tokens.LogoIcon
-import dev.love.winter.designsystem.tokens.MessageIcon
-import dev.love.winter.designsystem.tokens.NavigationIcon
-import dev.love.winter.designsystem.tokens.NotificationIcon
-import dev.love.winter.designsystem.tokens.PurchaseIcon
 
 @Immutable
 data class Icon(
@@ -27,7 +17,7 @@ data class Icon(
     val logo: LogoIcon,
 )
 
-internal val IconTheme = Icon(
+val IconTheme = Icon(
     global = GlobalIcon(
         home = IconResource(
             filled = R.drawable.ic_home_filled,

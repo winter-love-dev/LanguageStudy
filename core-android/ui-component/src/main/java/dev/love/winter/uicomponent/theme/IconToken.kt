@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.tokens
+package dev.love.winter.uicomponent.theme
 
 import androidx.annotation.DrawableRes
 import androidx.compose.runtime.Immutable

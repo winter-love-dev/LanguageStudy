@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.interaction
+package dev.love.winter.uicomponent.interaction
 
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.runtime.Composable

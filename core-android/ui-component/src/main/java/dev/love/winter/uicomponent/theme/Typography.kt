@@ -1,25 +1,25 @@
-package dev.love.winter.designsystem.theme
+package dev.love.winter.uicomponent.theme
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
-import dev.love.winter.designsystem.tokens.ActionLarge
-import dev.love.winter.designsystem.tokens.ActionMedium
-import dev.love.winter.designsystem.tokens.ActionSmall
-import dev.love.winter.designsystem.tokens.BodyExtraLarge
-import dev.love.winter.designsystem.tokens.BodyExtraSmall
-import dev.love.winter.designsystem.tokens.BodyLarge
-import dev.love.winter.designsystem.tokens.BodyMedium
-import dev.love.winter.designsystem.tokens.BodySmall
-import dev.love.winter.designsystem.tokens.CaptionLarge
-import dev.love.winter.designsystem.tokens.CaptionMedium
-import dev.love.winter.designsystem.tokens.CaptionSmall
-import dev.love.winter.designsystem.tokens.FontLarge
-import dev.love.winter.designsystem.tokens.FontMedium
-import dev.love.winter.designsystem.tokens.FontSmall
-import dev.love.winter.designsystem.tokens.TitleLarge
-import dev.love.winter.designsystem.tokens.TitleMedium
-import dev.love.winter.designsystem.tokens.TitleSmall
+import dev.love.winter.designsystem.ActionLarge
+import dev.love.winter.designsystem.ActionMedium
+import dev.love.winter.designsystem.ActionSmall
+import dev.love.winter.designsystem.BodyExtraLarge
+import dev.love.winter.designsystem.BodyExtraSmall
+import dev.love.winter.designsystem.BodyLarge
+import dev.love.winter.designsystem.BodyMedium
+import dev.love.winter.designsystem.BodySmall
+import dev.love.winter.designsystem.CaptionLarge
+import dev.love.winter.designsystem.CaptionMedium
+import dev.love.winter.designsystem.CaptionSmall
+import dev.love.winter.designsystem.FontLarge
+import dev.love.winter.designsystem.FontMedium
+import dev.love.winter.designsystem.FontSmall
+import dev.love.winter.designsystem.TitleLarge
+import dev.love.winter.designsystem.TitleMedium
+import dev.love.winter.designsystem.TitleSmall
 
 @Immutable
 data class Typography(

@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.tokens
+package dev.love.winter.designsystem
 
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape

@@ -5,7 +5,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
-import dev.love.winter.designsystem.theme.WinterTheme
+import dev.love.winter.uicomponent.theme.WinterTheme
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

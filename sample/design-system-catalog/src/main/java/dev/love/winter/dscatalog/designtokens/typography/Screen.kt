@@ -16,8 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 import dev.love.winter.sample.common.R as CommonR
 
 @Composable

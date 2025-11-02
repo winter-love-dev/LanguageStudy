@@ -25,9 +25,9 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.sample.common.R
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 
 private const val ASPECT_COLUMN_RATIO_TOKEN = 0.5f
 private const val ASPECT_COLUMN_RATIO_PX = 0.3f

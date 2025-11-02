@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.theme
+package dev.love.winter.uicomponent.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme

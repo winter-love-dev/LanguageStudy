@@ -18,9 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.window.Dialog
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.sample.common.R
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 
 private data class Language(
     val displayName: String,

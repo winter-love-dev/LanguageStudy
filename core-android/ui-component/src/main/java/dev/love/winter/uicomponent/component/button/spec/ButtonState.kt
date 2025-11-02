@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.component.button.spec
+package dev.love.winter.uicomponent.component.button.spec
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color

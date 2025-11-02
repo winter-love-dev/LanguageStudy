@@ -1,4 +1,4 @@
-package dev.love.winter.designsystem.component.button
+package dev.love.winter.uicomponent.component.button
 
 import android.content.res.Configuration
 import androidx.compose.animation.animateColorAsState
@@ -27,16 +27,16 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.love.winter.designsystem.component.button.spec.ButtonColors
-import dev.love.winter.designsystem.component.button.spec.ButtonIcon
-import dev.love.winter.designsystem.component.button.spec.ButtonShape
-import dev.love.winter.designsystem.component.button.spec.ButtonState
-import dev.love.winter.designsystem.component.button.spec.ButtonType
-import dev.love.winter.designsystem.interaction.PressableState
-import dev.love.winter.designsystem.interaction.pressable
-import dev.love.winter.designsystem.interaction.rememberPressedState
-import dev.love.winter.designsystem.interaction.updateScale
-import dev.love.winter.designsystem.theme.WinterTheme
+import dev.love.winter.uicomponent.component.button.spec.ButtonColors
+import dev.love.winter.uicomponent.component.button.spec.ButtonIcon
+import dev.love.winter.uicomponent.component.button.spec.ButtonShape
+import dev.love.winter.uicomponent.component.button.spec.ButtonState
+import dev.love.winter.uicomponent.component.button.spec.ButtonType
+import dev.love.winter.uicomponent.interaction.PressableState
+import dev.love.winter.uicomponent.interaction.pressable
+import dev.love.winter.uicomponent.interaction.rememberPressedState
+import dev.love.winter.uicomponent.interaction.updateScale
+import dev.love.winter.uicomponent.theme.WinterTheme
 
 private const val PRESSED_SCALE = 0.95f
 private const val DURATION_ANIMATION = 100
