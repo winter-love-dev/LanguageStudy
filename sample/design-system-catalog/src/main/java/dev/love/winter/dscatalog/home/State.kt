@@ -21,10 +21,17 @@ sealed interface Event {
     data class OnCatalogItemClick(
         val item: Catalog,
     ) : Event
+    data class OnLanguageChange(
+        val languageTag: String,
+    ) : Event
 }
 
 sealed interface SideEffect {
     data class NavigateTo(
         val catalog: NavKey,
+    ) : SideEffect
+
+    data class RestartApp(
+        val languageTag: String,
     ) : SideEffect
 }
