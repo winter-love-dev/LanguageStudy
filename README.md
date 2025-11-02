@@ -1,7 +1,7 @@
 # LanguageStudy
 
 # Project Overview
-Architecture**: Multi-module Architecture
+Architecture: Multi-module Architecture
 
 # Domain
 **LanguageStudy**: A language learning application.
@@ -28,27 +28,43 @@ Establishing a comprehensive design system:
 
 ## Kotlin Conventions
 **Trailing Comma**: Always use trailing commas in multi-line declarations
+
 **If Statements**: Always use braces with line breaks (no single-line if)
+
 **When Statements**: Use braces for all branches, prefer `if` for 2 conditions, no `else` for enums/sealed
+
 **Lambda**: Always use line breaks, specify field types explicitly
+
 **Invoke Operator**: Use `obj()` not `obj.invoke()` for operator functions and lambdas
+
 **Enum Classes**: Use `SCREAMING_SNAKE_CASE` for enum entries
+
 **Declaration Order**: override → public → internal → protected → private (variables → functions → extensions)
+
 **Object/Companion**: Always declare at bottom of class/interface
+
 **Named Arguments**: Optional for 1 arg, required for 2+ args (Kotlin code only)
+
 **Comments**: Use KDoc style, link TODO comments to JIRA tickets. Do not leave comments like `//` inside functions.
+
 **Class Formatting**: The first line of a class should be written without a blank line.
 
 ## Compose Conventions
 **Function Naming**: Unit-returning Composables start with uppercase, value-returning with lowercase
+
 **Parameter Order**: Required → Modifier (first optional) → Optional → Composable slots/lambdas
+
 **Modifier Default**: Always use `modifier: Modifier = Modifier` (not `Modifier.something()`)
+
 **ViewModel Injection**: Pass ViewModels as parameters, not create inside Composables
+
 **Preview Functions**: Mark internal composable previews as `internal` (not `public`)
+
 **Event Parameters**: Use consistent naming for event handlers (`onX` pattern)
 
 # Architecture
 Following Android's official recommended app architecture with a layered approach:
+
 **Presentation Layer** → **Domain Layer (Optional)** → **Data Layer**
 
 ## Architectural Pattern
