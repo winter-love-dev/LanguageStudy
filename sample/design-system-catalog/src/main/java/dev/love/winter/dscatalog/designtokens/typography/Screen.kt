@@ -14,29 +14,11 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
-
-private const val DESC_HEADER_DISPLAY =
-    "Use the display font style for large headings or prominent text that requires emphasis. " +
-            "Display is ideal for grabbing the user's attention and making a bold statement. Avoid using this style for long texts."
-
-private const val DESC_HEADER_TITLE =
-    "Use the title font style when you need a clear visual hierarchy without overwhelming the layout. " +
-            "You can apply this style in short texts that need to stand out when compared to body text, like section titles, card titles, page titles, etc."
-
-private const val DESC_HEADER_BODY =
-    "The body font style is ideal for regular text content, such as paragraphs, or descriptions. " +
-            "The body styles are suitable both for long and short text, where readability and legibility are essential."
-
-private const val DESC_HEADER_ACTION =
-    "The action font style is suitable for text elements that represent interactive or actionable items, such as buttons, input, and links. " +
-            "Use it to distinguish interactive elements from regular text."
-
-private const val DESC_HEADER_CAPTION =
-    "The caption font style is used for supporting text that provides context and complements visual elements, " +
-            "like icons, images, tags, etc. Avoid using this style in long texts."
+import dev.love.winter.sample.common.R as CommonR
 
 @Composable
 fun TypographyRoute(
@@ -60,8 +42,8 @@ private fun Screen(
     ) {
         item(key = "display-header") {
             SectionHeader(
-                title = "Display",
-                description = DESC_HEADER_DISPLAY,
+                title = stringResource(CommonR.string.display),
+                description = stringResource(CommonR.string.display_description),
                 modifier = Modifier.padding(top = WinterTheme.spacing.extraExtraLarge),
             )
         }
@@ -74,8 +56,8 @@ private fun Screen(
 
         item(key = "title-header") {
             SectionHeader(
-                title = "Title",
-                description = DESC_HEADER_TITLE,
+                title = stringResource(CommonR.string.title),
+                description = stringResource(CommonR.string.title_description),
             )
         }
         items(
@@ -87,8 +69,8 @@ private fun Screen(
 
         item(key = "body-header") {
             SectionHeader(
-                title = "Body",
-                description = DESC_HEADER_BODY,
+                title = stringResource(CommonR.string.body),
+                description = stringResource(CommonR.string.body_description),
             )
         }
         items(
@@ -100,8 +82,8 @@ private fun Screen(
 
         item(key = "action-header") {
             SectionHeader(
-                title = "Action",
-                description = DESC_HEADER_ACTION,
+                title = stringResource(CommonR.string.action),
+                description = stringResource(CommonR.string.action_description),
             )
         }
         items(
@@ -113,8 +95,8 @@ private fun Screen(
 
         item(key = "caption-header") {
             SectionHeader(
-                title = "Caption",
-                description = DESC_HEADER_CAPTION,
+                title = stringResource(CommonR.string.caption),
+                description = stringResource(CommonR.string.caption_description),
             )
         }
         items(
@@ -300,10 +282,12 @@ private fun SpecItem(
 @Preview(
     name = "Light",
     uiMode = Configuration.UI_MODE_NIGHT_NO,
+    heightDp = 2000,
 )
 @Preview(
     name = "Dark",
     uiMode = Configuration.UI_MODE_NIGHT_YES,
+    heightDp = 2000,
 )
 @Composable
 fun Preview() {

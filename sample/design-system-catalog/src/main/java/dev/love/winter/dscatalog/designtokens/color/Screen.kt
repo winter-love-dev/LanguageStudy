@@ -24,6 +24,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -36,6 +37,7 @@ import dev.love.winter.designsystem.api.yellowColorTokens
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import kotlinx.collections.immutable.ImmutableList
+import dev.love.winter.sample.common.R
 
 @Composable
 fun ColorRoute(
@@ -63,7 +65,7 @@ private fun Screen(
     ) {
         item(span = { GridItemSpan(maxLineSpan) }) {
             Text(
-                text = "Color System",
+                text = stringResource(R.string.color_system),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier.padding(top = WinterTheme.spacing.extraExtraLarge),
             )

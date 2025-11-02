@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -35,6 +36,7 @@ import dev.love.winter.designsystem.component.button.spec.ButtonShape
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.Catalog
+import dev.love.winter.sample.common.R
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable
@@ -109,7 +111,7 @@ private fun Content(
         }
         item {
             Text(
-                text = "LanguageStudy",
+                text = stringResource(R.string.app_name),
                 style = WinterTheme.typography.displayLarge,
                 color = WinterTheme.color.textBrand,
                 modifier = Modifier.padding(
@@ -119,15 +121,14 @@ private fun Content(
         }
         item {
             Text(
-                text = "Design System",
+                text = stringResource(R.string.design_system),
                 style = WinterTheme.typography.displayLarge,
                 color = WinterTheme.color.textTitle,
             )
         }
         item {
             Text(
-                text = "A comprehensive catalog of\n" +
-                        "components and styles",
+                text = stringResource(R.string.welcome_message),
                 style = WinterTheme.typography.displaySmall,
                 color = WinterTheme.color.textTitle,
                 modifier = Modifier.padding(
@@ -139,7 +140,7 @@ private fun Content(
             Divider()
         }
         stickyHeader {
-            SectionTitle(text = "🎨  DESIGN TOKENS")
+            SectionTitle(text = "🎨 " + stringResource(R.string.design_tokens).uppercase())
         }
         items(
             items = state.designTokenEntries,
@@ -159,7 +160,7 @@ private fun Content(
             Divider()
         }
         stickyHeader {
-            SectionTitle(text = "🧩  COMPONENTS")
+            SectionTitle(text = "🧩 " + stringResource(R.string.components).uppercase())
         }
         items(
             items = state.componentEntries.chunked(2),
@@ -223,10 +224,10 @@ private fun BottomBar(
         Text(
             text = createHighlightedText(
                 text = """
-                    Designed & Developed by Winter
-                    © 2025 All rights reserved.
+                    ${stringResource(R.string.made_by)}
+                    ${stringResource(R.string.copyright)}
                 """.trimIndent(),
-                highlightWord = "Winter",
+                highlightWord = stringResource(R.string.winter),
                 highlightColor = WinterTheme.color.textBrand,
                 baseStyle = WinterTheme.typography.bodySmall,
             ),
@@ -234,7 +235,7 @@ private fun BottomBar(
             color = WinterTheme.color.textTitle,
         )
         Button(
-            label = "option",
+            label = stringResource(R.string.option),
             onPress = { },
             shape = ButtonShape.Small,
             icon = ButtonIcon.Leading(

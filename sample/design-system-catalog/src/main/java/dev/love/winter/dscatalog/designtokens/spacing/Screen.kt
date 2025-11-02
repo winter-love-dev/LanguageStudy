@@ -21,11 +21,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.R
+import dev.love.winter.sample.common.R as CommonR
 
 private const val ASPECT_COLUMN_RATIO_TOKEN = 0.5f
 private const val ASPECT_COLUMN_RATIO_PX = 0.2f
@@ -53,14 +55,14 @@ private fun Screen(
     ) {
         item(key = "Spacing") {
             Text(
-                text = "Spacing",
+                text = stringResource(CommonR.string.spacing),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
                     .padding(top = WinterTheme.spacing.extraExtraLarge),
             )
             Text(
-                text = "Spacing tokens guarantee consistent spacing and alignment between elements while providing better readability, clarity, and balance.",
+                text = stringResource(CommonR.string.spacing_description),
                 color = WinterTheme.color.textCaption,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -91,7 +93,7 @@ private fun Screen(
 
         item(key = "Tokens") {
             Text(
-                text = "Tokens",
+                text = stringResource(CommonR.string.tokens),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -202,13 +204,7 @@ private fun Screen(
 
         item(key = "Usage desc") {
             Text(
-                text = """
-                    Use the spacing tokens to organize the content under the correct hierarchy.
-                    
-                    It's important to group related elements to increase readability.
-                    
-                    For related items, use smaller spacing values. While between unrelated items, it's better to increase the spacing.
-                """.trimIndent(),
+                text = stringResource(CommonR.string.usage_description_1),
                 color = WinterTheme.color.textCaption,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -240,7 +236,7 @@ private fun Screen(
 
         item(key = "Usage desc 2") {
             Text(
-                text = "When stacking components, use the same spacing between all elements in the group.",
+                text = stringResource(CommonR.string.usage_description_2),
                 color = WinterTheme.color.textCaption,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -333,10 +329,12 @@ private fun SpacingExample(
 @Preview(
     name = "Light",
     uiMode = Configuration.UI_MODE_NIGHT_NO,
+    heightDp = 2000,
 )
 @Preview(
     name = "Dark",
     uiMode = Configuration.UI_MODE_NIGHT_YES,
+    heightDp = 2000,
 )
 @Composable
 private fun Preview() {
