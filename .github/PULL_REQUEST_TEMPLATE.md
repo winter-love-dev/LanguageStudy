@@ -1,8 +1,3 @@
----
-name: Pull Request
-about: Create a new pull request
-labels: ''
----
 
 ## Task summery
 <!-- Briefly describe the changes in this PR. -->
