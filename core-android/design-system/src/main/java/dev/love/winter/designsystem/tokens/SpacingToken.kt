@@ -14,10 +14,10 @@ import androidx.compose.ui.unit.dp
  * - When stacking components, use the same spacing between all elements in the group
  */
 
-internal val SpacingExtraExtraSmall = 4.dp
-internal val SpacingExtraSmall = 8.dp
-internal val SpacingSmall = 16.dp
-internal val SpacingMedium = 24.dp
-internal val SpacingLarge = 32.dp
-internal val SpacingExtraLarge = 40.dp
-internal val SpacingExtraExtraLarge = 48.dp
+val SpacingExtraExtraSmall = 4.dp
+val SpacingExtraSmall = 8.dp
+val SpacingSmall = 16.dp
+val SpacingMedium = 24.dp
+val SpacingLarge = 32.dp
+val SpacingExtraLarge = 40.dp
+val SpacingExtraExtraLarge = 48.dp

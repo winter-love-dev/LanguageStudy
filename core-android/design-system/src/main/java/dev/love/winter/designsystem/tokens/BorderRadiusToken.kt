@@ -20,9 +20,9 @@ import androidx.compose.ui.unit.dp
  * - Pill: Components that are completely rounded on their sides
  */
 
-internal val BorderRadiusExtraSmall = RoundedCornerShape(2.dp)
-internal val BorderRadiusSmall = RoundedCornerShape(4.dp)
-internal val BorderRadiusMedium = RoundedCornerShape(8.dp)
-internal val BorderRadiusLarge = RoundedCornerShape(16.dp)
-internal val BorderRadiusExtraLarge = RoundedCornerShape(24.dp)
-internal val BorderRadiusPill = CircleShape
+val BorderRadiusExtraSmall = RoundedCornerShape(2.dp)
+val BorderRadiusSmall = RoundedCornerShape(4.dp)
+val BorderRadiusMedium = RoundedCornerShape(8.dp)
+val BorderRadiusLarge = RoundedCornerShape(16.dp)
+val BorderRadiusExtraLarge = RoundedCornerShape(24.dp)
+val BorderRadiusPill = CircleShape

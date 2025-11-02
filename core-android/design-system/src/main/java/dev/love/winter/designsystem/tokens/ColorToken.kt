@@ -77,199 +77,199 @@ internal val Red900 = Color(0xFF401111)
 /**
  * Component Token - Background (Light Theme)
  */
-internal val BackgroundLight = Grey50
-internal val BackgroundContainerLight = Grey100
-internal val BackgroundObjectLight = Grey200
-internal val BackgroundModalLight = Grey50
-internal val BackgroundBrandLight = Primary500
-internal val BackgroundBrandSubtleLight = Primary50
-internal val BackgroundPositiveLight = Green50
-internal val BackgroundWarningLight = Yellow50
-internal val BackgroundNegativeLight = Red50
-internal val BackgroundContrastLight = Grey900
-internal val BackgroundDisabledLight = Grey100
-internal val BackgroundOverlayLight = Grey900.copy(alpha = 0.5f)
+val BackgroundLight = Grey50
+val BackgroundContainerLight = Grey100
+val BackgroundObjectLight = Grey200
+val BackgroundModalLight = Grey50
+val BackgroundBrandLight = Primary500
+val BackgroundBrandSubtleLight = Primary50
+val BackgroundPositiveLight = Green50
+val BackgroundWarningLight = Yellow50
+val BackgroundNegativeLight = Red50
+val BackgroundContrastLight = Grey900
+val BackgroundDisabledLight = Grey100
+val BackgroundOverlayLight = Grey900.copy(alpha = 0.5f)
 
 /**
  * Component Token - Background (Dark Theme)
  */
-internal val BackgroundDark = Grey900
-internal val BackgroundContainerDark = Grey800
-internal val BackgroundObjectDark = Grey700
-internal val BackgroundModalDark = Grey800
-internal val BackgroundBrandDark = Primary500
-internal val BackgroundBrandSubtleDark = Primary900
-internal val BackgroundPositiveDark = Green900
-internal val BackgroundWarningDark = Yellow900
-internal val BackgroundNegativeDark = Red900
-internal val BackgroundContrastDark = Grey50
-internal val BackgroundDisabledDark = Grey800
-internal val BackgroundOverlayDark = Grey900.copy(alpha = 0.7f)
+val BackgroundDark = Grey900
+val BackgroundContainerDark = Grey800
+val BackgroundObjectDark = Grey700
+val BackgroundModalDark = Grey800
+val BackgroundBrandDark = Primary500
+val BackgroundBrandSubtleDark = Primary900
+val BackgroundPositiveDark = Green900
+val BackgroundWarningDark = Yellow900
+val BackgroundNegativeDark = Red900
+val BackgroundContrastDark = Grey50
+val BackgroundDisabledDark = Grey800
+val BackgroundOverlayDark = Grey900.copy(alpha = 0.7f)
 
 /**
  * Component Token - Stroke (Light Theme)
  */
-internal val StrokeNeutralSubtleLight = Grey100
-internal val StrokeNeutralLight = Grey200
-internal val StrokeNeutralStrongLight = Grey300
-internal val StrokeBrandLight = Primary500
-internal val StrokePositiveLight = Green500
-internal val StrokeWarningLight = Yellow500
-internal val StrokeNegativeLight = Red500
+val StrokeNeutralSubtleLight = Grey100
+val StrokeNeutralLight = Grey200
+val StrokeNeutralStrongLight = Grey300
+val StrokeBrandLight = Primary500
+val StrokePositiveLight = Green500
+val StrokeWarningLight = Yellow500
+val StrokeNegativeLight = Red500
 
 /**
  * Component Token - Stroke (Dark Theme)
  */
-internal val StrokeNeutralSubtleDark = Grey800
-internal val StrokeNeutralDark = Grey700
-internal val StrokeNeutralStrongDark = Grey600
-internal val StrokeBrandDark = Primary600
-internal val StrokePositiveDark = Green600
-internal val StrokeWarningDark = Yellow600
-internal val StrokeNegativeDark = Red600
+val StrokeNeutralSubtleDark = Grey800
+val StrokeNeutralDark = Grey700
+val StrokeNeutralStrongDark = Grey600
+val StrokeBrandDark = Primary600
+val StrokePositiveDark = Green600
+val StrokeWarningDark = Yellow600
+val StrokeNegativeDark = Red600
 
 /**
  * Component Token - Text (Light Theme)
  */
-internal val TextTitleLight = Grey900
-internal val TextSubtitleLight = Grey700
-internal val TextBodyLight = Grey800
-internal val TextCaptionLight = Grey600
-internal val TextPlaceholderLight = Grey500
-internal val TextDisabledLight = Grey400
-internal val TextOnColorDarkLight = Grey50
-internal val TextOnColorLightLight = Grey900
-internal val TextOnContrastLight = Grey50
-internal val TextLinkLight = Primary600
-internal val TextBrandLight = Primary500
-internal val TextPositiveLight = Green200
-internal val TextWarningLight = Yellow700
-internal val TextNegativeLight = Red600
+val TextTitleLight = Grey900
+val TextSubtitleLight = Grey700
+val TextBodyLight = Grey800
+val TextCaptionLight = Grey600
+val TextPlaceholderLight = Grey500
+val TextDisabledLight = Grey400
+val TextOnColorDarkLight = Grey50
+val TextOnColorLightLight = Grey900
+val TextOnContrastLight = Grey50
+val TextLinkLight = Primary600
+val TextBrandLight = Primary500
+val TextPositiveLight = Green200
+val TextWarningLight = Yellow700
+val TextNegativeLight = Red600
 
 /**
  * Component Token - Text (Dark Theme)
  */
-internal val TextTitleDark = Grey50
-internal val TextSubtitleDark = Grey200
-internal val TextBodyDark = Grey100
-internal val TextCaptionDark = Grey300
-internal val TextPlaceholderDark = Grey500
-internal val TextDisabledDark = Grey600
-internal val TextOnColorDarkDark = Grey50
-internal val TextOnColorLightDark = Grey900
-internal val TextOnContrastDark = Grey900
-internal val TextLinkDark = Primary300
-internal val TextBrandDark = Primary500
-internal val TextPositiveDark = Green700
-internal val TextWarningDark = Yellow200
-internal val TextNegativeDark = Red200
+val TextTitleDark = Grey50
+val TextSubtitleDark = Grey200
+val TextBodyDark = Grey100
+val TextCaptionDark = Grey300
+val TextPlaceholderDark = Grey500
+val TextDisabledDark = Grey600
+val TextOnColorDarkDark = Grey50
+val TextOnColorLightDark = Grey900
+val TextOnContrastDark = Grey900
+val TextLinkDark = Primary300
+val TextBrandDark = Primary500
+val TextPositiveDark = Green700
+val TextWarningDark = Yellow200
+val TextNegativeDark = Red200
 
 /**
  * Component Token - Icon (Light Theme)
  */
-internal val IconNeutralSubtleLight = Grey500
-internal val IconNeutralLight = Grey600
-internal val IconNeutralStrongLight = Grey900
-internal val IconBrandLight = Primary500
-internal val IconPositiveLight = Green600
-internal val IconWarningLight = Yellow600
-internal val IconNegativeLight = Red600
-internal val IconOnColorDarkLight = Grey50
-internal val IconOnColorLightLight = Grey900
-internal val IconOnContrastLight = Grey50
-internal val IconDisabledLight = Grey400
+val IconNeutralSubtleLight = Grey500
+val IconNeutralLight = Grey600
+val IconNeutralStrongLight = Grey900
+val IconBrandLight = Primary500
+val IconPositiveLight = Green600
+val IconWarningLight = Yellow600
+val IconNegativeLight = Red600
+val IconOnColorDarkLight = Grey50
+val IconOnColorLightLight = Grey900
+val IconOnContrastLight = Grey50
+val IconDisabledLight = Grey400
 
 /**
  * Component Token - Icon (Dark Theme)
  */
-internal val IconNeutralSubtleDark = Grey500
-internal val IconNeutralDark = Grey300
-internal val IconNeutralStrongDark = Grey300
-internal val IconBrandDark = Primary500
-internal val IconPositiveDark = Green600
-internal val IconWarningDark = Yellow500
-internal val IconNegativeDark = Red500
-internal val IconOnColorDarkDark = Grey50
-internal val IconOnColorLightDark = Grey900
-internal val IconOnContrastDark = Grey900
-internal val IconDisabledDark = Grey600
+val IconNeutralSubtleDark = Grey500
+val IconNeutralDark = Grey300
+val IconNeutralStrongDark = Grey300
+val IconBrandDark = Primary500
+val IconPositiveDark = Green600
+val IconWarningDark = Yellow500
+val IconNegativeDark = Red500
+val IconOnColorDarkDark = Grey50
+val IconOnColorLightDark = Grey900
+val IconOnContrastDark = Grey900
+val IconDisabledDark = Grey600
 
 /**
  * Component Token - Button (Light Theme)
  */
-internal val ButtonPrimaryDefaultLight = Grey900
-internal val ButtonPrimaryActiveLight = Grey800
-internal val ButtonPrimaryDisabledLight = Grey100
-internal val ButtonSecondaryDefaultLight = Grey300
-internal val ButtonSecondaryActiveLight = Grey400
-internal val ButtonSecondaryDisabledLight = Grey100
-internal val ButtonTertiaryDefaultLight = Grey900
-internal val ButtonTertiaryActiveLight = Grey700
-internal val ButtonTertiaryDisabledLight = Grey400
-internal val ButtonBrandDefaultLight = Primary500
-internal val ButtonBrandActiveLight = Primary600
-internal val ButtonBrandDisabledLight = Grey100
-internal val ButtonCriticalDefaultLight = Red600
-internal val ButtonCriticalActiveLight = Red700
-internal val ButtonCriticalDisabledLight = Grey100
+val ButtonPrimaryDefaultLight = Grey900
+val ButtonPrimaryActiveLight = Grey800
+val ButtonPrimaryDisabledLight = Grey100
+val ButtonSecondaryDefaultLight = Grey300
+val ButtonSecondaryActiveLight = Grey400
+val ButtonSecondaryDisabledLight = Grey100
+val ButtonTertiaryDefaultLight = Grey900
+val ButtonTertiaryActiveLight = Grey700
+val ButtonTertiaryDisabledLight = Grey400
+val ButtonBrandDefaultLight = Primary500
+val ButtonBrandActiveLight = Primary600
+val ButtonBrandDisabledLight = Grey100
+val ButtonCriticalDefaultLight = Red600
+val ButtonCriticalActiveLight = Red700
+val ButtonCriticalDisabledLight = Grey100
 
 /**
  * Component Token - Button (Dark Theme)
  */
-internal val ButtonPrimaryDefaultDark = Grey50
-internal val ButtonPrimaryActiveDark = Grey200
-internal val ButtonPrimaryDisabledDark = Grey800
-internal val ButtonSecondaryDefaultDark = Grey600
-internal val ButtonSecondaryActiveDark = Grey700
-internal val ButtonSecondaryDisabledDark = Grey800
-internal val ButtonTertiaryDefaultDark = Grey50
-internal val ButtonTertiaryActiveDark = Grey300
-internal val ButtonTertiaryDisabledDark = Grey600
-internal val ButtonBrandDefaultDark = Primary500
-internal val ButtonBrandActiveDark = Primary600
-internal val ButtonBrandDisabledDark = Grey800
-internal val ButtonCriticalDefaultDark = Red600
-internal val ButtonCriticalActiveDark = Red700
-internal val ButtonCriticalDisabledDark = Grey800
+val ButtonPrimaryDefaultDark = Grey50
+val ButtonPrimaryActiveDark = Grey200
+val ButtonPrimaryDisabledDark = Grey800
+val ButtonSecondaryDefaultDark = Grey600
+val ButtonSecondaryActiveDark = Grey700
+val ButtonSecondaryDisabledDark = Grey800
+val ButtonTertiaryDefaultDark = Grey50
+val ButtonTertiaryActiveDark = Grey300
+val ButtonTertiaryDisabledDark = Grey600
+val ButtonBrandDefaultDark = Primary500
+val ButtonBrandActiveDark = Primary600
+val ButtonBrandDisabledDark = Grey800
+val ButtonCriticalDefaultDark = Red600
+val ButtonCriticalActiveDark = Red700
+val ButtonCriticalDisabledDark = Grey800
 
 /**
  * Component Token - Input (Light Theme)
  */
-internal val InputDefaultLight = Grey300
-internal val InputActiveLight = Grey300
-internal val InputActiveCursorLight = Primary500
-internal val InputSelectedLight = Grey900
-internal val InputPositiveLight = Green500
-internal val InputNegativeLight = Red500
-internal val InputDisabledLight = Grey300
+val InputDefaultLight = Grey300
+val InputActiveLight = Grey300
+val InputActiveCursorLight = Primary500
+val InputSelectedLight = Grey900
+val InputPositiveLight = Green500
+val InputNegativeLight = Red500
+val InputDisabledLight = Grey300
 
 /**
  * Component Token - Input (Dark Theme)
  */
-internal val InputDefaultDark = Grey700
-internal val InputActiveDark = Primary500
-internal val InputActiveCursorDark = Primary200
-internal val InputSelectedDark = Grey50
-internal val InputPositiveDark = Green300
-internal val InputNegativeDark = Red300
-internal val InputDisabledDark = Grey700
+val InputDefaultDark = Grey700
+val InputActiveDark = Primary500
+val InputActiveCursorDark = Primary200
+val InputSelectedDark = Grey50
+val InputPositiveDark = Green300
+val InputNegativeDark = Red300
+val InputDisabledDark = Grey700
 
 /**
  * Component Token - Tag (Light Theme)
  */
-internal val TagNeutralLight = Grey200
-internal val TagBrandStrongLight = Primary500
-internal val TagBrandSubtleLight = Primary100
-internal val TagPositiveLight = Green100
-internal val TagWarningLight = Yellow100
-internal val TagNegativeLight = Red100
+val TagNeutralLight = Grey200
+val TagBrandStrongLight = Primary500
+val TagBrandSubtleLight = Primary100
+val TagPositiveLight = Green100
+val TagWarningLight = Yellow100
+val TagNegativeLight = Red100
 
 /**
  * Component Token - Tag (Dark Theme)
  */
-internal val TagNeutralDark = Grey700
-internal val TagBrandStrongDark = Primary600
-internal val TagBrandSubtleDark = Primary100
-internal val TagPositiveDark = Green100
-internal val TagWarningDark = Yellow100
-internal val TagNegativeDark = Red100
+val TagNeutralDark = Grey700
+val TagBrandStrongDark = Primary600
+val TagBrandSubtleDark = Primary100
+val TagPositiveDark = Green100
+val TagWarningDark = Yellow100
+val TagNegativeDark = Red100
