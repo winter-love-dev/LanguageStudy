@@ -19,11 +19,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.designsystem.tokens.IconResource
 import dev.love.winter.dscatalog.R
+import dev.love.winter.sample.common.R as CommonR
 
 private const val ASPECT_COLUMN_RATIO_TOKEN = 0.65f
 private const val ASPECT_COLUMN_RATIO_EXAMPLE = 0.35f
@@ -51,15 +53,14 @@ private fun Screen(
     ) {
         item(key = "Icons") {
             Text(
-                text = "Icons",
+                text = stringResource(CommonR.string.icons),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
                     .padding(top = WinterTheme.spacing.extraExtraLarge),
             )
             Text(
-                text = "Icons are graphic assets that improve usability by providing extra meaning to actions and components, " +
-                        "making them more visually appealing and easier to understand",
+                text = stringResource(CommonR.string.icons_description),
                 color = WinterTheme.color.textCaption,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -68,15 +69,14 @@ private fun Screen(
         }
         item(key = "Creating an icon") {
             Text(
-                text = "Creating an icon",
+                text = stringResource(CommonR.string.creating_an_icon),
                 style = WinterTheme.typography.displaySmall,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
                     .padding(top = WinterTheme.spacing.extraExtraLarge),
             )
             Text(
-                text = "When creating new icons, start with a base of 24px and draw the icon using a 1.5px stroke. " +
-                        "Use the Icon grid (represented below) to help you design consistent icons.",
+                text = stringResource(CommonR.string.creating_an_icon_description),
                 color = WinterTheme.color.textCaption,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -99,7 +99,7 @@ private fun Screen(
         }
         item(key = "Tokens") {
             Text(
-                text = "Tokens",
+                text = stringResource(CommonR.string.tokens),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)

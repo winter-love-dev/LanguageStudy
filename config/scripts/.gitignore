@@ -1,0 +1,7 @@
+# Service Account credentials
+*.json
+service-account*.json
+
+# Translation config files (except example)
+translations/*
+!translations/example.properties

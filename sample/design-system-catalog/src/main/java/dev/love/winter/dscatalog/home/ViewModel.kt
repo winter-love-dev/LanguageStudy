@@ -40,6 +40,13 @@ class ViewModel @Inject constructor() : ViewModel() {
             is Event.OnCatalogItemClick -> {
                 handleCatalogItemClick(event.item)
             }
+            is Event.OnLanguageChange -> {
+                _sideEffect.tryEmit(
+                    SideEffect.RestartApp(
+                        languageTag = event.languageTag,
+                    )
+                )
+            }
         }
     }
 

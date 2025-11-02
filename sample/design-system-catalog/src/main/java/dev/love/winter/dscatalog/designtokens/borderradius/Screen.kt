@@ -22,11 +22,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
-import dev.love.winter.dscatalog.R
+import dev.love.winter.sample.common.R
 
 private const val ASPECT_COLUMN_RATIO_TOKEN = 0.5f
 private const val ASPECT_COLUMN_RATIO_PX = 0.3f
@@ -55,15 +56,14 @@ fun Screen(
     ) {
         item(key = "Title") {
             Text(
-                text = "Border radius",
+                text = stringResource(R.string.border_radius),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
                     .padding(top = WinterTheme.spacing.extraExtraLarge),
             )
             Text(
-                text = "Border radius tokens are applied to elements with rounded corners, " +
-                        "such as buttons, cards, input fields, and containers, to soften their edges and create a more pleasing appearance.",
+                text = stringResource(R.string.border_radius_description),
                 color = WinterTheme.color.textCaption,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -85,7 +85,7 @@ fun Screen(
                         ),
             ) {
                 Image(
-                    painter = painterResource(R.drawable.image_border_radius_sample),
+                    painter = painterResource(dev.love.winter.dscatalog.R.drawable.image_border_radius_sample),
                     contentDescription = "sample image",
                     modifier = Modifier.align(Alignment.Center)
                 )
@@ -93,6 +93,7 @@ fun Screen(
         }
 
         item(key = "Tokens") {
+            stringResource(R.string.tokens)
             Text(
                 text = "Tokens",
                 style = WinterTheme.typography.displayMedium,
@@ -147,7 +148,7 @@ fun Screen(
 
         item(key = "Usage title") {
             Text(
-                text = "Usage",
+                text = stringResource(R.string.usage),
                 style = WinterTheme.typography.displayMedium,
                 modifier = Modifier
                     .padding(horizontal = WinterTheme.spacing.small)
@@ -156,9 +157,9 @@ fun Screen(
         }
 
         usageInfoItems.forEach { usageInfo ->
-            item(key = "Usage title - ${usageInfo.title}") {
+            item(key = "Usage title - ${usageInfo.titleRes}") {
                 Text(
-                    text = usageInfo.title,
+                    text = stringResource(usageInfo.titleRes),
                     style = WinterTheme.typography.titleLarge,
                     color = WinterTheme.color.textSubtitle,
                     modifier = Modifier
@@ -167,15 +168,15 @@ fun Screen(
                 )
             }
 
-            item(key = "Usage sample - ${usageInfo.title}") {
+            item(key = "Usage sample - ${usageInfo.titleRes}") {
                 UsageSampleImage(
                     imageRes = usageInfo.imageRes,
                 )
             }
 
-            item(key = "Usage desc - ${usageInfo.title}") {
+            item(key = "Usage desc - ${usageInfo.titleRes}") {
                 Text(
-                    text = usageInfo.description,
+                    text = stringResource(usageInfo.descriptionRes),
                     color = WinterTheme.color.textCaption,
                     modifier = Modifier
                         .padding(top = WinterTheme.spacing.small)
@@ -191,7 +192,7 @@ fun Screen(
 private fun UsageSampleImage(
     @DrawableRes imageRes: Int,
 ) {
-    if (imageRes == R.drawable.image_border_radius_usage) {
+    if (imageRes == dev.love.winter.dscatalog.R.drawable.image_border_radius_usage) {
         Box(
             modifier =
                 Modifier
@@ -295,10 +296,12 @@ private fun SpecItem(
 @Preview(
     name = "Light",
     uiMode = Configuration.UI_MODE_NIGHT_NO,
+    heightDp = 2000,
 )
 @Preview(
     name = "Dark",
     uiMode = Configuration.UI_MODE_NIGHT_YES,
+    heightDp = 2000,
 )
 @Composable
 private fun Preview() {

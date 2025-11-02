@@ -20,4 +20,5 @@ android {
 dependencies {
     implementation(projects.sample.common)
     implementation(projects.coreAndroid.designSystem)
+    implementation(libs.androidX.appcompat)
 }

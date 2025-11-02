@@ -6,13 +6,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Shape
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.R
+import dev.love.winter.sample.common.R as CommonR
 
 class Data
 
 data class UsageInfo(
-    val title: String,
+    @param:DrawableRes val titleRes: Int,
     @param:DrawableRes val imageRes: Int,
-    val description: String,
+    @param:DrawableRes val descriptionRes: Int,
 )
 
 data class SpecInfo(
@@ -23,34 +24,34 @@ data class SpecInfo(
 
 val usageInfoItems = listOf(
     UsageInfo(
-        title = "Extra small",
+        titleRes = CommonR.string.extra_small,
         imageRes = R.drawable.image_border_radius_usage,
-        description = "Use Extra small for very subtle rounded corners.",
+        descriptionRes = CommonR.string.extra_small_description,
     ),
     UsageInfo(
-        title = "Small",
+        titleRes = CommonR.string.small,
         imageRes = R.drawable.image_border_radius_usage_small,
-        description = "Use Small for the smallest elements or nested components.",
+        descriptionRes = CommonR.string.small_description,
     ),
     UsageInfo(
-        title = "Medium",
+        titleRes = CommonR.string.medium,
         imageRes = R.drawable.image_border_radius_usage_medium,
-        description = "The Medium variation is used in most components. Use it in small-to-medium components and containers.",
+        descriptionRes = CommonR.string.medium_description,
     ),
     UsageInfo(
-        title = "Large",
+        titleRes = CommonR.string.large,
         imageRes = R.drawable.image_border_radius_usage_large,
-        description = "Use Large for medium-to-large components and containers.",
+        descriptionRes = CommonR.string.large_description,
     ),
     UsageInfo(
-        title = "Extra Large",
+        titleRes = CommonR.string.extra_large,
         imageRes = R.drawable.image_border_radius_usage_extra_large,
-        description = "Use Extra Large for the biggest elements, especially on tablet screens.",
+        descriptionRes = CommonR.string.extra_large_description,
     ),
     UsageInfo(
-        title = "Pill",
+        titleRes = CommonR.string.pill,
         imageRes = R.drawable.image_border_radius_usage_pill,
-        description = "Use Pill for the components that are completely rounded on their sides.",
+        descriptionRes = CommonR.string.pill_description,
     ),
 )
 

@@ -1,5 +1,6 @@
 package dev.love.winter.dscatalog.home
 
+import android.content.Intent
 import android.content.res.Configuration
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -17,10 +18,15 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -35,7 +41,12 @@ import dev.love.winter.designsystem.component.button.spec.ButtonShape
 import dev.love.winter.designsystem.component.text.Text
 import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.Catalog
+import dev.love.winter.dscatalog.home.component.LanguageSelectionDialog
+import dev.love.winter.dscatalog.home.component.findActivity
+import dev.love.winter.sample.common.R
+import dev.love.winter.sample.common.util.LocaleManager
 import kotlinx.coroutines.flow.collectLatest
+import kotlin.system.exitProcess
 
 @Composable
 fun HomeRoute(
@@ -43,6 +54,7 @@ fun HomeRoute(
     modifier: Modifier = Modifier,
     viewModel: ViewModel = hiltViewModel(),
 ) {
+    val context = LocalContext.current
     val state: State by viewModel.uiState.collectAsStateWithLifecycle()
 
     LaunchedEffect(viewModel.sideEffect) {
@@ -51,6 +63,16 @@ fun HomeRoute(
                 is SideEffect.NavigateTo -> {
                     onNavigate(sideEffect.catalog)
                 }
+                is SideEffect.RestartApp -> {
+                    LocaleManager.setLocale(languageTag = sideEffect.languageTag)
+                    context.findActivity()?.let { activity ->
+                        val intent = activity.packageManager.getLaunchIntentForPackage(activity.packageName)
+                        intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                        intent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                        activity.startActivity(intent)
+                        exitProcess(0)
+                    }
+                }
             }
         }
     }
@@ -58,9 +80,7 @@ fun HomeRoute(
         state = state,
         modifier = modifier
             .background(color = WinterTheme.color.background),
-        onClick = {
-            viewModel.onEvent(Event.OnCatalogItemClick(it))
-        },
+        onEvent = viewModel::onEvent,
     )
 }
 
@@ -68,19 +88,36 @@ fun HomeRoute(
 private fun HomeScreen(
     state: State,
     modifier: Modifier = Modifier,
-    onClick: (item: Catalog) -> Unit = { },
+    onEvent: (Event) -> Unit = { },
 ) {
+    var showLanguageDialog by remember { mutableStateOf(false) }
+    if (showLanguageDialog) {
+        LanguageSelectionDialog(
+            onDismissRequest = {
+                showLanguageDialog = false
+            },
+            onLanguageChange = { languageTag ->
+                onEvent(Event.OnLanguageChange(languageTag))
+                showLanguageDialog = false
+            },
+        )
+    }
+
     Box(modifier) {
         Content(
             state = state,
-            modifier = Modifier
-                .fillMaxSize(),
-            onClick = onClick,
+            modifier = Modifier.fillMaxSize(),
+            onClick = { catalog ->
+                onEvent(Event.OnCatalogItemClick(catalog))
+            },
         )
         BottomBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter),
+            onOptionClick = {
+                showLanguageDialog = true
+            },
         )
     }
 }
@@ -109,7 +146,7 @@ private fun Content(
         }
         item {
             Text(
-                text = "LanguageStudy",
+                text = stringResource(R.string.app_name),
                 style = WinterTheme.typography.displayLarge,
                 color = WinterTheme.color.textBrand,
                 modifier = Modifier.padding(
@@ -119,15 +156,14 @@ private fun Content(
         }
         item {
             Text(
-                text = "Design System",
+                text = stringResource(R.string.design_system),
                 style = WinterTheme.typography.displayLarge,
                 color = WinterTheme.color.textTitle,
             )
         }
         item {
             Text(
-                text = "A comprehensive catalog of\n" +
-                        "components and styles",
+                text = stringResource(R.string.welcome_message),
                 style = WinterTheme.typography.displaySmall,
                 color = WinterTheme.color.textTitle,
                 modifier = Modifier.padding(
@@ -139,7 +175,7 @@ private fun Content(
             Divider()
         }
         stickyHeader {
-            SectionTitle(text = "🎨  DESIGN TOKENS")
+            SectionTitle(text = stringResource(R.string.tokens))
         }
         items(
             items = state.designTokenEntries,
@@ -159,7 +195,7 @@ private fun Content(
             Divider()
         }
         stickyHeader {
-            SectionTitle(text = "🧩  COMPONENTS")
+            SectionTitle(text = stringResource(R.string.components))
         }
         items(
             items = state.componentEntries.chunked(2),
@@ -209,6 +245,7 @@ private fun SectionTitle(text: String) {
 @Composable
 private fun BottomBar(
     modifier: Modifier = Modifier,
+    onOptionClick: () -> Unit,
 ) {
     Row(
         modifier = modifier
@@ -223,10 +260,10 @@ private fun BottomBar(
         Text(
             text = createHighlightedText(
                 text = """
-                    Designed & Developed by Winter
-                    © 2025 All rights reserved.
+                    ${stringResource(R.string.made_by)}
+                    ${stringResource(R.string.copyright)}
                 """.trimIndent(),
-                highlightWord = "Winter",
+                highlightWord = stringResource(R.string.winter),
                 highlightColor = WinterTheme.color.textBrand,
                 baseStyle = WinterTheme.typography.bodySmall,
             ),
@@ -234,8 +271,8 @@ private fun BottomBar(
             color = WinterTheme.color.textTitle,
         )
         Button(
-            label = "option",
-            onPress = { },
+            label = stringResource(R.string.option),
+            onPress = onOptionClick,
             shape = ButtonShape.Small,
             icon = ButtonIcon.Leading(
                 resource = WinterTheme.icon.global.settings.outlined,

@@ -10,3 +10,5 @@ include(":app")
 include(":core-android:design-system")
 include(":sample:common")
 include(":sample:design-system-catalog")
+
+include(":config:scripts")

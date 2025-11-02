@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application name -->
+    <string name="app_name">LanguageStudy</string>
+    <!-- Design System text -->
+    <string name="design_system">Hệ thống thiết kế</string>
+    <!-- Welcome message -->
+    <string name="welcome_message">Danh mục toàn diện về các thành phần và phong cách</string>
+    <!-- Design tokens -->
+    <string name="design_tokens">Token thiết kế</string>
+    <!-- Design token -->
+    <string name="design_token">Token thiết kế</string>
+    <!-- Component -->
+    <string name="component">Thành phần</string>
+    <!-- Components -->
+    <string name="components">Thành phần</string>
+    <string name="winter">Winter</string>
+    <string name="made_by">Designed &amp; Development by Winter</string>
+    <string name="copyright">\@ 2025 All rights reserved.</string>
+    <string name="option">Tùy chọn</string>
+    <string name="color_system">Hệ thống màu sắc</string>
+    <string name="display">Hiển thị</string>
+    <string name="display_description">Sử dụng kiểu phông chữ hiển thị cho các tiêu đề lớn hoặc văn bản nổi bật cần nhấn mạnh. Hiển thị rất lý tưởng để thu hút sự chú ý của người dùng và tạo ra tuyên bố táo bạo. Tránh sử dụng kiểu này cho văn bản dài.</string>
+    <string name="title">Tiêu đề</string>
+    <string name="title_description">Sử dụng kiểu phông chữ tiêu đề khi bạn cần một hệ thống phân cấp trực quan rõ ràng mà không làm choáng ngợp bố cục. Bạn có thể áp dụng kiểu này trong các văn bản ngắn cần nổi bật so với văn bản nội dung, như tiêu đề phần, tiêu đề thẻ, tiêu đề trang, v.v.</string>
+    <string name="body">Nội dung</string>
+    <string name="body_description">Kiểu phông chữ nội dung lý tưởng cho nội dung văn bản thông thường, chẳng hạn như đoạn văn hoặc mô tả. Kiểu nội dung phù hợp cho cả văn bản dài và ngắn, nơi khả năng đọc và dễ đọc là điều cần thiết.</string>
+    <string name="action">Hành động</string>
+    <string name="action_description">Kiểu phông chữ hành động phù hợp cho các phần tử văn bản đại diện cho các mục tương tác hoặc có thể thực hiện, chẳng hạn như nút, trường nhập liệu và liên kết. Sử dụng nó để phân biệt các phần tử tương tác với văn bản thông thường.</string>
+    <string name="caption">Chú thích</string>
+    <string name="caption_description">Kiểu phông chữ chú thích được sử dụng cho văn bản hỗ trợ cung cấp ngữ cảnh và bổ sung cho các yếu tố trực quan, như biểu tượng, hình ảnh, thẻ, v.v. Tránh sử dụng kiểu này trong văn bản dài.</string>
+    <string name="spacing">Khoảng cách</string>
+    <string name="spacing_description">Token khoảng cách đảm bảo khoảng cách và căn chỉnh nhất quán giữa các phần tử đồng thời cung cấp khả năng đọc, rõ ràng và cân bằng tốt hơn.</string>
+    <string name="usage">Cách sử dụng</string>
+    <string name="usage_description_1">Sử dụng token khoảng cách để sắp xếp nội dung theo đúng hệ thống phân cấp. Điều quan trọng là nhóm các phần tử liên quan để tăng khả năng đọc. Đối với các mục liên quan, sử dụng giá trị khoảng cách nhỏ hơn. Trong khi giữa các mục không liên quan, tốt hơn là tăng khoảng cách.</string>
+    <string name="usage_description_2">Khi xếp chồng các thành phần, hãy sử dụng cùng một khoảng cách giữa tất cả các phần tử trong nhóm.</string>
+    <string name="border_radius">Bán kính viền</string>
+    <string name="border_radius_description">Token bán kính viền được áp dụng cho các phần tử có góc bo tròn, chẳng hạn như nút, thẻ, trường nhập liệu và vùng chứa, để làm mềm các cạnh của chúng và tạo ra vẻ ngoài dễ chịu hơn.</string>
+    <string name="tokens">Token</string>
+    <string name="extra_small">Rất nhỏ</string>
+    <string name="extra_small_description">Sử dụng Rất nhỏ cho các góc bo tròn rất tinh tế.</string>
+    <string name="small">Nhỏ</string>
+    <string name="small_description">Sử dụng Nhỏ cho các phần tử nhỏ nhất hoặc các thành phần lồng nhau.</string>
+    <string name="medium">Trung bình</string>
+    <string name="medium_description">Biến thể Trung bình được sử dụng trong hầu hết các thành phần. Sử dụng nó trong các thành phần và vùng chứa từ nhỏ đến trung bình.</string>
+    <string name="large">Lớn</string>
+    <string name="large_description">Sử dụng Lớn cho các thành phần và vùng chứa từ trung bình đến lớn.</string>
+    <string name="extra_large">Rất lớn</string>
+    <string name="extra_large_description">Sử dụng Rất lớn cho các phần tử lớn nhất, đặc biệt là trên màn hình máy tính bảng.</string>
+    <string name="pill">Viên thuốc</string>
+    <string name="pill_description">Sử dụng Viên thuốc cho các thành phần có các cạnh hoàn toàn tròn.</string>
+    <string name="icons">Biểu tượng</string>
+    <string name="icons_description">Biểu tượng là tài sản đồ họa giúp cải thiện khả năng sử dụng bằng cách cung cấp ý nghĩa bổ sung cho các hành động và thành phần, làm cho chúng hấp dẫn hơn về mặt thị giác và dễ hiểu hơn.</string>
+    <string name="creating_an_icon">Tạo biểu tượng</string>
+    <string name="creating_an_icon_description">Khi tạo biểu tượng mới, hãy bắt đầu với cơ sở 24px và vẽ biểu tượng bằng nét 1.5px. Sử dụng lưới Biểu tượng (được thể hiện bên dưới) để giúp bạn thiết kế các biểu tượng nhất quán.</string>
+    <string name="select_language">Chọn ngôn ngữ</string>
+</resources>
