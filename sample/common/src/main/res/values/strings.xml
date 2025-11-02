@@ -5,7 +5,7 @@
     <!-- Design System text -->
     <string name="design_system">Design System</string>
     <!-- Welcome message -->
-    <string name="welcome_message">A comprehensive catalog of components and styles</string>
+    <string name="welcome_message">A comprehensive catalog of \ncomponents and styles</string>
     <!-- Design tokens -->
     <string name="design_tokens">Design tokens</string>
     <!-- Design token -->
