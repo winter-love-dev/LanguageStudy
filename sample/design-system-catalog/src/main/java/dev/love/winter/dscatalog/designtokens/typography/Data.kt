@@ -3,7 +3,7 @@ package dev.love.winter.dscatalog.designtokens.typography
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.text.TextStyle
-import dev.love.winter.designsystem.theme.WinterTheme
+import dev.love.winter.uicomponent.theme.WinterTheme
 
 sealed class TypographyListItem {
     data class Header(

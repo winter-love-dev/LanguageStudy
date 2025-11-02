@@ -28,15 +28,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import dev.love.winter.designsystem.api.ColorToken
-import dev.love.winter.designsystem.api.brandColorTokens
-import dev.love.winter.designsystem.api.greenColorTokens
-import dev.love.winter.designsystem.api.neutralColorTokens
-import dev.love.winter.designsystem.api.redColorTokens
-import dev.love.winter.designsystem.api.yellowColorTokens
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.sample.common.R
+import dev.love.winter.uicomponent.api.ColorToken
+import dev.love.winter.uicomponent.api.brandColorTokens
+import dev.love.winter.uicomponent.api.greenColorTokens
+import dev.love.winter.uicomponent.api.neutralColorTokens
+import dev.love.winter.uicomponent.api.redColorTokens
+import dev.love.winter.uicomponent.api.yellowColorTokens
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 import kotlinx.collections.immutable.ImmutableList
 
 @Composable

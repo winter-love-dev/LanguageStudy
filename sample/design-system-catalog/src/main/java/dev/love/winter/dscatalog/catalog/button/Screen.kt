@@ -15,13 +15,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.love.winter.designsystem.component.button.Button
-import dev.love.winter.designsystem.component.button.spec.ButtonIcon
-import dev.love.winter.designsystem.component.button.spec.ButtonShape
-import dev.love.winter.designsystem.component.button.spec.ButtonState
-import dev.love.winter.designsystem.component.button.spec.ButtonType
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
+import dev.love.winter.uicomponent.component.button.Button
+import dev.love.winter.uicomponent.component.button.spec.ButtonIcon
+import dev.love.winter.uicomponent.component.button.spec.ButtonShape
+import dev.love.winter.uicomponent.component.button.spec.ButtonState
+import dev.love.winter.uicomponent.component.button.spec.ButtonType
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 

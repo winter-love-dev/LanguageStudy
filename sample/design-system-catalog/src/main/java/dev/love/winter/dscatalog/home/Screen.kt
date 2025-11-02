@@ -35,16 +35,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation3.runtime.NavKey
-import dev.love.winter.designsystem.component.button.Button
-import dev.love.winter.designsystem.component.button.spec.ButtonIcon
-import dev.love.winter.designsystem.component.button.spec.ButtonShape
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.Catalog
 import dev.love.winter.dscatalog.home.component.LanguageSelectionDialog
 import dev.love.winter.dscatalog.home.component.findActivity
 import dev.love.winter.sample.common.R
 import dev.love.winter.sample.common.util.LocaleManager
+import dev.love.winter.uicomponent.component.button.Button
+import dev.love.winter.uicomponent.component.button.spec.ButtonIcon
+import dev.love.winter.uicomponent.component.button.spec.ButtonShape
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 import kotlinx.coroutines.flow.collectLatest
 import kotlin.system.exitProcess
 

@@ -19,8 +19,6 @@ import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.runtime.rememberNavBackStack
 import androidx.navigation3.runtime.rememberSaveableStateHolderNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
-import dev.love.winter.designsystem.component.text.Text
-import dev.love.winter.designsystem.theme.WinterTheme
 import dev.love.winter.dscatalog.catalog.button.ButtonRoute
 import dev.love.winter.dscatalog.designtokens.borderradius.BorderRadiusRoute
 import dev.love.winter.dscatalog.designtokens.color.ColorRoute
@@ -28,6 +26,8 @@ import dev.love.winter.dscatalog.designtokens.icons.ColorsRoute
 import dev.love.winter.dscatalog.designtokens.spacing.SpacingRoute
 import dev.love.winter.dscatalog.designtokens.typography.TypographyRoute
 import dev.love.winter.dscatalog.home.HomeRoute
+import dev.love.winter.uicomponent.component.text.Text
+import dev.love.winter.uicomponent.theme.WinterTheme
 
 @Composable
 fun Navigation(

@@ -7,7 +7,10 @@ pluginManagement {
 rootProject.name = "LanguageStudy"
 
 include(":app")
-include(":core-android:design-system")
+include(
+    ":core-android:design-system",
+    ":core-android:ui-component",
+)
 include(":sample:common")
 include(":sample:design-system-catalog")
 
