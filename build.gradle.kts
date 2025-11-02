@@ -10,9 +10,8 @@ plugins {
     alias(libs.plugins.detekt)
 }
 
-apply(from = "${rootDir}/gradle/jetifier_disable.gradle.kts")
-apply(from = "${rootDir}/gradle/projectInverseDependencyGraph.gradle")
-
 tasks.register("clean", Delete::class) {
     delete(rootProject.layout.buildDirectory)
 }
+
+apply(from = "${rootDir}/gradle/dependencyGraph.gradle")
