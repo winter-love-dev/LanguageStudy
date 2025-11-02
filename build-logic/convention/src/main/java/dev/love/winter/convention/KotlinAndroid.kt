@@ -24,7 +24,7 @@ internal fun Project.configureApplication() {
         }
 
         androidResources {
-            localeFilters += listOf("en", "ko")
+            localeFilters += listOf("en", "ko", "ja", "zh-rCN", "vi", "th")
         }
 
         buildTypes {
