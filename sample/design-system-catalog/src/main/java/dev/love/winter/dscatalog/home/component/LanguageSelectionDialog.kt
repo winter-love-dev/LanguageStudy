@@ -30,6 +30,7 @@ private data class Language(
 @Composable
 fun LanguageSelectionDialog(
     onDismissRequest: () -> Unit,
+    modifier: Modifier = Modifier,
     onLanguageChange: (languageTag: String) -> Unit,
 ) {
     val languages = remember {
@@ -47,6 +48,7 @@ fun LanguageSelectionDialog(
         Surface(
             shape = WinterTheme.borderRadius.large,
             color = WinterTheme.color.background,
+            modifier = modifier,
         ) {
             Column(
                 modifier = Modifier.padding(WinterTheme.spacing.medium)

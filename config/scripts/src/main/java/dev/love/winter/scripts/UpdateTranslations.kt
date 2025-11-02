@@ -207,13 +207,17 @@ fun parseTranslationData(data: List<List<Any>>): TranslationData {
 fun convertToAndroidResourceQualifier(languageCode: String): String {
     val parts = languageCode.split("-")
     return when (parts.size) {
-        1 -> parts[0].lowercase()
+        1 -> {
+            parts[0].lowercase()
+        }
         2 -> {
             val language = parts[0].lowercase()
             val region = parts[1].uppercase()
             "$language-r$region"
         }
-        else -> languageCode.lowercase()
+        else -> {
+            languageCode.lowercase()
+        }
     }
 }
 
