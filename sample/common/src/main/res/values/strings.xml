@@ -53,4 +53,5 @@
     <string name="icons_description">Icons are graphic assets that improve usability by providing extra meaning to actions and components, making them more visually appealing and easier to understand.</string>
     <string name="creating_an_icon">Creating an icon</string>
     <string name="creating_an_icon_description">When creating new icons, start with a base of 24px and draw the icon using a 1.5px stroke. Use the Icon grid (represented below) to help you design consistent icons.</string>
+    <string name="select_language">Select Language</string>
 </resources>

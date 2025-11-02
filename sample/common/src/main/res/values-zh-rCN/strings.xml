@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Application name -->
+    <string name="app_name">LanguageStudy</string>
+    <!-- Design System text -->
+    <string name="design_system">设计系统</string>
+    <!-- Welcome message -->
+    <string name="welcome_message">组件和样式的综合目录</string>
+    <!-- Design tokens -->
+    <string name="design_tokens">设计令牌</string>
+    <!-- Design token -->
+    <string name="design_token">设计令牌</string>
+    <!-- Component -->
+    <string name="component">组件</string>
+    <!-- Components -->
+    <string name="components">组件</string>
+    <string name="winter">Winter</string>
+    <string name="made_by">Designed &amp; Development by Winter</string>
+    <string name="copyright">\@ 2025 All rights reserved.</string>
+    <string name="option">选项</string>
+    <string name="color_system">颜色系统</string>
+    <string name="display">显示</string>
+    <string name="display_description">显示字体样式用于大标题或需要强调的突出文本。显示非常适合吸引用户注意力并做出大胆的声明。避免在长文本中使用此样式。</string>
+    <string name="title">标题</string>
+    <string name="title_description">当您需要清晰的视觉层次而不会使布局过于复杂时，请使用标题字体样式。您可以将此样式应用于需要与正文文本区分开来的短文本，例如章节标题、卡片标题、页面标题等。</string>
+    <string name="body">正文</string>
+    <string name="body_description">正文字体样式非常适合常规文本内容，例如段落或描述。正文样式适用于长文本和短文本，其中可读性和易读性至关重要。</string>
+    <string name="action">操作</string>
+    <string name="action_description">操作字体样式适用于表示交互或可操作项目的文本元素，例如按钮、输入框和链接。使用它来区分交互元素和常规文本。</string>
+    <string name="caption">说明文字</string>
+    <string name="caption_description">说明文字字体样式用于提供上下文并补充视觉元素的辅助文本，如图标、图像、标签等。避免在长文本中使用此样式。</string>
+    <string name="spacing">间距</string>
+    <string name="spacing_description">间距令牌保证元素之间的间距和对齐一致，同时提供更好的可读性、清晰度和平衡性。</string>
+    <string name="usage">使用方法</string>
+    <string name="usage_description_1">使用间距令牌在正确的层次结构下组织内容。对相关元素进行分组以提高可读性非常重要。对于相关项目，使用较小的间距值。而对于不相关的项目之间，最好增加间距。</string>
+    <string name="usage_description_2">堆叠组件时，在组中的所有元素之间使用相同的间距。</string>
+    <string name="border_radius">边框半径</string>
+    <string name="border_radius_description">边框半径令牌应用于具有圆角的元素，例如按钮、卡片、输入字段和容器，以软化其边缘并创建更令人愉悦的外观。</string>
+    <string name="tokens">令牌</string>
+    <string name="extra_small">超小</string>
+    <string name="extra_small_description">超小用于非常微妙的圆角。</string>
+    <string name="small">小</string>
+    <string name="small_description">小用于最小的元素或嵌套组件。</string>
+    <string name="medium">中</string>
+    <string name="medium_description">中等变体用于大多数组件。将其用于中小型组件和容器。</string>
+    <string name="large">大</string>
+    <string name="large_description">大用于中大型组件和容器。</string>
+    <string name="extra_large">超大</string>
+    <string name="extra_large_description">超大用于最大的元素，特别是在平板电脑屏幕上。</string>
+    <string name="pill">胶囊</string>
+    <string name="pill_description">胶囊用于两侧完全圆润的组件。</string>
+    <string name="icons">图标</string>
+    <string name="icons_description">图标是通过为操作和组件提供额外含义来提高可用性的图形资源，使其更具视觉吸引力且更易于理解。</string>
+    <string name="creating_an_icon">创建图标</string>
+    <string name="creating_an_icon_description">创建新图标时，从24px的基础开始，并使用1.5px笔画绘制图标。使用图标网格（如下所示）帮助您设计一致的图标。</string>
+    <string name="select_language">选择语言</string>
+</resources>

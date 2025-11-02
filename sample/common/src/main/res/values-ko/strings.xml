@@ -53,4 +53,5 @@
     <string name="icons_description">아이콘은 액션과 컴포넌트에 추가적인 의미를 제공하여 사용성을 향상시키고, 시각적으로 더 매력적이며 이해하기 쉽게 만드는 그래픽 자산입니다.</string>
     <string name="creating_an_icon">아이콘 만들기</string>
     <string name="creating_an_icon_description">새 아이콘을 만들 때는 24px 베이스로 시작하고 1.5px 스트로크를 사용하여 아이콘을 그리세요. 일관된 아이콘을 디자인하는 데 도움이 되도록 아이콘 그리드(아래 표시)를 사용하세요.</string>
+    <string name="select_language">언어 선택</string>
 </resources>

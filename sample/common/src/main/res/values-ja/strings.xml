@@ -53,4 +53,5 @@
     <string name="icons_description">アイコンは、アクションやコンポーネントに追加の意味を提供することで使いやすさを向上させ、視覚的により魅力的で理解しやすくするグラフィック資産です。</string>
     <string name="creating_an_icon">アイコンの作成</string>
     <string name="creating_an_icon_description">新しいアイコンを作成する場合は、24pxのベースから始め、1.5pxのストロークを使用してアイコンを描いてください。一貫したアイコンをデザインするために、アイコングリッド（下記）を使用してください。</string>
+    <string name="select_language">言語を選択</string>
 </resources>

@@ -53,4 +53,5 @@
     <string name="icons_description">Biểu tượng là tài sản đồ họa giúp cải thiện khả năng sử dụng bằng cách cung cấp ý nghĩa bổ sung cho các hành động và thành phần, làm cho chúng hấp dẫn hơn về mặt thị giác và dễ hiểu hơn.</string>
     <string name="creating_an_icon">Tạo biểu tượng</string>
     <string name="creating_an_icon_description">Khi tạo biểu tượng mới, hãy bắt đầu với cơ sở 24px và vẽ biểu tượng bằng nét 1.5px. Sử dụng lưới Biểu tượng (được thể hiện bên dưới) để giúp bạn thiết kế các biểu tượng nhất quán.</string>
+    <string name="select_language">Chọn ngôn ngữ</string>
 </resources>
