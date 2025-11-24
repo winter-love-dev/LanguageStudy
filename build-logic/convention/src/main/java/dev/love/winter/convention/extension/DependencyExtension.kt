@@ -21,25 +21,6 @@ fun DependencyHandlerScope.implementations(vararg deps: Any) {
     deps.forEach { "implementation"(it) }
 }
 
-@Suppress("DEPRECATION")
-fun DependencyHandlerScope.implementationsAbsPattern(
-    vararg depsRoot: ProjectDependency,
-    subModules: List<String> = listOf("api", "impl")
-) {
-    depsRoot.forEach { dep ->
-        val projectPath = dep.dependencyProject.path
-        subModules.forEach { subModule ->
-            val subProjectPath = "$projectPath:$subModule"
-            try {
-//                "runtimeOnly"(project(subProjectPath))
-                "implementation"(project(subProjectPath))
-            } catch (e: UnknownProjectException) {
-                println("project $subProjectPath does not exist.")
-            }
-        }
-    }
-}
-
 typealias AndroidExtension = CommonExtension<*, *, *, *, *, *>
 
 internal fun <T : Any> DependencyHandler.implementation(
